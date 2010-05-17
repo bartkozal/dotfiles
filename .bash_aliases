@@ -42,7 +42,7 @@ function iwork () {
 
 ## Aliases to directories
 
-alias d='cd ~/Dev'
-alias ds='cd ~/Desktop'
+alias d='cd ~/Desktop'
+alias p='cd ~/Projects'
 alias s='cd ~/Sites'
-alias scr='cd ~/Library/Scripts'
+alias st='cd ~/Projects/studies'
