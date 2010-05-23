@@ -20,16 +20,12 @@ function ichat () {
 
 # Change state of AirPort proxy
 function proxy () {
-	if [ `whoami` != 'root' ]; then
-		echo "Run with root privileges"
+	if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
+		sudo networksetup -setwebproxystate AirPort off
+		echo "Proxy is turned off now"
 	else
-		if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
-			networksetup -setwebproxystate AirPort off
-			echo "Proxy is turned off now"
-		else
-			networksetup -setwebproxystate AirPort on
-			echo "Proxy is turned on now"
-		fi
+		sudo networksetup -setwebproxystate AirPort on
+		echo "Proxy is turned on now"
 	fi
 }
 
