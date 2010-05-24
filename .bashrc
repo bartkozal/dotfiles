@@ -11,7 +11,7 @@ done
 
 # Set PS1
 
-export PS1='\[\033[0m\]\$\u: \[\033[32m\]\w\[\033[0m\] '
+export PS1="$ \[\033[32m\]\w\[\033[33m\]`__git_ps1` \[\033[0m\]"
 
 # Set text editor
 
