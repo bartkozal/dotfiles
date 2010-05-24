@@ -1,11 +1,3 @@
-## Overloading commands
-
-alias ls='ls -Ga'
-alias ll='ls -Gal'
-
-alias ..='cd ..'
-alias rm='rm -r'
-
 ## Useful functions
 
 # Recursive cleaning of .DS_Store files
@@ -35,6 +27,14 @@ function iwork () {
 		rm -i /Library/Preferences/com.apple.iWork09.plist
 	fi
 }
+
+## Overloading commands
+
+alias ls='ls -Ga'
+alias ll='ls -Gal'
+
+alias ..='cd ..'
+alias rm='rm -r'
 
 ## Aliases to directories
 
