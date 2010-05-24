@@ -6,7 +6,9 @@ files_to_load=(
 )
 
 for (( i = 0; i < ${#files_to_load[@]}; i++ )); do
-	source ${files_to_load[${i}]}
+	if [[ -f ${files_to_load[${i}]} ]]; then
+		source ${files_to_load[${i}]}
+	fi
 done
 
 # Set PS1
