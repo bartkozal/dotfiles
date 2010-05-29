@@ -31,6 +31,7 @@ function iwork () {
 ## Overloading commands
 
 alias ls='ls -Ga'
+alias l='ls'
 alias ll='ls -Gal'
 
 alias ..='cd ..'
