@@ -34,7 +34,8 @@ alias ls='ls -Ga'
 alias ll='ls -Gal'
 
 alias ..='cd ..'
-alias rm='rm -r'
+alias cp='cp -Rv'
+alias rm='rm -Rv'
 alias tar='tar xzvf'
 
 ## Aliases to directories
