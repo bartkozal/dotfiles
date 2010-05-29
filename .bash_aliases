@@ -30,14 +30,15 @@ function iwork () {
 
 ## Overloading commands
 
-alias ls='ls -Ga'
+alias ls='ls -Gah'
 alias l='ls'
-alias ll='ls -Gal'
+alias ll='ls -l'
 
 alias ..='cd ..'
 alias cp='cp -Rv'
+alias mv='mv -v'
 alias rm='rm -Rv'
-alias tar='tar xzvf'
+alias tar='tar -v'
 
 ## Aliases to directories
 
