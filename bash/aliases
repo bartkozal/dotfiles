@@ -1,0 +1,45 @@
+alias ..='cd ..'
+alias d='cd Desktop'
+alias p='cd Projects'
+alias s='cd Sites'
+alias st='cd studies'
+
+alias ls='ls -Ga'
+alias ll='ls -lh'
+alias l='ls'
+
+alias mv='mv -fv'
+alias cp='cp -Rfv'
+alias rm='rm -Rfv'
+
+alias tar='tar -v'
+
+alias reload='source ~/.bashrc'
+
+# Remove recursive .DS_Store in tree
+alias clean="find . -depth -name '.DS_Store' -exec rm '{}' \; -print"
+
+# Change state of AirPort proxy
+function proxy {
+	if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
+		sudo networksetup -setwebproxystate AirPort off
+		echo "Proxy is turned off now"
+	else
+		sudo networksetup -setwebproxystate AirPort on
+		echo "Proxy is turned on now"
+	fi
+}
+
+# Sorry Apple..
+function iwork {
+	if [ -e /Library/Preferences/com.apple.iWork09.plist ]; then
+		rm -i /Library/Preferences/com.apple.iWork09.plist
+	fi
+}
+
+# iChat archive cleaning
+function ichat {
+	if [ -d /Users/Bart/Library/Application\ Support/iChat/ ]; then
+		rm -r /Users/Bart/Library/Application\ Support/iChat/
+	fi
+}

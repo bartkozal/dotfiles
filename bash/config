@@ -1,0 +1,2 @@
+source '/usr/local/etc/bash_completion.d/git-completion.bash'
+source '/usr/local/Library/Contributions/brew_bash_completion.sh'
