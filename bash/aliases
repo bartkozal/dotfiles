@@ -16,6 +16,18 @@ alias tar='tar -v'
 
 alias reload='source ~/.bashrc'
 
+alias gc='git commit -m'
+alias gca='git commit -am'
+alias gs='git status'
+alias gl='git log --pretty=online'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gco='git checkout'
+alias gpl='git pull'
+alias gps='git push'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gd='tig'
+
 # Remove recursive .DS_Store in tree
 alias clean="find . -depth -name '.DS_Store' -exec rm '{}' \; -print"
 
