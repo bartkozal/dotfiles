@@ -1,4 +1,0 @@
-export PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin'
-export CDPATH='.:~:~/Desktop/:~/Projects:~/Projects/studies:~/Projects/dotfiles:~/Sites'
-export PS1="\[$txtgrn\][\w]\[$txtylw\]\$(\__git_ps1) \[$txtwht\]"
-export EDITOR='mate -w'
