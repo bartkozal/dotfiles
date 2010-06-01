@@ -15,6 +15,7 @@ alias cp='cp -Rfv'
 alias rm='rm -Rfv'
 
 alias tar='tar -v'
+alias ln='ln -v'
 
 alias reload='source ~/.bashrc'
 
