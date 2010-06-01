@@ -27,6 +27,8 @@ alias gpl='git pull'
 alias gps='git push'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gd='tig'
+alias ga='git add'
+alias gaa='git add .'
 
 # Remove recursive .DS_Store in tree
 alias clean="find . -depth -name '.DS_Store' -exec rm '{}' \; -print"
