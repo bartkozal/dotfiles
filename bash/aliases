@@ -1,10 +1,4 @@
-alias ..='cd ..'
-alias d='cd Desktop'
-alias p='cd Projects'
-alias s='cd Sites'
-alias st='cd studies'
-
-alias mo='mate .'
+alias mop='mate .'
 
 alias ls='ls -Ga'
 alias ll='ls -lh'
@@ -17,22 +11,18 @@ alias rm='rm -Rfv'
 alias tar='tar -v'
 alias ln='ln -v'
 
-alias reload='source ~/.bashrc'
-
 alias gc='git commit -m'
 alias gca='git commit -am'
 alias gcam='git commit --amend'
+alias ga='git add'
+alias gaa='git add .'
 alias gs='git status'
 alias gl='git log --pretty=oneline'
 alias gb='git branch'
-alias gbd='git branch -d'
 alias gco='git checkout'
 alias gpl='git pull'
 alias gps='git push'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gd='tig'
-alias ga='git add'
-alias gaa='git add .'
 
 # Remove recursive .DS_Store in tree
 alias clean="find . -depth -name '.DS_Store' -exec rm '{}' \; -print"
@@ -52,12 +42,5 @@ function proxy {
 function iwork {
 	if [ -e /Library/Preferences/com.apple.iWork09.plist ]; then
 		rm -i /Library/Preferences/com.apple.iWork09.plist
-	fi
-}
-
-# iChat archive cleaning
-function ichat {
-	if [ -d /Users/Bart/Library/Application\ Support/iChat/ ]; then
-		rm -r /Users/Bart/Library/Application\ Support/iChat/
 	fi
 }
