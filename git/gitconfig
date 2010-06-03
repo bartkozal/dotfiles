@@ -4,5 +4,12 @@
 [core]
 	editor = mate -w
 	excludesfile = ~/.gitignore
+[alias]
+	# Commits summary
+	who = shortlog -s --
+	# Stats
+	stat = diff --stat -r
+	# Show aliases
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 [github]
 	user = bkozal

@@ -1,11 +1,9 @@
-Host github
-	HostName github.com
-	User bkozal
-
+# FTIMS ICS account
 Host stud
 	HostName stud.ics.p.lodz.pl
 	User bkozal
 	
+# FTIMS ZSK account
 Host zsk
 	HostName zsks.zsk.p.lodz.pl
 	User bkozal
