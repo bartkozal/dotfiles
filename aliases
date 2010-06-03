@@ -1,39 +1,44 @@
+# TextMate
+alias m='mate'
 alias mop='mate .'
 
-alias ls='ls -Ga'
-alias ll='ls -lh'
-alias l='ls'
-
-alias mv='mv -fv'
-alias cp='cp -Rfv'
-alias rm='rm -Rfv'
-
-alias tar='tar -v'
-alias ln='ln -v'
-
+# Git
+alias g='git'
+alias gs='git status'
 alias gc='git commit -m'
 alias gca='git commit -am'
 alias gcam='git commit --amend'
-alias ga='git add'
-alias gaa='git add .'
-alias gs='git status'
 alias gl='git log --pretty=oneline'
 alias gb='git branch'
 alias gco='git checkout'
 alias gpl='git pull'
 alias gps='git push'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gpap="git pull && git push"
 
-# Remove recursive .DS_Store in tree
+# List
+alias ..='cd ..'
+alias l='ls'
+alias ls='ls -Ga'
+alias ll='ls -Galh'
+
+# Verbose, recursive and force
+alias mv='mv -fv'
+alias cp='cp -Rfv'
+alias rm='rm -Rfv'
+alias ln='ln -v'
+alias tar='tar -v'
+
+# Recursive remove .DS_Store
 alias clean="find . -depth -name '.DS_Store' -exec rm '{}' \; -print"
 
 # Change state of AirPort proxy
 function proxy {
 	if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
-		sudo networksetup -setwebproxystate AirPort off
+		networksetup -setwebproxystate AirPort off
 		echo "Proxy is turned off now"
 	else
-		sudo networksetup -setwebproxystate AirPort on
+		networksetup -setwebproxystate AirPort on
 		echo "Proxy is turned on now"
 	fi
 }
