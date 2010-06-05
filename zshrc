@@ -12,8 +12,10 @@ setopt AUTO_CD
 setopt AUTO_LIST
 setopt AUTO_MENU
 setopt MENU_COMPLETE
+setopt COMPLETE_IN_WORD
 setopt CORRECT_ALL
 setopt HIST_IGNORE_ALL_DUPS
+setopt EXTENDED_HISTORY
 
 # Completion style
 zstyle ':completion:*' menu select

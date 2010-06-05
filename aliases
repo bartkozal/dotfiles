@@ -19,6 +19,11 @@ alias gps='git push'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gpap="git pull && git push"
 
+# Rails
+alias sc='script/console'
+alias ss='script/server'
+alias sg='script/generate'
+
 # List
 alias ..='cd ..'
 alias l='ls'
