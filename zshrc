@@ -1,10 +1,7 @@
 # Aliases
-source ~/Projects/dotfiles/aliases
+source $HOME/Projects/dotfiles/aliases
 
-# Reload zshrc
-alias reload='source ~/.zshrc'
-
-# Completion
+# Completion and colors
 autoload -U compinit colors && compinit && colors
 
 # Set options - http://zsh.sourceforge.net/Doc/Release/Options.html
@@ -24,7 +21,8 @@ zstyle ':completion:*:messages' format %F{green}-- %d --%f
 zstyle ':completion:*:warnings' format %F{red}-- no matches --%f
 
 # Env variables
-PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin'
+PATH="$PATH:/usr/local/sbin"
+
 PS1="%F{green}[%~]%f "
 EDITOR='mate -w'
 
@@ -35,3 +33,6 @@ SAVEHIST=1000
 
 # Time report
 REPORTTIME=10
+
+# Ruby version manager
+source $HOME/.rvm/scripts/rvm
