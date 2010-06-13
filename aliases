@@ -1,6 +1,7 @@
 # TextMate
 alias m='mate'
 alias mop='mate .'
+alias mup='find "$HOME/Library/Application Support/TextMate/Bundles" -name .git -execdir git pull --verbose \;'
 
 # Git
 alias g='git'
