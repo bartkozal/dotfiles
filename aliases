@@ -18,6 +18,7 @@ alias gpl='git pull'
 alias gps='git push'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gpap="git pull && git push"
+alias gcl='git clone'
 
 # Rails
 alias sc='script/console'
