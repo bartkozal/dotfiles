@@ -22,9 +22,9 @@ alias gpap="git pull && git push"
 alias gcl='git clone'
 
 # Rails
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
+alias sc='script/rails console'
+alias ss='script/rails server'
+alias sg='script/rails generate'
 
 # List
 alias ..='cd ..'
