@@ -16,6 +16,7 @@ setopt EXTENDED_HISTORY
 
 # Completion style
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:descriptions' format %F{green}-- %d --%f
 zstyle ':completion:*:messages' format %F{green}-- %d --%f
 zstyle ':completion:*:warnings' format %F{red}-- no matches --%f
