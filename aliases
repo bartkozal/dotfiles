@@ -25,7 +25,7 @@ alias gcl='git clone'
 alias sc='script/rails console'
 alias ss='script/rails server'
 alias sg='script/rails generate'
-alias spec='spec -c -f s'
+alias rspec='rspec -c -f s'
 
 # List
 alias ..='cd ..'

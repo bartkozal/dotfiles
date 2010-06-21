@@ -22,18 +22,15 @@ zstyle ':completion:*:descriptions' format %F{green}-- %d --%f
 zstyle ':completion:*:messages' format %F{green}-- %d --%f
 zstyle ':completion:*:warnings' format %F{red}-- no matches --%f
 
-# Git branch
-function git_current_branch() {
+# Git prompt
+function git_prompt() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo '['${ref#refs/heads/}']'
-}
-function git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != "" ]] && echo "⚡"
 }
 
 # Env variables
 PATH="$PATH:/usr/local/sbin"
-PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_current_branch)$(git_dirty)%f '
+PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_prompt)%f '
 EDITOR='mate -w'
 
 # Save history to file
