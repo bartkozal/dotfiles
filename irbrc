@@ -1,4 +1,5 @@
 # History and colors
+require 'rubygems'
 require 'wirble'
 
 Wirble.init
