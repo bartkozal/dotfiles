@@ -22,15 +22,24 @@ zstyle ':completion:*:descriptions' format %F{green}-- %d --%f
 zstyle ':completion:*:messages' format %F{green}-- %d --%f
 zstyle ':completion:*:warnings' format %F{red}-- no matches --%f
 
-# Git prompt
+# Prompt functions
+function git_dirty () {
+	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo '⚑'
+}
+
 function git_prompt() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo '['${ref#refs/heads/}']'
+	echo '['${ref#refs/heads/}']'$(git_dirty)
+}
+
+function ruby_version() {
+	echo '['$(ruby -v | cut -f 2 -d ' ')']'
 }
 
 # Env variables
 PATH="$PATH:/usr/local/sbin"
 PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_prompt)%f '
+RPROMPT=$'%F{red}$(ruby_version)%f'
 EDITOR='mate -w'
 
 # Save history to file
