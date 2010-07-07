@@ -6,12 +6,11 @@ alias mup='find "$HOME/Library/Application Support/TextMate/Bundles" -name .git 
 # Git
 alias g='git'
 alias gs='git status'
-alias ga='git add'
 alias gaa='git add .'
 alias gc='git commit -v'
 alias gca='git commit -av'
 alias gcam='git commit --amend'
-alias gl='git log --pretty=oneline'
+alias glo='git log --pretty=oneline'
 alias gdf='git diff | mate'
 alias gb='git branch --color'
 alias gco='git checkout'
@@ -25,6 +24,7 @@ alias gcl='git clone'
 alias sc='script/rails console'
 alias ss='script/rails server'
 alias sg='script/rails generate'
+alias spec='spec -c -f s'
 alias rspec='rspec -c -f s'
 
 # List
