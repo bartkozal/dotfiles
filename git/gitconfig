@@ -13,3 +13,9 @@
 	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 [github]
 	user = bkozal
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
