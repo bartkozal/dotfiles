@@ -13,13 +13,27 @@ alias gcam='git commit --amend'
 alias glo='git log --pretty=oneline'
 alias gdf='git difftool'
 alias gdfm='git diff | mate'
-alias gb='git branch --color'
+alias gb='git branch --color -a'
 alias gco='git checkout'
 alias gpl='git pull'
 alias gps='git push'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gpap="git pull && git push"
 alias gcl='git clone'
+
+function gbra {
+  set branch_name = $1
+  git push origin origin:refs/heads/${branch_name}
+  git fetch origin
+  git checkout --track -b ${branch_name} origin/${branch_name}
+  git pull
+}
+
+function gbrd {
+  set branch_name = $1
+  git branch -d ${branch_name}
+  git push origin :heads/${branch_name}
+}
 
 # Rails
 alias sc='script/rails console'
