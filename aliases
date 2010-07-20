@@ -28,7 +28,7 @@ alias gpap="git pull && git push"
 alias gcl='git clone'
 
 function gbra {
-  set branch_name = $1
+  branch_name=$1
   git push origin origin:refs/heads/${branch_name}
   git fetch origin
   git checkout --track -b ${branch_name} origin/${branch_name}
@@ -36,7 +36,7 @@ function gbra {
 }
 
 function gbrd {
-  set branch_name = $1
+  branch_name=$1
   git branch -d ${branch_name}
   git push origin :heads/${branch_name}
 }
@@ -66,18 +66,17 @@ alias clean="find . -depth -name '.DS_Store' -exec rm '{}' \; -print"
 
 # Change state of AirPort proxy
 function proxy {
-	if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
-		networksetup -setwebproxystate AirPort off
-		echo "Proxy is turned off now"
-	else
-		networksetup -setwebproxystate AirPort on
-		echo "Proxy is turned on now"
-	fi
+  if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
+    networksetup -setwebproxystate AirPort off
+    echo "Proxy is turned off now"
+  else
+    networksetup -setwebproxystate AirPort on
+    echo "Proxy is turned on now"
+  fi
 }
 
-# Sorry Apple..
 function iwork {
-	if [ -e /Library/Preferences/com.apple.iWork09.plist ]; then
-		rm -i /Library/Preferences/com.apple.iWork09.plist
-	fi
+  if [ -e /Library/Preferences/com.apple.iWork09.plist ]; then
+    rm /Library/Preferences/com.apple.iWork09.plist
+  fi
 }
