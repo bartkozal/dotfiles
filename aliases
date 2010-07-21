@@ -1,31 +1,33 @@
-# TextMate
+alias dotfiles='cd ~/Projects/dotfiles'
+alias eotb='cd ~/Projects/ragnarson/eotb'
+alias eotbgem='cd ~/Projects/ragnarson/eotb_rails_plugin'
+
 alias m='mate'
 alias mop='mate .'
 alias mup='find "$HOME/Library/Application Support/TextMate/Bundles" -name .git -execdir git pull --verbose \;'
 
-# Projects
-alias eotb='cd ~/Projects/ragnarson/eotb'
-alias eotbgem='cd ~/Projects/ragnarson/eotb_rails_plugin'
-alias dotfiles='cd ~/Projects/dotfiles'
-
-# Git
 alias g='git'
 alias gs='git status'
+alias ga='git add'
 alias gaa='git add .'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gc='git commit -v'
 alias gca='git commit -av'
 alias gcam='git commit --amend'
-alias glo='git log --pretty=oneline'
-alias gdf='git difftool'
-alias gdfm='git diff | mate'
+alias gst='git stash'
+alias gstp='git stash pop'
+alias gsta='git stash apply'
+alias gstc='git stash clear'
+alias gco='git checkout'
 alias gb='git branch --color -a'
 alias gbd='git branch -d'
-alias gco='git checkout'
+alias gcl='git clone'
 alias gpl='git pull'
 alias gps='git push'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gpap="git pull && git push"
-alias gcl='git clone'
+alias gdf='git diff'
+alias gdfm='git diff | mate'
+alias glo='git log --pretty=oneline'
 
 function gbra {
   branch_name=$1
@@ -41,30 +43,25 @@ function gbrd {
   git push origin :heads/${branch_name}
 }
 
-# Rails
 alias sc='script/rails console'
 alias ss='script/rails server'
 alias sg='script/rails generate'
 alias spec='spec -c'
 alias rspec='rspec -c'
 
-# List
 alias ..='cd ..'
 alias l='ls'
 alias ls='ls -Ga'
 alias ll='ls -Galh'
 
-# Verbose, recursive and force
 alias mv='mv -fv'
 alias cp='cp -Rfv'
 alias rm='rm -Rfv'
 alias ln='ln -v'
 alias tar='tar -v'
 
-# Recursive remove .DS_Store
 alias clean="find . -depth -name '.DS_Store' -exec rm '{}' \; -print"
 
-# Change state of AirPort proxy
 function proxy {
   if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
     networksetup -setwebproxystate AirPort off
