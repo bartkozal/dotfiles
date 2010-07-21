@@ -10,3 +10,7 @@
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 [github]
   user = bkozal
+[diff]
+  tool = opendiff
+[merge]
+  tool = opendiff
