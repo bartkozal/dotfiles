@@ -1,6 +1,7 @@
 alias dotfiles='cd ~/Projects/dotfiles'
 alias eotb='cd ~/Projects/ragnarson/eotb'
-alias eotbgem='cd ~/Projects/ragnarson/eotb_rails_plugin'
+alias eotb_gem='cd ~/Projects/ragnarson/eotb_rails_plugin'
+alias personal_page='cd ~/Projects/open_source/personal_page'
 
 alias m='mate'
 alias mop='mate .'
