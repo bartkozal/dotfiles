@@ -1,18 +1,12 @@
 [user]
-	name = Bartlomiej Kozal
-	email = bartlomiejkozal@gmail.com
+  name = Bartlomiej Kozal
+  email = bartlomiejkozal@gmail.com
 [core]
-	editor = mate -w
-	excludesfile = ~/.gitignore
+  editor = mate -w
+  excludesfile = ~/.gitignore
 [alias]
-	# Commits summary
-	who = shortlog -s --
-	# Stats
-	stat = diff --stat -r
-	# Show aliases
-	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+  who = shortlog -s --
+  stat = diff --stat -r
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 [github]
-	user = bkozal
-[difftool "Kaleidoscope"]
-[difftool]
-[diff]
+  user = bkozal
