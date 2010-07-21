@@ -14,3 +14,6 @@
   tool = opendiff
 [merge]
   tool = opendiff
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
