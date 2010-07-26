@@ -38,6 +38,7 @@ function ruby_version() {
 
 # Env variables
 PATH="$PATH:/usr/local/sbin"
+ARCHFLAGS='-arch x86_64'
 PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_prompt)%f '
 RPROMPT=$'%F{red}$(ruby_version)%f'
 EDITOR='mate -w'
@@ -49,6 +50,9 @@ SAVEHIST=1000
 
 # Time report
 REPORTTIME=10
+
+# Eucaliptus
+source $HOME/.euca/eucarc
 
 # Ruby version manager
 source $HOME/.rvm/scripts/rvm
