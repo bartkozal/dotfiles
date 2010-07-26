@@ -4,16 +4,20 @@
 [core]
   editor = mate -w
   excludesfile = ~/.gitignore
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
 [alias]
   who = shortlog -s --
   stat = diff --stat -r
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 [github]
   user = bkozal
-[diff]
-  tool = opendiff
 [merge]
   tool = opendiff
-[branch "master"]
-  remote = origin
-  merge = refs/heads/master
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
