@@ -49,9 +49,9 @@ function gbrd {
   git push origin :heads/${branch_name}
 }
 
-alias sc='script/rails console'
-alias ss='script/rails server'
-alias sg='script/rails generate'
+alias sc='script/console'
+alias ss='script/server'
+alias sg='script/generate'
 alias spec='spec -c'
 alias rspec='rspec -c'
 
