@@ -56,3 +56,6 @@ source $HOME/.euca/eucarc
 
 # Ruby version manager
 source $HOME/.rvm/scripts/rvm
+
+# ulimit
+ulimit -n 4096

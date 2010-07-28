@@ -8,6 +8,7 @@ alias m='mate'
 alias mop='mate .'
 alias mup='find "$HOME/Library/Application Support/TextMate/Bundles" -name .git -execdir git pull --verbose \;'
 
+alias git='hub'
 alias g='git'
 alias gs='git status'
 alias ga='git add'
@@ -33,7 +34,7 @@ alias gdfm='git diff | mate'
 alias gdft='git difftool'
 alias gm='git merge'
 alias gmt='git mergetool'
-alias glo='git log --pretty=oneline'
+alias glo='git log --oneline --decorate --color'
 
 function gbra {
   branch_name=$1
