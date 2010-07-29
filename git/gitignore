@@ -3,3 +3,4 @@
 .livereload
 .rvmrc
 Icon?
+Gemfile.lock
