@@ -1,7 +1,0 @@
-Host stud
-	HostName stud.ics.p.lodz.pl
-	User bkozal
-	
-Host zsk
-	HostName zsks.zsk.p.lodz.pl
-	User bkozal
