@@ -1,7 +1,9 @@
+alias bellegs='cd ~/Projects/ragnarson/bellegs'
 alias dotfiles='cd ~/Projects/dotfiles'
 alias eotb='cd ~/Projects/ragnarson/eotb'
 alias eotb_gem='cd ~/Projects/ragnarson/eotb_rails_plugin'
 alias personal_page='cd ~/Projects/open_source/personal_page'
+alias tmfiles='cd ~/Projects/tmfiles'
 alias winnie='cd ~/Projects/ragnarson/winnie-app'
 
 alias m='mate'
