@@ -8,7 +8,7 @@ alias m='mate'
 alias mop='mate .'
 alias mup='find "$HOME/Library/Application Support/TextMate/Bundles" -name .git -execdir git pull --verbose \;'
 
-alias git='hub'
+function git { hub "$@" }
 alias g='git'
 alias gs='git status -s'
 alias ga='git add'
