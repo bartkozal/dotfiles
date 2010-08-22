@@ -5,10 +5,10 @@ require 'wirble'
 Wirble.init
 Wirble.colorize
 
-# Alias to exit
+# Fast quit
 alias q exit
 
-# Display local methods of object
+# Display local methods
 class Object
   def local_methods
     (methods - Object.instance_methods).sort

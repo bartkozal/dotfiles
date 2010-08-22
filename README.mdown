@@ -1,0 +1,10 @@
+Configs for:
+* bash
+* git
+* irb
+* livereload
+* rvm
+* vim
+* zsh
+
+[Check my addons for TextMate :)](http://bkozal.github.com/tmfiles/)

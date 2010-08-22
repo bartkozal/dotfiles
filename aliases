@@ -1,16 +1,9 @@
-alias bellegs='cd ~/Projects/ragnarson/bellegs'
-alias dotfiles='cd ~/Projects/dotfiles'
-alias eotb='cd ~/Projects/ragnarson/eotb'
-alias eotb_gem='cd ~/Projects/ragnarson/eotb_rails_plugin'
-alias footbag_circle='cd ~/Projects/open_source/footbag_circle'
-alias mklwaste='cd ~/Projects/mk_londyn/mkl_waste'
-alias personal_page='cd ~/Projects/open_source/personal_page'
-alias tmfiles='cd ~/Projects/open_source/tmfiles'
-alias winnie='cd ~/Projects/ragnarson/winnie-app'
+alias p='cd ~/Projects/'
+alias os='cd ~/Projects/open_source'
+alias rag='cd ~/Projects/ragnarson'
 
 alias m='mate'
 alias mop='mate .'
-alias mup='find "$HOME/Library/Application Support/TextMate/Bundles" -name .git -execdir git pull --verbose \;'
 
 function git { hub "$@" }
 alias g='git'
@@ -18,26 +11,26 @@ alias gs='git status -s'
 alias ga='git add'
 alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gc='git commit -v'
-alias gca='git commit -av'
-alias gcam='git commit -v --amend'
+alias gc='git commit -av'
+alias gcam='git commit -av --amend'
 alias gst='git stash'
 alias gstl='git stash list'
-alias gsta='git stash apply'
 alias gstp='git stash pop'
-alias gstc='git stash clear'
 alias gco='git checkout'
-alias gb='git branch --color -a'
+alias gcob='git checkout -b'
+alias gb='git branch -a'
 alias gbd='git branch -d'
 alias gcl='git clone'
 alias gpl='git pull --rebase'
 alias gps='git push'
 alias gpap="git pull --rebase && git push"
 alias gdf='git difftool'
-alias gdfm='git diff | mate'
 alias gm='git merge'
 alias gmt='git mergetool'
-alias glo='git log --oneline --decorate --color | head -n 15'
+alias glo='git log --decorate --oneline --color | head -n 15'
+alias gloa='git log --graph --decorate --oneline --all'
+alias gwho='git shortlog -s'
+alias gstat='git diff --stat -r'
 
 function gbra {
   branch_name=$1
@@ -53,9 +46,16 @@ function gbrd {
   git push origin :heads/${branch_name}
 }
 
+alias rb='ruby'
+
 alias sc='script/console'
 alias ss='script/server'
 alias sg='script/generate'
+
+alias rs='rails server'
+alias rc='rails console'
+alias rg='rails generate'
+
 alias spec='spec -c'
 alias rspec='rspec -c'
 
@@ -64,13 +64,15 @@ alias l='ls'
 alias ls='ls -Ga'
 alias ll='ls -Galh'
 
-alias mv='mv -fv'
-alias cp='cp -Rfv'
-alias rm='rm -Rfv'
+alias mv='mv -v'
+alias cp='cp -Rv'
+alias rm='rm -Rv'
 alias ln='ln -v'
 alias tar='tar -v'
 
-alias clean="find . -depth -name '.DS_Store' -exec rm '{}' \; -print"
+function clean {
+  find . -depth -name "$1" -exec rm '{}' \; -print 
+}
 
 function proxy {
   if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then

@@ -1,3 +1,5 @@
+# TODO: add comments
+
 scriptencoding utf-8
 
 set nocompatible
