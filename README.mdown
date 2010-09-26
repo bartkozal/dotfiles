@@ -5,7 +5,5 @@ Configs for:
 * irb
 * livereload
 * rvm
-* vim
+* vim/macvim
 * zsh
-
-[Check my addons for TextMate :)](http://bkozal.github.com/tmfiles/)
