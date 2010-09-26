@@ -41,7 +41,7 @@ PATH="$PATH:/usr/local/sbin"
 ARCHFLAGS='-arch x86_64'
 PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_prompt)%f '
 RPROMPT=$'%F{red}$(ruby_version)%f'
-EDITOR='mate -w'
+EDITOR='mate -w' # TODO: update
 
 # Save history to file
 HISTFILE="$HOME/.history"
@@ -57,5 +57,5 @@ source $HOME/.euca/eucarc
 # Ruby version manager
 source $HOME/.rvm/scripts/rvm
 
-# ulimit
+# ulimit (LiveReload hack)
 ulimit -n 4096
