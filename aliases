@@ -1,7 +1,3 @@
-alias p='cd ~/Projects/'
-alias os='cd ~/Projects/open_source'
-alias rag='cd ~/Projects/ragnarson'
-
 function git { hub "$@" }
 alias g='git'
 alias gs='git status -s'
