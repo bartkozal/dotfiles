@@ -2,7 +2,7 @@
   name = Bartlomiej Kozal
   email = bartlomiejkozal@gmail.com
 [core]
-  editor = mate -w # TODO: update
+  editor = vim 
   excludesfile = ~/.gitignore
 [color]
   branch = auto

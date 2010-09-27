@@ -1,3 +1,5 @@
+alias v='vim'
+
 function git { hub "$@" }
 alias g='git'
 alias gs='git status -s'
@@ -17,9 +19,8 @@ alias gcl='git clone'
 alias gpl='git pull --rebase'
 alias gps='git push'
 alias gpap="git pull --rebase && git push"
-alias gdf='git difftool'
+alias gdf='git diff'
 alias gm='git merge'
-alias gmt='git mergetool'
 alias glo='git log --decorate --oneline --color | head -n 15'
 alias gloa='git log --graph --decorate --oneline --all'
 alias gwho='git shortlog -s'
