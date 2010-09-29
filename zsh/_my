@@ -1,0 +1,2 @@
+#compdef my
+_files -W ~/Projects/my_projects -/

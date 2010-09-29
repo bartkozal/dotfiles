@@ -2,7 +2,8 @@
 source $HOME/Projects/dotfiles/aliases
 
 # Completion and colors
-autoload -U compinit colors && compinit && colors
+autoload -U compinit colors p rag my
+compinit && colors
 
 # Set options - http://zsh.sourceforge.net/Doc/Release/Options.html
 setopt PROMPT_SUBST
