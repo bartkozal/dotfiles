@@ -1,5 +1,6 @@
 alias v='mvim'
-alias m='mate .'
+alias m='mate'
+alias mop='mate .'
 
 function git { hub "$@" }
 alias g='git'
