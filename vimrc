@@ -1,6 +1,8 @@
 set nocompatible
 set encoding=utf-8
-set nobackup
+set backupdir=~/.vimtmp//
+set directory=~/.vimtmp//
+
 syntax on
 
 " leader
