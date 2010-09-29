@@ -22,8 +22,8 @@ endif
 if has("gui_running")
   set guioptions-=T
   set listchars=tab:▸\ ,eol:¬
-  set guifont=Menlo:h10
-  colorscheme macvim
+  set guifont=Monaco:h12
+  colorscheme vividchalk
 endif
 
 " Display
@@ -37,7 +37,7 @@ set number
 set laststatus=2
 set scrolloff=2
 set backspace=2
-set linespace=3
+set linespace=2
 
 " Indentation
 set tabstop=4
@@ -80,11 +80,8 @@ map <leader>d :NERDTreeToggle<CR>
 map <leader>p :YRShow<CR>
 
 let NERDTreeWinPos = 'right'
-autocmd TabEnter * NERDTree
-autocmd TabEnter * wincmd p
 
 let g:yankring_max_history = 100
 let g:yankring_history_file = '.vim/tmp/yankring'
 let g:yankring_clipboard_monitor = 1
-
 
