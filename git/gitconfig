@@ -2,7 +2,7 @@
   name = Bartlomiej Kozal
   email = bartlomiejkozal@gmail.com
 [core]
-  editor = mvim 
+  editor = mate -w 
   excludesfile = ~/.gitignore
 [color]
   branch = auto
@@ -14,4 +14,3 @@
   merge = refs/heads/master
 [github]
   user = bkozal
-
