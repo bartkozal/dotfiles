@@ -10,23 +10,26 @@ set directory=~/.vimtmp//
 
 syntax on
 
-" leader
 let mapleader = ","
 
-" autoupdate of vimrc
+" Autoupdate vimrc
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-" textmate inivisibles
+" Remove toolbar
+if has("gui_running")
+  set guioptions-=T
+endif
+
+" Inivisible chars representation
 set listchars=tab:▸\ ,eol:¬
 
-" tabs and spaces
+" Two spaces as default indentation 
 set tabstop=4
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-" leader maps
 nmap <leader>l :set list!<CR>
 nmap <leader>v :tabedit $MYVIMRC<CR>
