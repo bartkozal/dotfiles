@@ -1,4 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/Bart/Projects/dotfiles'
-let g:netrw_dirhist_2='/Users/Bart/Projects/my_projects/bkozal.github.com'
+let g:netrw_dirhist_cnt =0
