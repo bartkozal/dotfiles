@@ -1,6 +1,9 @@
 alias v='mvim'
 alias m='mate'
+alias mo='mate .'
 alias mop='mate .'
+alias o='open .'
+alias os='open -a Safari'
 
 function git { hub "$@" }
 alias g='git'
@@ -66,7 +69,7 @@ alias rm='rm -Rv'
 alias ln='ln -v'
 
 function clean {
-  find . -depth -name "$1" -exec rm '{}' \; -print 
+  find . -depth -name "$1" -exec rm '{}' \; -print
 }
 
 function proxy {
