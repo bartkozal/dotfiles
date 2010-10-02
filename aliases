@@ -45,6 +45,10 @@ function gbrd {
   git push origin :heads/${branch_name}
 }
 
+function nubc {
+  git config remote.origin.url | ruby -e '$_=STDIN.readlines; $_.join(" ") =~ %r{github\.com[\:/]([\w\-]+)/([\w\-]+)\.git}; `git config github.user #{$1}; \ngit config github.repo #{$2}` ' ; git config --list | grep github
+}
+
 alias rb='ruby'
 
 alias sc='script/console'
