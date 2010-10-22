@@ -1,6 +1,6 @@
 Configs for:
 
-* bash
+* ack
 * git
 * irb
 * livereload
