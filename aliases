@@ -29,7 +29,10 @@ alias gstat='git diff --stat -r'
 alias glo='git log --decorate --oneline --color | head -n 15'
 alias gloa='git log --graph --decorate --oneline --all'
 alias gwho='git shortlog -s'
-alias wtc='git commit -am "$(curl -s http://whatthecommit.com/ |grep '<p>' |cut -c 4-)"'
+
+function wtc {
+  git commit -am "$(curl -s http://whatthecommit.com/ | grep '<p>' | cut -c 4-)"
+}
 
 function gbra {
   branch_name=$1
