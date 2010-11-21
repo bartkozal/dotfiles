@@ -5,6 +5,5 @@ Configs for:
 * irb
 * livereload
 * rvm
-* textmate
-* vim/macvim
+* vim
 * zsh
