@@ -1,9 +1,11 @@
-alias v='mvim'
-alias m='mate'
-alias mo='mate .'
-alias mop='mate .'
+alias m='mvim'
+alias mo='mvim *'
 alias o='open .'
 alias os='open -a Safari'
+
+alias man="gem man -s"
+
+function pman { man -t $1 | open -a Preview -f }
 
 function git { hub "$@" }
 alias g='git'
@@ -46,10 +48,6 @@ function gbrd {
   branch_name=$1
   git branch -d ${branch_name}
   git push origin :heads/${branch_name}
-}
-
-function nubc {
-  git config remote.origin.url | ruby -e '$_=STDIN.readlines; $_.join(" ") =~ %r{github\.com[\:/]([\w\-]+)/([\w\-]+)\.git}; `git config github.user #{$1}; \ngit config github.repo #{$2}` ' ; git config --list | grep github
 }
 
 alias rb='ruby'
