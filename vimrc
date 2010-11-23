@@ -60,9 +60,10 @@ map <leader>j <C-w>j
 map <leader>k <C-w>k
 map <leader>l <C-w>l
 
-nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>v :tabedit ~/projects/dotfiles/vimrc<CR>
 nmap <leader>vc :tabedit ~/projects/dotfiles/vimchs<CR>
 
 nmap <leader>i :set list!<CR>
 nmap <leader>s :set hlsearch!<CR>
 
+map <leader>/ :NERDTreeToggle<CR> 
