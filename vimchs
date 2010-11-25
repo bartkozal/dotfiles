@@ -1,0 +1,40 @@
+h, j, k, l     #=> slow movement
+0, $           #=> line terminus
+w, W, e, E     #=> foward word movement
+b, B, ge, gE   #=> backword word movement
+f, F, t, T, l  #=> "to the character" movement
+ctrl+f, ctrl+b #=> paging
+ctrl+u, ctrl+d #=> half paging
+H, M, L        #=> cursor jumping to the screen parts
+gg, G          #=> top and bottom of the buffer
+<motion>G      #=> jump to the line
+*, #           #=> easy regular expression searching
+/, ?           #=> manual regular expression searching
+[[, ]]         #=> start of function or class jumping
+][, []         #=> end of function or class jumping
+%              #=> jumping to matching braces
+m, ', `        #=> marks
+
+i, I           #=> starting an insert
+o, O           #=> starting an insert with a new line
+a, A           #=> starting an insert with append
+r, R           #=> replacing characters
+c, C           #=> changing things
+x, X           #=> deleting characters
+dd             #=> deleting lines
+.              #=> repeat
+y, Y           #=> yanking
+p, P           #=> putting
+J, gJ          #=> joining
+v, V, ctrl+v   #=> visual mode
+
+ls             #=> listing buffers
+b              #=> switching buffers
+bd             #=> buffer deletion
+
+# Working with Many Files (Screencast 2)
+
+# Working with Many Files (Screencast 3)
+
+By Derek Wyatt
+

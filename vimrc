@@ -40,7 +40,6 @@ set scrolloff=1
 set backspace=2
 set linespace=2
 set cpoptions+=$
-set virtualedit=all
 
 set showmatch
 
@@ -59,6 +58,9 @@ map <leader>h <C-w>h
 map <leader>j <C-w>j
 map <leader>k <C-w>k
 map <leader>l <C-w>l
+
+map j gj
+map k gk
 
 nmap <leader>v :tabedit ~/projects/dotfiles/vimrc<CR>
 nmap <leader>vc :tabedit ~/projects/dotfiles/vimchs<CR>
