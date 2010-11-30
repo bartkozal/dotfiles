@@ -1,6 +1,6 @@
 [user]
-  name = Bartlomiej Kozal
-  email = bartlomiejkozal@gmail.com
+	name = Bartlomiej Kozal
+	email = bartlomiejkozal@gmail.com
 [core]
   editor = mvim
   excludesfile = ~/.gitignore
