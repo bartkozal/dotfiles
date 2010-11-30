@@ -3,20 +3,17 @@ alias mo='mvim *'
 alias o='open .'
 alias os='open -a Safari'
 
-alias man="gem man -s"
-
 function pman { man -t $1 | open -a Preview -f }
 
 function git { hub "$@" }
-alias g='git'
 alias gs='git status -s'
 alias ga='git add'
 alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gc='git commit -av'
 alias gcam='git commit -av --amend'
-alias gst='git stash'
-alias gstl='git stash list'
+alias gst='git stash list'
+alias gsta='git stash'
 alias gstp='git stash pop'
 alias gco='git checkout'
 alias gcob='git checkout -b'
@@ -87,8 +84,3 @@ function proxy {
   fi
 }
 
-function iwork {
-  if [ -e /Library/Preferences/com.apple.iWork09.plist ]; then
-    rm /Library/Preferences/com.apple.iWork09.plist
-  fi
-}

@@ -1,2 +1,0 @@
-#compdef rag
-_files -W ~/Projects/ragnarson -/
