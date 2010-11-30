@@ -1,3 +1,30 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = git://github.com/vim-scripts/The-NERD-tree.git
+[submodule "vim/bundle/trailing-whitespace"]
+	path = vim/bundle/trailing-whitespace
+	url = git://github.com/bronson/vim-trailing-whitespace.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/matchit"]
+	path = vim/bundle/matchit
+	url = git://github.com/edsono/vim-matchit.git
+[submodule "vim/bundle/gundo"]
+	path = vim/bundle/gundo
+	url = git://github.com/sjl/gundo.vim.git
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/fuzzyfinder"]
+	path = vim/bundle/fuzzyfinder
+	url = git://github.com/vim-scripts/FuzzyFinder.git
+[submodule "vim/bundle/l9"]
+	path = vim/bundle/l9
+	url = git://github.com/vim-scripts/L9.git
