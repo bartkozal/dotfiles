@@ -1,5 +1,5 @@
-alias m='mvim'
-alias mo='mvim *'
+alias m='mvim -f'
+alias mo='mvim -f *'
 alias o='open .'
 alias os='open -a Safari'
 
