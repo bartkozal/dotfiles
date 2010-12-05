@@ -74,6 +74,13 @@ function clean {
   find . -depth -name "$1" -exec rm '{}' \; -print
 }
 
+function newtab {
+  osascript -e "
+    tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+    tell application \"Terminal\" to do script \"cd \\\"$(PWD)\\\"\" in selected tab of the front window
+  " > /dev/null 2>&1
+}
+
 function proxy {
   if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
     networksetup -setwebproxystate AirPort off
