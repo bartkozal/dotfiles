@@ -48,8 +48,11 @@ set gdefault
 
 set statusline=[%n]\ %f\ %m%r%=%c:%l/%L\ [%p%%]
 
-nmap ; :
+let NERDTreeWinPos = "right"
+let g:fuf_dataDir = "~/.vim/tmp/fuf"
 let mapleader = ","
+
+nmap ; :
 
 map j gj
 map k gk
@@ -86,9 +89,9 @@ nmap <leader>ve :e $MYVIMRC<CR>
 nmap <leader>vs :so $MYVIMRC<CR>
 
 map <leader>b :FufBuffer<CR>
-map <leader>t :FufFile<CR>
+map <leader>t :FufCoverageFile<CR>
+map <leader>y :FufFile<CR>
 
-map <leader>a :Ack
+map <leader>a :Ack<space>
 map <leader>/ :GundoToggle<CR>
 map <leader>\ :NERDTreeToggle<CR>
-
