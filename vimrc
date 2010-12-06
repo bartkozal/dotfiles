@@ -92,6 +92,5 @@ map <leader>b :FufBuffer<CR>
 map <leader>t :FufCoverageFile<CR>
 map <leader>y :FufFile<CR>
 
-map <leader>a :Ack<space>
 map <leader>/ :GundoToggle<CR>
 map <leader>\ :NERDTreeToggle<CR>
