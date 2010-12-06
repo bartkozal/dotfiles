@@ -28,3 +28,6 @@
 [submodule "vim/bundle/l9"]
 	path = vim/bundle/l9
 	url = git://github.com/vim-scripts/L9.git
+[submodule "vim/bundle/autoclose"]
+	path = vim/bundle/autoclose
+	url = git://github.com/vim-scripts/AutoClose.git
