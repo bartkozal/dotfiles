@@ -65,13 +65,12 @@ nmap <down> <nop>
 nmap <left> <nop>
 nmap <right> <nop>
 
-map <leader>w <C-w>v<C-w>l
-map <leader>d <C-w>c
-map <leader>x <C-w>x
-map <leader>h <C-w>h
-map <leader>j <C-w>j
-map <leader>k <C-w>k
-map <leader>l <C-w>l
+map <C-c> <C-w>c
+map <C-x> <C-w>x
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :Gcommit<CR>
