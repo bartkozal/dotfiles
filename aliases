@@ -1,7 +1,18 @@
-alias m='mate'
-alias mo='mate .'
-alias o='open .'
-alias os='open -a Safari'
+function m {
+  if [ "$1" != "" ]; then
+    mate $1
+  else
+    mate .
+  fi
+}
+
+function o {
+  if [ "$1" != "" ]; then
+    open $1
+  else
+    open .
+  fi
+}
 
 function pman { man -t $1 | open -a Preview -f }
 
@@ -10,8 +21,6 @@ alias gs='git status -s'
 alias ga='git add'
 alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gc='git commit -av'
-alias gcam='git commit -av --amend'
 alias gst='git stash list'
 alias gsta='git stash'
 alias gstp='git stash pop'
@@ -28,6 +37,22 @@ alias gstat='git diff --stat -r'
 alias glo='git log --decorate --oneline --color | head -n 15'
 alias gloa='git log --graph --decorate --oneline --all'
 alias gwho='git shortlog -s'
+
+function gc {
+  if [ "$1" != "" ]; then
+    git commit -a -m $1
+  else
+    git commit -av
+  fi
+}
+
+function gcam {
+  if [ "$1" != "" ]; then
+    git commit -a --amend -m $1
+  else
+    git commit -av --amend
+  fi
+}
 
 function wtc {
   git commit -am "$(curl -s http://whatthecommit.com/ | grep '<p>' | cut -c 4-)"
