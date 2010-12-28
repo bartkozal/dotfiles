@@ -32,7 +32,7 @@ function ruby_version() {
 	echo '['$(ruby -v | cut -f 2 -d ' ')']'
 }
 
-PATH="$PATH:/usr/local/sbin"
+PATH="$PATH:/usr/local/sbin:/usr/local/share/npm/bin"
 ARCHFLAGS='-arch x86_64'
 PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_prompt)%f '
 RPROMPT=$'%F{red}$(ruby_version)%f'
