@@ -1,4 +1,4 @@
-Configs for:
+## Configs for:
 
 * ack
 * git
@@ -7,5 +7,13 @@ Configs for:
 * rvm
 * vim
 * zsh
+
+## Useful gems for me:
+
+* google-translate
+* hirb
+* livereload
+* open_gem
+* wirble
 
 TODO: add rake task which install my dotfiles
