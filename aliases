@@ -14,6 +14,10 @@ function o {
   fi
 }
 
+function p {
+  cd "$MY_CODE/$1";
+}
+
 function pman { man -t $1 | open -a Preview -f }
 
 function git { hub "$@" }
@@ -77,10 +81,16 @@ alias rb='ruby'
 alias sc='script/console'
 alias ss='script/server'
 alias sg='script/generate'
+alias sd='script/destroy'
 
 alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
+alias rd='rails destroy'
+
+alias rkm='rake db:migrate db:test:clone'
+alias rkrm='rake db:migrate db:migrate:redo db:test:clone'
+alias rkrdb='rake db:drop db:create db:migrate db:test:clone'
 
 alias spec='spec -c'
 alias rspec='rspec -c'
@@ -111,3 +121,6 @@ function proxy {
     echo "Proxy is turned on now"
   fi
 }
+
+alias tep='translate en:pl'
+alias tpe='translate pl:en'
