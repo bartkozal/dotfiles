@@ -7,3 +7,5 @@ Configs for:
 * rvm
 * vim
 * zsh
+
+TODO: add rake task which install my dotfiles
