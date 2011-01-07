@@ -122,5 +122,5 @@ function proxy {
   fi
 }
 
-alias tep='translate en:pl'
-alias tpe='translate pl:en'
+alias ten='translate en:pl'
+alias tpl='translate pl:en'
