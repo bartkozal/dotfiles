@@ -39,13 +39,14 @@ function ruby_version() {
 ARCHFLAGS='-arch x86_64'
 PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_prompt)%f '
 RPROMPT=$'%F{red}$(ruby_version)%f'
-EDITOR='mate -w'
 
 HISTFILE="$HOME/.history"
 HISTSIZE=1000
 SAVEHIST=1000
 
 REPORTTIME=10
+
+export EDITOR='mate -w'
 
 source $HOME/.rvm/scripts/rvm
 
