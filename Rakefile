@@ -21,6 +21,7 @@ namespace :install do
   desc "Fetch useful vim plugins"
   task :vim_plugins do
     # TODO
+    # git submodule update --init
   end
 
   desc "Install configs, gems and vim plugins"
