@@ -1,10 +1,10 @@
-### Installation
+## Installation
 
 WARNING: it **overwrite** your existing files
 
 `rake install:all`
 
-### Configs for
+## Configs for
 
 * ack
 * git
@@ -14,12 +14,6 @@ WARNING: it **overwrite** your existing files
 * vim
 * zsh
 
-### Useful gems
-
-* google-translate
-* hirb
-* livereload
-* wirble
 
 TODO: describe how add gh token to keychain
 TODO: add requirements or specification of my setup
