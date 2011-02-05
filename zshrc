@@ -2,7 +2,7 @@ source $HOME/Projects/dotfiles/aliases
 
 MY_CODE="$HOME/Projects"
 PATH="$PATH:/usr/local/sbin:/usr/local/share/npm/bin"
-FPATH="$FPATH:$MY_CODE/dotfiles/zsh"
+FPATH="$FPATH:$HOME/.zsh"
 
 autoload -U compinit colors
 compinit && colors
