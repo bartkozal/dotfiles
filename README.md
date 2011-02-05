@@ -1,5 +1,7 @@
 ## Installation
 
+    git clone git@github.com:bkozal/dotfiles.git ~/.dotfiles
+    gem install highline
     rake install
 
 ## Configs for
