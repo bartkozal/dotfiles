@@ -1,4 +1,4 @@
-source $HOME/Projects/dotfiles/aliases
+source $HOME/.aliases
 
 MY_CODE="$HOME/Projects"
 PATH="$PATH:/usr/local/sbin:/usr/local/share/npm/bin"

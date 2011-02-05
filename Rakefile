@@ -1,7 +1,7 @@
 require 'rake'
 require 'highline/import'
 
-CONFIGS = ['ackrc', 'gitconfig', 'gitignore', 'irbrc', 'livereload', 'rvmrc', 'vimrc', 'vim', 'zshrc', 'zsh']
+CONFIGS = ['aliases', 'ackrc', 'gitconfig', 'gitignore', 'irbrc', 'livereload', 'rvmrc', 'vimrc', 'zshrc', 'vim/', 'zsh/']
 GEMS = ['hirb', 'livereload', 'wirble']
 VIM_PLUGINS = File.open(File.join(File.dirname(__FILE__), '.gitmodules')).read.scan(/bundle\/([\w\-_]*$)/).flatten
 
@@ -13,21 +13,22 @@ task :install do
   say "<%= color(\"WARNING: it overwrite your existing files!\", :red) %>"
   if agree("Are you sure? [yn]")
     CONFIGS.map do |c|
-      say "Linking #{c} config..."
-      system "ln -sf #{dirpath}/#{c} $HOME/.#{c} > /dev/null 2>&1"
+      say "Linking #{c}..."
+      system "ln -sf #{dirname}/#{c} $HOME/.#{c.delete('/')} > /dev/null 2>&1"
     end
     GEMS.map do |g|
       say "Installing gem #{g}..."
       system "gem install #{g} > /dev/null 2>&1"
     end
     say "Fetching vim plugins..."
-    system 'git submodule update --init > /dev/null 2>&1'
+    system "mkdir -p #{dirname}/vim/bundle"
+    system "git submodule update --init > /dev/null 2>&1"
     say "<%= color(\"Now add your GitHub token to OS X keychain with 'github.token' name\", :red) %>"
   else
     exit
   end
 end
 
-def dirpath
-  File.path(File.dirname(__FILE__))
+def dirname
+  File.dirname(__FILE__)
 end
