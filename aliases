@@ -6,6 +6,8 @@ function m {
   fi
 }
 
+alias dts="mate $HOME/.dotfiles"
+
 function o {
   if [ "$1" != "" ]; then
     open $1
