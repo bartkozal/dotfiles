@@ -9,20 +9,19 @@ def list(const)
 end
 
 namespace :install do
-  desc "Link configs: #{list(CONFIGS)}"
+  desc "WARNING: Overwriting your current configs! Files to link: #{list(CONFIGS)}"
   task :configs do
     CONFIGS.map do |c|
       puts "Linking #{c}..."
       system "ln -sf #{File.dirname(__FILE__)}/#{c} $HOME/.#{c.delete('/')} > /dev/null 2>&1"
-      puts "Add your GitHub token to OS X keychain with 'github.token' name"
     end
+    puts "Add your GitHub token to OS X keychain with 'github.token' name"
   end
 
   desc "Install gems: #{list(GEMS)}"
   task :gems do
     GEMS.map do |g|
-      puts "Installing gem #{g}..."
-      system "gem install #{g} > /dev/null 2>&1"
+      system "gem install #{g}"
     end
   end
 
@@ -31,6 +30,6 @@ namespace :install do
     system "git submodule update --init"
   end
 
-  desc "Install all"
+  desc "Install all (configs, gems, vim plugins)"
   task :all => [:configs, :gems, :vim_plugins]
 end
