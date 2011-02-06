@@ -105,14 +105,14 @@ alias cp='cp -Rv'
 alias rm='rm -Rv'
 alias ln='ln -v'
 
-function tabs {
-  function tab {
-    osascript -e "
-      tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
-      tell application \"Terminal\" to do script \"cd \\\"$(PWD)\\\"\" in selected tab of the front window
-    " > /dev/null 2>&1
-  }
-  
+function tab {
+  osascript -e "
+    tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+    tell application \"Terminal\" to do script \"cd \\\"$(PWD)\\\"\" in selected tab of the front window
+  " > /dev/null 2>&1
+}
+
+function tabs {  
   if [ "$1" != "" ]; then
     for i in {1..$1};do;tab;done;
   else
