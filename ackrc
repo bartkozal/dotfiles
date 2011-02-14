@@ -3,4 +3,4 @@
 --follow
 --group
 --sort-files
---type-add=ruby=.haml,.sass,.scss,.yml
+--type-add=ruby=.haml,.sass,.scss,.yml,.feature
