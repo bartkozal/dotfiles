@@ -1,6 +1,6 @@
 require 'rake'
 
-CONFIGS = ['aliases', 'ackrc', 'gitconfig', 'gitignore', 'irbrc', 'livereload', 'rvmrc', 'vimrc', 'zshrc', 'vim/', 'zsh/']
+CONFIGS = ['aliases', 'ackrc', 'gitconfig', 'gitignore', 'irbrc', 'livereload', 'rvmrc', 'vimrc', 'zshrc', 'screenrc', 'vim/', 'zsh/']
 GEMS = ['hirb', 'livereload', 'wirble']
 VIM_PLUGINS = File.open(File.join(File.dirname(__FILE__), '.gitmodules')).read.scan(/bundle\/([\w\-_]*$)/).flatten
 
