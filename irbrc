@@ -1,8 +1,10 @@
-require 'rubygems'
-require 'wirble'
+unless IRB.version.include?("DietRB")
+  require 'rubygems'
+  require 'wirble'
 
-Wirble.init
-Wirble.colorize
+  Wirble.init
+  Wirble.colorize
+end
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
