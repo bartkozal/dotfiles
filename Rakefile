@@ -1,6 +1,6 @@
 require 'rake'
 
-IGNORE = [".", "..", ".git", ".gitignore", ".gitmodules", "Rakefile", "README.md", "aliases"]
+IGNORE = [".", "..", ".git", ".gitignore", ".gitmodules", "Rakefile", "README.md"]
 
 namespace :install do
   desc "Link configs - WARNING: Overwriting your current files!"
