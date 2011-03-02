@@ -1,8 +1,7 @@
 require 'rake'
 
-IGNORE = [".", "..", ".git", ".gitignore", ".gitmodules", "Rakefile", "README.md"]
+IGNORE = [".", "..", ".git", ".gitignore", ".gitmodules", "Rakefile", "README.md", "aliases"]
 GEMS = ['hirb', 'livereload', 'wirble']
-
 
 namespace :install do
   desc "Link configs - WARNING: Overwriting your current configs!"
