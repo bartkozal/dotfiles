@@ -18,18 +18,14 @@ function p {
   cd "$MY_CODE/$1";
 }
 
-function pman { man -t $1 | open -a Preview -f }
-
-function git { hub "$@" }
 alias gs='git status -s'
 alias ga='git add'
 alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gst='git stash list'
-alias gsta='git stash'
+alias gst='git stash'
+alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gco='git checkout'
-alias gcob='git checkout -b'
 alias gb='git branch -a'
 alias gcl='git clone'
 alias gpl='git pull --rebase'
@@ -39,7 +35,6 @@ alias gdf='git diff'
 alias gdfx='git diff | gitx'
 alias gstat='git diff --stat -r'
 alias glo='git log --decorate --oneline --color | head -n 15'
-alias gloa='git log --graph --decorate --oneline --all'
 alias gwho='git shortlog -s'
 
 function gc {
@@ -80,20 +75,13 @@ alias rb='ruby'
 
 alias sc='script/console'
 alias ss='script/server'
-alias sg='script/generate'
-alias sd='script/destroy'
 
 alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
 alias rd='rails destroy'
-
-alias rkm='rake db:migrate db:test:clone'
-alias rkrm='rake db:migrate db:migrate:redo db:test:clone'
-alias rkrdb='rake db:drop db:create db:migrate db:test:clone'
-
-alias spec='spec -c'
-alias rspec='rspec -c'
+alias rmg='rake db:migrate db:test:clone'
+alias rrmg='rake db:migrate db:migrate:redo db:test:clone'
 
 alias ..='cd ..'
 alias l='ls'
@@ -129,6 +117,3 @@ function proxy {
     echo "Proxy is turned on now"
   fi
 }
-
-alias ten='translate en:pl'
-alias tpl='translate pl:en'
