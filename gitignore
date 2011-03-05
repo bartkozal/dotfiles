@@ -2,4 +2,5 @@
 .bundle
 .livereload
 .rvmrc
+.sass-cache
 Icon?
