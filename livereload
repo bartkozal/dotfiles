@@ -1,7 +1,7 @@
 # Lines starting with pound sign (#) are ignored.
 
 # additional extensions to monitor
-config.exts.concat ['haml', 'sass', 'scss']
+config.exts.concat ['haml', 'sass', 'scss', 'slim']
 
 # exclude files with NAMES matching this mask
 config.exclusions << '~*'
