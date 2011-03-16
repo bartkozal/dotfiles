@@ -1,6 +1,6 @@
 source $HOME/.aliases
 
-MY_CODE="$HOME/Projects"
+MY_CODE="$HOME/Developer"
 PATH="$PATH:/usr/local/sbin:/usr/local/share/npm/bin"
 FPATH="$FPATH:$HOME/.zsh"
 

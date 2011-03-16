@@ -1,0 +1,3 @@
+#compdef d
+
+_files -W $MY_CODE -/
