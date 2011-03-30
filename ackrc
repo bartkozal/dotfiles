@@ -3,4 +3,8 @@
 --follow
 --group
 --sort-files
---type-add=ruby=.haml,.sass,.scss,.yml,.feature
+--type-set=haml=.haml,.sass,.scss
+--type-set=yaml=.yml
+--type-set=cucumber=.feature
+--type-set=bin=.pdf
+--nobin
