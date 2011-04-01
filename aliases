@@ -47,9 +47,9 @@ function gc {
 
 function gca {
   if [ "$1" != "" ]; then
-    git commit -a -m $1
+    git commit -ma $1
   else
-    git commit -av
+    git commit -va
   fi
 }
 
@@ -63,9 +63,9 @@ function gcam {
 
 function gcaam {
   if [ "$1" != "" ]; then
-    git commit --amend -a -m $1
+    git commit --amend -ma $1
   else
-    git commit --amend -av
+    git commit --amend -va
   fi
 }
 
