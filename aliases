@@ -39,22 +39,22 @@ alias gwho='git shortlog -s'
 
 function gc {
   if [ "$1" != "" ]; then
-    git commit -m $1
+    git commit -a -m $1
   else
-    git commit -v
+    git commit -av
   fi
 }
 
 function gcam {
   if [ "$1" != "" ]; then
-    git commit --amend -m $1
+    git commit -a --amend -m $1
   else
-    git commit -v --amend
+    git commit -av --amend
   fi
 }
 
 function wtc {
-  git commit -m "$(curl -s http://whatthecommit.com/ | grep '<p>' | cut -c 4-)"
+  git commit -am "$(curl -s http://whatthecommit.com/ | grep '<p>' | cut -c 4-)"
 }
 
 function gbra {
