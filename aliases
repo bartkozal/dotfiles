@@ -45,27 +45,11 @@ function gc {
   fi
 }
 
-function gca {
-  if [ "$1" != "" ]; then
-    git commit -ma $1
-  else
-    git commit -va
-  fi
-}
-
 function gcam {
   if [ "$1" != "" ]; then
     git commit --amend -m $1
   else
-    git commit --amend -v
-  fi
-}
-
-function gcaam {
-  if [ "$1" != "" ]; then
-    git commit --amend -ma $1
-  else
-    git commit --amend -va
+    git commit -v --amend
   fi
 }
 
