@@ -81,7 +81,6 @@ alias rc='rails console'
 alias rg='rails generate'
 alias rd='rails destroy'
 alias rmg='rake db:migrate db:test:clone'
-alias rrmg='rake db:migrate db:migrate:redo db:test:clone'
 
 alias bi='bundle install'
 alias be='bundle exec'
