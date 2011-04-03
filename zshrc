@@ -27,18 +27,24 @@ function git_dirty () {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo '⚑'
 }
 
-function git_prompt() {
+function git_prompt {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo '['${ref#refs/heads/}']'$(git_dirty)
 }
 
-function ruby_version() {
+function ruby_version {
   echo '['$(rvm current)']'
+}
+
+function battery {
+  max=`ioreg -rc AppleSmartBattery | grep "MaxCapacity" | awk '{ print $3 }'`
+  current=`ioreg -rc AppleSmartBattery | grep "CurrentCapacity" | awk '{ print $3 }'`
+  echo "scale=2;$current/$max*100" | bc -l | cut -f 1 -d '.'
 }
 
 ARCHFLAGS='-arch x86_64'
 PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_prompt)%f '
-RPROMPT=$'%F{red}$(ruby_version)%f'
+RPROMPT=$'%F{red}$(ruby_version)%f%F{cyan}[$(battery)%%]%f'
 
 HISTFILE="$HOME/.history"
 HISTSIZE=1000
