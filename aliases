@@ -34,7 +34,7 @@ alias gpap="git pull --rebase && git push"
 alias gdf='git diff'
 alias gdfx='git diff | gitx'
 alias gstat='git diff --stat -r'
-alias glo='git log --decorate --oneline --color | head -n 15'
+alias glo='git log --decorate --oneline --color -n 15'
 alias gwho='git shortlog -s'
 
 function gc {
