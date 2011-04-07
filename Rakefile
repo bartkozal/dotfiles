@@ -4,7 +4,7 @@ IGNORE = [".", "..", ".git", ".gitignore", ".gitmodules", "Rakefile", "README.md
 
 namespace :install do
   desc "Link configs - WARNING: Overwriting your current files!"
-  task :conf do
+  task :configs do
     current_directory = File.dirname(__FILE__)
     (Dir.entries(current_directory) - IGNORE).map do |c|
       puts "Linking #{c}..."
