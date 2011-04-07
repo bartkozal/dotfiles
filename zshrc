@@ -1,8 +1,9 @@
 source $HOME/.aliases
 
 MY_CODE="$HOME/Developer"
-PATH="$PATH:/usr/local/sbin:/usr/local/share/npm/bin"
+PATH="$PATH:/usr/local/sbin"
 FPATH="$FPATH:$HOME/.zsh"
+NODE_PATH="/usr/local/lib/node"
 
 autoload -U compinit colors
 compinit && colors
