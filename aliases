@@ -1,8 +1,8 @@
 function m {
   if [ "$1" != "" ]; then
-    mate $1
+    mvim $1
   else
-    mate .
+    mvim
   fi
 }
 
