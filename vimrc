@@ -22,6 +22,7 @@ set tabstop=4
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+set autoindent
 
 set showmode
 set showcmd
@@ -54,6 +55,7 @@ nnoremap <D-i> :set list!<CR>
 nnoremap <D-F> :Ack<space>
 
 map <D-0> :ConqueTerm zsh<CR>
+map <D-1> :NERDTreeToggle<CR>
 map <D-2> :GundoToggle<CR>
 
 let g:gundo_help = 0

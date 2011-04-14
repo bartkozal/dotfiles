@@ -18,3 +18,7 @@
 	path = vim/bundle/conqueterm
 	url = https://github.com/rygwdn/vim-conque.git
     ignore = dirty
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+    ignore = dirty
