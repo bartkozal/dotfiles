@@ -48,7 +48,7 @@ nnoremap <right> <nop>
 vnoremap <D-]> >gv
 vnoremap <D-[> <gv
 
-nnoremap <D-/> :set hlsearch!<CR>
+nnoremap <D-k> :noh<CR>
 nnoremap <D-i> :set list!<CR>
 
 nnoremap <D-F> :Ack<space>
