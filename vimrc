@@ -4,6 +4,8 @@ call pathogen#helptags()
 set nocompatible
 set encoding=utf-8
 
+filetype plugin indent on
+
 set backupdir=~/.vim/tmp/
 set directory=~/.vim/tmp/
 set undodir=~/.vim/tmp/
@@ -58,6 +60,7 @@ map <D-0> :ConqueTerm zsh<CR>
 map <D-1> :NERDTreeToggle<CR>
 map <D-2> :GundoToggle<CR>
 map <D-3> :TlistToggle<CR>
+map <D-4> :registers<CR>
 
 let g:gundo_help = 0
 let g:gist_clip_command = 'pbcopy'
