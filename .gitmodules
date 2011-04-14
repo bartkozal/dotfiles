@@ -10,3 +10,7 @@
 	path = vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
     ignore = dirty
+[submodule "vim/bundle/gist"]
+	path = vim/bundle/gist
+	url = https://github.com/mattn/gist-vim.git
+    ignore = dirty
