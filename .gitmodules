@@ -74,3 +74,7 @@
 	path = vim/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
     ignore = dirty
+[submodule "vim/bundle/tabular"]
+	path = vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+    ignore = dirty

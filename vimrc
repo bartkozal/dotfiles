@@ -1,4 +1,4 @@
-call pathogen#runtime_append_all_bundles() 
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags() 
 
 set nocompatible
@@ -55,12 +55,14 @@ nnoremap <D-k> :noh<CR>
 nnoremap <D-i> :set list!<CR>
 
 nnoremap <D-F> :Ack<space>
+nnoremap <D-A> :Tabularize /
+vnoremap <D-A> :Tabularize /
 
 map <D-0> :ConqueTerm zsh<CR>
 map <D-1> :NERDTreeToggle<CR>
 map <D-2> :GundoToggle<CR>
 map <D-3> :TlistToggle<CR>
-map <D-4> :registers<CR>
+map <D-4> :TlistToggle<CR>
 
 let g:gundo_help = 0
 let g:gist_clip_command = 'pbcopy'
