@@ -78,3 +78,6 @@
 	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
     ignore = dirty
+[submodule "vim/bundle/trailing-whitespace"]
+	path = vim/bundle/trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace.git

@@ -1,5 +1,5 @@
 call pathogen#runtime_append_all_bundles()
-call pathogen#helptags() 
+call pathogen#helptags()
 
 set nocompatible
 set encoding=utf-8
@@ -34,12 +34,14 @@ set lazyredraw
 set laststatus=2
 set cpoptions+=$
 
+set ignorecase
 set incsearch
 set hlsearch
 
 nnoremap <leader>\ q:
 nnoremap <leader>/ q/
 nnoremap <leader>? q?
+nnoremap <leader>w :FixWhitespace<CR>
 
 nnoremap ; :
 
@@ -62,7 +64,7 @@ map <D-0> :ConqueTerm zsh<CR>
 map <D-1> :NERDTreeToggle<CR>
 map <D-2> :GundoToggle<CR>
 map <D-3> :TlistToggle<CR>
-map <D-4> :TlistToggle<CR>
+map <D-4> :registers<CR>
 
 let g:gundo_help = 0
 let g:gist_clip_command = 'pbcopy'
@@ -71,3 +73,5 @@ let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Compact_Format = 1
