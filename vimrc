@@ -34,6 +34,10 @@ set cpoptions+=$
 set incsearch
 set hlsearch
 
+nnoremap <leader>\ q:
+nnoremap <leader>/ q/
+nnoremap <leader>? q?
+
 nnoremap ; :
 
 nnoremap <up> <nop>
