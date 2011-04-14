@@ -45,8 +45,12 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
-nnoremap <leader>h :set hlsearch!<CR>
-nnoremap <leader>i :set list!<CR>
+vnoremap <D-]> >gv
+vnoremap <D-[> <gv
 
-nnoremap <leader>1 :GundoToggle<CR>
+nnoremap <D-/> :set hlsearch!<CR>
+nnoremap <D-i> :set list!<CR>
+
+nnoremap <D-F> :Ack<space>
+nnoremap <D-2> :GundoToggle<CR>
 let g:gundo_help = 0
