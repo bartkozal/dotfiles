@@ -57,9 +57,12 @@ nnoremap <D-F> :Ack<space>
 map <D-0> :ConqueTerm zsh<CR>
 map <D-1> :NERDTreeToggle<CR>
 map <D-2> :GundoToggle<CR>
+map <D-3> :TlistToggle<CR>
 
 let g:gundo_help = 0
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+let Tlist_GainFocus_On_ToggleOpen = 1
