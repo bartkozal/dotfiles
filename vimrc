@@ -59,6 +59,7 @@ nnoremap <D-i> :set list!<CR>
 nnoremap <D-F> :Ack<space>
 nnoremap <D-A> :Tabularize /
 vnoremap <D-A> :Tabularize /
+map <D-/> <plug>NERDCommenterToggle
 
 map <D-0> :ConqueTerm zsh<CR>
 map <D-1> :NERDTreeToggle<CR>
@@ -75,3 +76,4 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 let Tlist_Compact_Format = 1
+let NERDSpaceDelims = 1
