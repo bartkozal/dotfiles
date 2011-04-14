@@ -14,7 +14,7 @@ set undofile
 set history=30
 set listchars=tab:▸\ ,eol:¬
 set cursorline
-set statusline=[%n]%y\ %f\ %m%r%=%l/%L:%c\ [%p%%]
+set statusline=[%n]%y\ %f\ %{SyntasticStatuslineFlag()}%m%r%=%l/%L:%c\ [%p%%]
 
 syntax enable
 set background=dark
@@ -67,6 +67,7 @@ map <D-2> :GundoToggle<CR>
 map <D-3> :TlistToggle<CR>
 map <D-4> :registers<CR>
 
+let g:syntastic_stl_format = '[ERR: #%F]'
 let g:gundo_help = 0
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
