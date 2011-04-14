@@ -1,5 +1,4 @@
 call pathogen#runtime_append_all_bundles() 
-call pathogen#helptags() 
 
 set nocompatible
 set encoding=utf-8
@@ -44,3 +43,5 @@ nnoremap <right> <nop>
 nnoremap <leader>h :set hlsearch!<CR>
 nnoremap <leader>i :set list!<CR>
 
+nnoremap <leader>1 :GundoToggle<CR>
+let g:gundo_help = 0
