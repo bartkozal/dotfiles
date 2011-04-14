@@ -52,7 +52,10 @@ nnoremap <D-k> :noh<CR>
 nnoremap <D-i> :set list!<CR>
 
 nnoremap <D-F> :Ack<space>
-nnoremap <D-2> :GundoToggle<CR>
+
+map <D-0> :ConqueTerm zsh<CR>
+map <D-2> :GundoToggle<CR>
+
 let g:gundo_help = 0
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1

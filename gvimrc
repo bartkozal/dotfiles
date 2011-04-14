@@ -8,7 +8,6 @@ set linespace=1
 
 set fuoptions=maxhorz,maxvert
 
-macmenu &File.New\ Tab key=<nop>
 macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 
-map <D-t> <Plug>PeepOpen
+map <C-space> <Plug>PeepOpen
