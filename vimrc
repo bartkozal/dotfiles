@@ -34,13 +34,13 @@ set cpoptions+=$
 set incsearch
 set hlsearch
 
-nmap ; :
+nnoremap ; :
 
-nmap <up> <nop>
-nmap <down> <nop>
-nmap <left> <nop>
-nmap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 
-nmap <leader>h :set hlsearch!<CR>
-nmap <leader>i :set list!<CR>
+nnoremap <leader>h :set hlsearch!<CR>
+nnoremap <leader>i :set list!<CR>
 
