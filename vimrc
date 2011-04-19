@@ -18,7 +18,7 @@ set statusline=[%n]%y\ %f\ %{SyntasticStatuslineFlag()}%m%r%=%l/%L:%c\ [%p%%]
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme railscasts
 
 set tabstop=4
 set softtabstop=2
