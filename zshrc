@@ -60,7 +60,7 @@ SAVEHIST=1000
 
 REPORTTIME=10
 
-export EDITOR='mvim -f'
+export EDITOR='mate -w'
 
 source $HOME/.rvm/scripts/rvm
 
