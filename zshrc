@@ -37,22 +37,9 @@ function ruby_version {
   echo '['$(rvm current)']'
 }
 
-function battery {
-  max=`ioreg -rc AppleSmartBattery | grep "MaxCapacity" | awk '{ print $3 }'`
-  current=`ioreg -rc AppleSmartBattery | grep "CurrentCapacity" | awk '{ print $3 }'`
-  capacity=`echo "scale=2;$current/$max*100" | bc -l | cut -f 1 -d '.'`
-  if [[ $capacity -lt 20 ]]; then
-    echo "%F{magenta}[$capacity%%]%f"
-  elif [[ $capacity -lt 80 ]]; then
-    echo "%F{cyan}[$capacity%%]%f"
-  else
-    echo "%F{green}[$capacity%%]%f"
-  fi
-}
-
 ARCHFLAGS='-arch x86_64'
 PROMPT=$'%F{green}[%~]%f%F{yellow}$(git_prompt)%f '
-RPROMPT=$'%F{red}$(ruby_version)%f$(battery)'
+RPROMPT=$'%F{red}$(ruby_version)%f'
 
 HISTFILE="$HOME/.history"
 HISTSIZE=1000
