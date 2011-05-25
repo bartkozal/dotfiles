@@ -82,7 +82,7 @@ alias rc='rails console'
 alias rg='rails generate'
 alias rd='rails destroy'
 alias rmg='rake db:migrate db:test:clone'
-alias rl='tail log/development.log'
+alias rl='tail -f log/development.log'
 alias rr='touch tmp/restart.txt'
 
 alias b='bundle'
