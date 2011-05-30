@@ -23,7 +23,6 @@ function git() {
 }
 
 alias gs='git status -sb'
-alias ga='git add'
 alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gst='git stash'
@@ -77,12 +76,15 @@ function gbrd {
 
 alias rb='ruby'
 
+alias r='rails'
 alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
 alias rd='rails destroy'
+alias rdb='rails dbconsole'
 alias rmg='rake db:migrate db:test:clone'
-alias rl='tail -f log/development.log'
+alias rl='tail log/development.log'
+alias rlf='rl -f'
 alias rr='touch tmp/restart.txt'
 
 alias b='bundle'
@@ -103,22 +105,4 @@ function tab {
     tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
     tell application \"Terminal\" to do script \"cd \\\"$(PWD)\\\"\" in selected tab of the front window
   " > /dev/null 2>&1
-}
-
-function tabs {
-  if [ "$1" != "" ]; then
-    for i in {1..$1};do;tab;done;
-  else
-    tab
-  fi
-}
-
-function proxy {
-  if [ `networksetup -getwebproxy AirPort | head -n 1 | awk '{ print $2 }'` = 'Yes' ]; then
-    networksetup -setwebproxystate AirPort off
-    echo "Proxy is turned off now"
-  else
-    networksetup -setwebproxystate AirPort on
-    echo "Proxy is turned on now"
-  fi
 }
