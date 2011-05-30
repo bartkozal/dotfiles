@@ -2,7 +2,7 @@ require 'rake'
 
 IGNORE = [".", "..", ".git", ".gitignore", ".gitmodules", "Rakefile", "README.md"]
 
-namespace :install do
+namespace :update do
   desc "Link configs - WARNING: Overwriting your current files!"
   task :configs do
     current_directory = File.dirname(__FILE__)
