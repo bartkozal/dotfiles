@@ -83,9 +83,16 @@ alias rg='rails generate'
 alias rd='rails destroy'
 alias rdb='rails dbconsole'
 alias rmg='rake db:migrate db:test:clone'
-alias rl='tail log/development.log'
-alias rlf='tail -f log/development.log'
 alias rr='touch tmp/restart.txt'
+alias rlf='tail -f log/development.log'
+
+function rl {
+  if [ "$1" != "" ]; then
+    tail -n $1 log/development.log
+  else
+    tail log/development.log
+  fi
+}
 
 alias b='bundle'
 alias be='bundle exec'
