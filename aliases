@@ -42,45 +42,25 @@ alias gwho='git shortlog -s'
 
 function gc {
   if [ "$1" != "" ]; then
-    git commit -a -m $1
+    git commit -m $1
   else
-    git commit -av
+    git commit -v
   fi
 }
 
 function gcam {
   if [ "$1" != "" ]; then
-    git commit -a --amend -m $1
+    git commit --amend -m $1
   else
-    git commit -av --amend
+    git commit -v --amend
   fi
-}
-
-function wtc {
-  git commit -am "$(curl -s http://whatthecommit.com/ | grep '<p>' | cut -c 4-)"
-}
-
-function gbra {
-  branch_name=$1
-  git push origin origin:refs/heads/${branch_name}
-  git fetch origin
-  git checkout --track -b ${branch_name} origin/${branch_name}
-  git pull
-}
-
-function gbrd {
-  branch_name=$1
-  git branch -d ${branch_name}
-  git push origin :heads/${branch_name}
 }
 
 alias rb='ruby'
 
 alias r='rails'
-alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
-alias rd='rails destroy'
 alias rdb='rails dbconsole'
 alias rmg='rake db:migrate db:test:clone'
 
