@@ -18,10 +18,6 @@ function d {
   cd "$MY_CODE/$1";
 }
 
-function git() {
-  hub "$@"
-}
-
 alias gs='git status -sb'
 alias gaa='git add .'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
