@@ -1,7 +1,7 @@
 source $HOME/.aliases
 
 MY_CODE="$HOME/Developer"
-PATH="$PATH:/usr/local/sbin"
+PATH="/usr/local/bin:$PATH"
 FPATH="$FPATH:$HOME/.zsh"
 NODE_PATH="/usr/local/lib/node"
 
