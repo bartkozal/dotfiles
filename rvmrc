@@ -1,5 +1,5 @@
-rvm_archflags="-arch x86_64"
-rvm_gemset_create_on_use_flag=1
-rvm_project_rvmrc_default=1
-rvm_pretty_print_flag=1
-rvm_path="/Users/Bart/.rvm"
+export rvm_archflags="-arch x86_64"
+export rvm_gemset_create_on_use_flag=1
+export rvm_project_rvmrc_default=1
+export rvm_pretty_print_flag=1
+export rvm_path="/Users/Bart/.rvm"
