@@ -72,10 +72,3 @@ alias mv='mv -v'
 alias cp='cp -Rv'
 alias rm='rm -Rv'
 alias ln='ln -v'
-
-function tab {
-  osascript -e "
-    tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
-    tell application \"Terminal\" to do script \"cd \\\"$(PWD)\\\"\" in selected tab of the front window
-  " > /dev/null 2>&1
-}
