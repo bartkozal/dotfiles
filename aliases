@@ -6,49 +6,32 @@ function m {
   fi
 }
 
-function o {
-  if [ "$1" != "" ]; then
-    open $1
-  else
-    open .
-  fi
-}
-
 function d {
   cd "$MY_CODE/$1";
 }
 
+alias g='git'
 alias gs='git status -sb'
-alias gaa='git add .'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gb='git branch -av'
+alias gco='git checkout'
+alias gcob='git checkout -b'
 alias gst='git stash'
 alias gstl='git stash list'
 alias gstp='git stash pop'
-alias gco='git checkout'
-alias gb='git branch -a'
+alias gm='git merge'
+alias gms='git merge --squash'
+alias grb='git rebase -i'
 alias gcl='git clone'
 alias gpl='git pull --rebase'
 alias gps='git push'
-alias gpap="git pull --rebase && git push"
 alias gdf='git diff'
-alias gdfx='git diff | gitx'
-alias gstat='git diff --stat -r'
-alias glo='git log --decorate --oneline --color -n 15'
-alias gwho='git shortlog -s'
+alias glo='git log --decorate --oneline -n 15'
 
 function gc {
   if [ "$1" != "" ]; then
     git commit -m $1
   else
     git commit -v
-  fi
-}
-
-function gcam {
-  if [ "$1" != "" ]; then
-    git commit --amend -m $1
-  else
-    git commit -v --amend
   fi
 }
 
@@ -64,7 +47,6 @@ alias b='bundle'
 alias be='bundle exec'
 
 alias ..='cd ..'
-alias l='ls'
 alias ls='ls -Ga'
 alias ll='ls -Galh'
 
