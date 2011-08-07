@@ -27,6 +27,7 @@ alias gps='git push'
 alias gdf='git diff'
 alias glo='git log --decorate --oneline -n 15'
 alias gaa='git add .'
+alias grm='git status | grep deleted | awk '{print \$3}' | xargs git rm'
 
 function gc {
   if [ "$1" != "" ]; then
@@ -34,6 +35,16 @@ function gc {
   else
     git commit -v
   fi
+}
+
+function gba {
+  git checkout -b $1
+  git push origin $1
+  git branch --set-upstream $1 origin/$1
+}
+
+function gbrm {
+  git push origin :$1
 }
 
 alias rb='ruby'
