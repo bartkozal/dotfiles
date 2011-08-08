@@ -45,6 +45,7 @@ function gba {
 
 function gbrm {
   git push origin :$1
+  git branch -D $1
 }
 
 alias rb='ruby'
