@@ -17,5 +17,5 @@
   user = bkozal
   token = !security 2>&1 >/dev/null find-generic-password -gs github.token | ruby -e 'print $1 if STDIN.gets =~ /^password: \\\"(.*)\\\"$/'
 [gist]
-  private = no
+  private = yes
   browse = no
