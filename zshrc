@@ -1,7 +1,8 @@
 source $HOME/.aliases
 
 export MY_CODE="$HOME/Developer"
-export PATH="/usr/local/bin:$PATH"
+export RBENV="$HOME/.rbenv/shims:$HOME/.rbenv/bin"
+export PATH="$RBENV:/usr/local/bin:$PATH"
 export FPATH="$FPATH:$HOME/.zsh"
 export NODE_PATH="/usr/local/lib/node"
 
@@ -29,7 +30,7 @@ function git_prompt {
 }
 
 function ruby_version {
-  rvm current
+  rbenv version | cut -f 1 -d " "
 }
 
 export PROMPT=$'%F{green}%~%f%F{yellow}$(git_prompt)%f '
@@ -40,5 +41,3 @@ export SAVEHIST=1024
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='mate -w'
-
-source $HOME/.rvm/scripts/rvm
