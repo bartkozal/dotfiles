@@ -48,6 +48,10 @@ function gbrm {
   git branch -D $1
 }
 
+function gbt {
+  git checkout -t origin/$1
+}
+
 alias rb='ruby'
 
 alias r='rails'
