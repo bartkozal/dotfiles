@@ -2,7 +2,7 @@ require 'rubygems'
 require 'irb/completion'
 require 'irb/ext/save-history'
 
-if Gem.available?('wirble')
+if Gem::Specification.find_by_name('wirble')
   require 'wirble'
   Wirble.init
   Wirble.colorize
