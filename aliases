@@ -52,6 +52,11 @@ function gbt {
   git checkout -t origin/$1
 }
 
+function gbfu {
+  git remote add upstream $1
+  git fetch upstream
+}
+
 alias rb='ruby'
 
 alias r='rails'
