@@ -27,7 +27,9 @@ alias gps='git push'
 alias gdf='git diff'
 alias glo='git log --decorate --oneline -n 15'
 alias gaa='git add .'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias grm="git rm \$(git ls-files --deleted)"
+alias gaar='gaa && grm'
+alias gres='git checkout -f HEAD && git clean -df'
 
 function gc {
   if [ "$1" != "" ]; then
