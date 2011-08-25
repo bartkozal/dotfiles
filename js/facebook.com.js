@@ -1,0 +1,1 @@
+$('.pvm').has('.pollOptions').hide()
