@@ -13,6 +13,7 @@ task :install do
   symlinks.each do |f|
     system "ln -sf #{current_dir}/#{format_if_dir(f)} $HOME/.#{f} > /dev/null 2>&1"
   end
+  system 'mkdir -p $HOME/.config && ln -sf $HOME/.terminitor $HOME/.config/terminitor'
   puts "Created symlinks:"
   puts symlinks.join(", ")
 end
