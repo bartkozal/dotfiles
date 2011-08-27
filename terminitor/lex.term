@@ -1,4 +1,4 @@
 require File.join(Dir.home, '.terminitor', 'tasks')
 
-before { project 'lex' }
+before { project 'learnexperts' }
 tab { rails }
