@@ -2,3 +2,4 @@ require File.join(Dir.home, '.terminitor', 'tasks')
 
 before { project 'learnexperts' }
 tab { rails }
+tab { run 'foreman start' }
