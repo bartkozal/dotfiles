@@ -1,4 +1,4 @@
 before { run 'cd ~/Developer/learnexperts' }
-tab { run 'mate .' }
+run 'mate .'
 tab { run 'guard' }
 tab { run 'foreman start' }

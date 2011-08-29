@@ -1,0 +1,3 @@
+before { run 'cd ~/Developer/bkzl.github.com' }
+run 'mate .'
+tab { run 'jekyll --auto --server 3000' }
