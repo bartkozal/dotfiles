@@ -1,4 +1,2 @@
-require File.join(Dir.home, '.terminitor', 'tasks')
-
-project 'dotfiles'
-mate
+run 'cd ~/Developer/dotfiles'
+run 'mate .'

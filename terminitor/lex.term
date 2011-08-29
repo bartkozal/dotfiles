@@ -1,5 +1,4 @@
-require File.join(Dir.home, '.terminitor', 'tasks')
-
-before { project 'learnexperts' }
-tab { rails }
+before { run 'cd ~/Developer/learnexperts' }
+tab { run 'mate .' }
+tab { run 'guard' }
 tab { run 'foreman start' }

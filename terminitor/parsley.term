@@ -1,4 +1,0 @@
-require File.join(Dir.home, '.terminitor', 'tasks')
-
-before { project 'parsley' }
-tab { rails }
