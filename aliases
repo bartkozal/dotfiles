@@ -10,10 +10,6 @@ function d {
   cd "$MY_CODE/$1";
 }
 
-function st {
-  terminitor start $1
-}
-
 alias g='git'
 alias gs='git status -sb'
 alias gb='git branch -av'

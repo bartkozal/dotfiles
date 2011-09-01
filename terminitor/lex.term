@@ -1,5 +1,0 @@
-before { run 'cd ~/Developer/learnexperts' }
-run 'mate .'
-tab { run 'guard' }
-tab { run 'foreman start' }
-tab { run 'rails c' }
