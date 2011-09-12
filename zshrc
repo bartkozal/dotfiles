@@ -29,7 +29,7 @@ function git_prompt {
 }
 
 function ruby_version {
-  rbenv version | cut -f 1 -d ' '
+  rvm current
 }
 
 export PROMPT=$'%F{green}%~%f%F{yellow}$(git_prompt)%f '
@@ -41,4 +41,4 @@ export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='mate -w'
 
-eval "$(rbenv init -)"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
