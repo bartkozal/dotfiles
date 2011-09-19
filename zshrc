@@ -19,7 +19,7 @@ setopt EXTENDED_HISTORY
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-function git_dirty () {
+function git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo '*'
 }
 
@@ -40,5 +40,8 @@ export SAVEHIST=1024
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='mate -w'
+
+function precmd  { print -Pn "\e]2; %~/ \a" }
+function preexec { print -Pn "\e]2; %~/ \a" }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
