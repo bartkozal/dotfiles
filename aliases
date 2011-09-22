@@ -69,10 +69,7 @@ function gbfu {
 alias rb='ruby'
 
 alias r='rails'
-alias rc='rails console'
-alias rg='rails generate'
-alias rdb='rails dbconsole'
-alias rmg='rake db:migrate db:test:clone'
+alias migrate='rake db:migrate db:test:clone'
 
 alias b='bundle'
 alias be='bundle exec'
