@@ -73,6 +73,7 @@ alias migrate='rake db:migrate db:test:clone'
 
 alias b='bundle'
 alias be='bundle exec'
+alias fs='foreman start'
 
 alias ..='cd ..'
 alias ls='ls -GA'
