@@ -12,15 +12,10 @@ function d {
 
 alias g='git'
 alias gs='git status -sb'
-alias gb='git branch -av'
 alias gco='git checkout'
-alias gcob='git checkout -b'
 alias gst='git stash'
 alias gstl='git stash list'
 alias gstp='git stash pop'
-alias gm='git merge --no-ff'
-alias gms='git merge --squash'
-alias grb='git rebase -i'
 alias gcl='git clone'
 alias gpl='git pull --rebase'
 alias gps='git push'
@@ -67,10 +62,8 @@ function gbfu {
 }
 
 alias rb='ruby'
-
 alias r='rails'
 alias migrate='rake db:migrate db:test:clone'
-
 alias b='bundle'
 alias be='bundle exec'
 alias fs='foreman start'
@@ -78,8 +71,5 @@ alias fs='foreman start'
 alias ..='cd ..'
 alias ls='ls -GA'
 alias ll='ls -GAlh'
-
-alias mv='mv -v'
-alias cp='cp -Rv'
-alias rm='rm -Rv'
-alias ln='ln -v'
+alias cp='cp -R'
+alias rm='rm -R'
