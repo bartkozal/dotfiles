@@ -1,8 +1,8 @@
-function m {
+function s {
   if [ "$1" != "" ]; then
-    mate $1
+    subl $1
   else
-    mate .
+    subl .
   fi
 }
 
