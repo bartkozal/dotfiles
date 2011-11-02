@@ -11,6 +11,7 @@ function d {
 }
 
 alias g='git'
+alias gb='git branch -av'
 alias gs='git status -sb'
 alias gco='git checkout'
 alias gst='git stash'
