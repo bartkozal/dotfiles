@@ -8,14 +8,6 @@ IRB.conf[:SAVE_HISTORY] = 1024
 IRB.conf[:AUTO_INDENT] = true
 
 class Object
-  def ri(method = nil)
-    unless method && method =~ /^[A-Z]/
-      klass = self.kind_of?(Class) ? name : self.class.name
-      method = [klass, method].compact.join('#')
-    end
-    puts `ri '#{method}'`
-  end
-
   def ls(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
