@@ -2,7 +2,7 @@
   name = Bartlomiej Kozal
   email = bkzl@me.com
 [core]
-  editor = subl -w
+  editor = choc -w
   excludesfile = ~/.gitignore
 [color]
   branch = auto

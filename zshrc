@@ -39,7 +39,7 @@ export HISTSIZE=1024
 export SAVEHIST=1024
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
-export EDITOR='subl -w'
+export EDITOR='choc -w'
 
 function precmd  { print -Pn "\e]2; %~/ \a" }
 function preexec { print -Pn "\e]2; %~/ \a" }
