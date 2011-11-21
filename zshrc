@@ -28,7 +28,7 @@ function git_prompt {
 }
 
 function ruby_version {
-  rbenv version | cut -d ' ' -f 1
+  rvm current
 }
 
 export PROMPT=$'%F{green}%~%f%F{yellow}$(git_prompt)%f '
@@ -38,9 +38,9 @@ export HISTSIZE=1024
 export SAVEHIST=1024
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
-export EDITOR='choc -w'
+export EDITOR='mate -w'
 
 function precmd  { print -Pn "\e]2; %~/ \a" }
 function preexec { print -Pn "\e]2; %~/ \a" }
 
-eval "$(rbenv init -)"
+[[ -s "/Users/bkzl/.rvm/scripts/rvm" ]] && source "/Users/bkzl/.rvm/scripts/rvm"
