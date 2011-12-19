@@ -31,7 +31,7 @@ function ruby_version {
   rvm current
 }
 
-export PROMPT=$'%F{green}%~%f%F{yellow}$(git_prompt)%f '
+export PROMPT=$'%F{blue}%~/%f%F{cyan}$(git_prompt)%f '
 export RPROMPT=$'%F{red}$(ruby_version)%f'
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1024
