@@ -6,6 +6,7 @@ set encoding=utf-8
 set showcmd
 set laststatus=2
 set ruler
+set cursorline
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
