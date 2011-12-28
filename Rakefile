@@ -9,7 +9,7 @@ task :install do
   end
 
   current_dir = File.dirname(__FILE__)
-  symlinks = (Dir.entries(current_dir) - [".", "..", ".git", "Rakefile"])
+  symlinks = (Dir.entries(current_dir) - [".", "..", ".git", ".gitignore", ".gitmodules",  "Rakefile"])
   symlinks.each do |f|
     system "ln -sf #{current_dir}/#{path_to_file(f)} $HOME/.#{f} > /dev/null 2>&1"
   end
