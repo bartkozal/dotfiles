@@ -15,6 +15,7 @@ syntax enable
 color jellybeans
 filetype plugin indent on
 
+set paste
 set nowrap
 set tabstop=2 shiftwidth=2
 set expandtab
