@@ -7,6 +7,7 @@ set showcmd
 set laststatus=2
 set ruler
 set cursorline
+set autochdir
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
