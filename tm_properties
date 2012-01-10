@@ -1,5 +1,5 @@
 fontName = "Menlo"
 fontSize = 12
 showInvisibles = true
-softWrap = true
+softTabs = true
 tabSize = 2
