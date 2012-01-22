@@ -3,7 +3,6 @@ source $HOME/.aliases
 export MY_CODE="$HOME/Developer"
 export PATH="/usr/local/bin:$PATH"
 export FPATH="$FPATH:$HOME/.zsh"
-export NODE_PATH="/usr/local/lib/node"
 
 autoload -U compinit colors
 compinit && colors
@@ -19,7 +18,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 function git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo '*'
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo '~'
 }
 
 function git_prompt {
