@@ -21,6 +21,8 @@ set nowrap
 set tabstop=2 shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
+set autoindent
+set hidden
 set list
 set listchars=""
 set listchars+=tab:▸\ 
