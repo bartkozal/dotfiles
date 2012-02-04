@@ -24,7 +24,6 @@ set list
 set listchars=""
 set listchars+=tab:▸\ 
 set listchars+=trail:.
-set paste
 set ruler
 set hlsearch
 set incsearch
