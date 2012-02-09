@@ -30,6 +30,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set scrolloff=3
 
 nnoremap <CR> :nohlsearch<cr>
 nnoremap <c-j> <c-w>j
