@@ -31,6 +31,7 @@ set incsearch
 set ignorecase
 set smartcase
 set scrolloff=3
+set showtabline=2
 
 nnoremap <CR> :nohlsearch<cr>
 nnoremap <c-j> <c-w>j
