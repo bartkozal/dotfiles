@@ -13,10 +13,9 @@ alias gcl='git clone'
 alias gpl='git pull --rebase'
 alias gps='git push'
 alias gdf='git diff'
+alias gdfc='git diff --cached'
 alias glo='git log --decorate --oneline -n 15'
-alias gaa='git add .'
-alias grm="git rm \$(git ls-files --deleted)"
-alias gaar='gaa && grm'
+alias gaa='git add -all'
 alias gres='git checkout -f HEAD && git clean -df'
 
 function gc {
@@ -24,6 +23,14 @@ function gc {
     git commit -m $1
   else
     git commit -v
+  fi
+}
+
+function gca {
+  if [ "$1" != "" ]; then
+    git commit --amend -m $1
+  else
+    git commit --amend -C HEAD
   fi
 }
 
