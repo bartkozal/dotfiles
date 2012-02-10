@@ -38,6 +38,7 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+inoremap jk <Esc>
 
 " Remap the tab key to do autocompletion or indentation depending on the
 " context
