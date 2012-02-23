@@ -33,6 +33,7 @@ set smartcase
 set scrolloff=3
 set showtabline=2
 set splitright
+set winwidth=105
 
 nnoremap <CR> :nohlsearch<cr>
 nnoremap <c-j> <c-w>j
