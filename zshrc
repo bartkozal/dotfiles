@@ -1,7 +1,7 @@
 source $HOME/.aliases
 
 export MY_CODE="$HOME/Developer"
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export FPATH="$FPATH:$HOME/.zsh"
 
 autoload -U compinit colors
