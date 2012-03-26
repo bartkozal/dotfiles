@@ -16,7 +16,7 @@ set clipboard=unnamed
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
 set nowrap
-set tabstop=2 shiftwidth=2
+set tabstop=2 softtabstop=2 shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
 set autoindent
