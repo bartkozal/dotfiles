@@ -8,6 +8,7 @@ syntax enable
 color jellybeans
 filetype plugin indent on
 
+set number
 set showcmd
 set laststatus=2
 set cursorline
