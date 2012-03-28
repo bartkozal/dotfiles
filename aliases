@@ -15,7 +15,6 @@ alias gps='git push'
 alias gdf='git diff'
 alias gdfc='git diff --cached'
 alias glo='git log --decorate --oneline -n 15'
-alias gaa='git add --all'
 alias gres='git checkout -f HEAD && git clean -df'
 
 function gc {
@@ -23,6 +22,13 @@ function gc {
     git commit -m $1
   else
     git commit -v
+  fi
+}
+
+function gaa {
+  git add --all
+  if [ "$1" != "" ]; then
+    git commit -m $1
   fi
 }
 
