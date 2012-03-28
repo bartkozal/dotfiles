@@ -15,7 +15,6 @@ alias gps='git push'
 alias gdf='git diff'
 alias gdfc='git diff --cached'
 alias glo='git log --decorate --oneline -n 15'
-alias gres='git checkout -f HEAD && git clean -df'
 
 function gc {
   if [ "$1" != "" ]; then
@@ -65,6 +64,16 @@ function gbt {
 function gbfu {
   git remote add upstream $1
   git fetch upstream
+}
+
+function gres {
+  echo "Are you sure to remove all your changes?"
+  select REPLY in "Yes" "No"; do
+    case $REPLY in
+      Yes ) git checkout -f HEAD && git clean -df; break;;
+      No ) break;;
+    esac
+  done
 }
 
 alias rb='ruby'
