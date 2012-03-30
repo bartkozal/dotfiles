@@ -59,7 +59,7 @@ function gbrm {
 }
 
 function gbt {
-  git checkout -t origin/$1
+  git checkout -t $1
 }
 
 function gbfu {
