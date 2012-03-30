@@ -1,0 +1,3 @@
+#compdef gbmv
+
+compadd $(git branch | grep -o '\w.*')
