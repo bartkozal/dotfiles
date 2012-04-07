@@ -65,3 +65,6 @@ inoremap <s-tab> <c-n>
 let g:ctrlp_working_path_mode = 2
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
+" netrw
+let g:netrw_dirhistmax=0
+
