@@ -15,7 +15,6 @@ set number
 set showcmd
 set laststatus=2
 set cursorline
-set autochdir
 set clipboard=unnamed
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
@@ -46,6 +45,8 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 inoremap jk <Esc>
+cnoremap %% <c-r>=expand('%:h').'/'<cr>
+map <leader>e :e %%
 
 " Remap the tab key to do autocompletion or indentation depending on the
 " context
