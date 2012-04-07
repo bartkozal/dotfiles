@@ -8,6 +8,9 @@ syntax enable
 color jellybeans
 filetype plugin indent on
 
+":h last-postion-jump
+:au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 set number
 set showcmd
 set laststatus=2
