@@ -23,6 +23,7 @@ set tabstop=2 softtabstop=2 shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
 set autoindent
+set autoread
 set hidden
 set list
 set listchars=""
