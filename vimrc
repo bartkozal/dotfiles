@@ -39,6 +39,7 @@ set showtabline=2
 set splitright
 set splitbelow
 set winwidth=105
+set shell=/bin/bash
 
 nnoremap <CR> :nohlsearch<cr>
 nnoremap <c-j> <c-w>j
