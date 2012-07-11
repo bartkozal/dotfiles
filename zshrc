@@ -27,12 +27,7 @@ function git_prompt {
   echo ' '${ref#refs/heads/}''$(git_dirty)
 }
 
-function ruby_version {
-  rbenv version | cut -d ' ' -f 1
-}
-
 export PROMPT=$'%F{blue}%~/%f%F{cyan}$(git_prompt)%f '
-export RPROMPT=$'%F{red}$(ruby_version)%f'
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1024
 export SAVEHIST=1024
@@ -44,3 +39,4 @@ function precmd  { print -Pn "\e]2; %~/ \a" }
 function preexec { print -Pn "\e]2; %~/ \a" }
 
 eval "$(rbenv init -)"
+

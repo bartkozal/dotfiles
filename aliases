@@ -2,7 +2,6 @@ function d {
   cd "$MY_CODE/$1";
 }
 
-alias g='git'
 alias gb='git branch -av'
 alias gs='git status -sb'
 alias gco='git checkout'
@@ -77,13 +76,8 @@ function gres {
   done
 }
 
-alias rb='ruby'
-alias r='rails'
-alias migrate='rake db:migrate db:test:prepare'
 alias b='bundle'
 alias be='bundle exec'
-alias specs='bundle exec rspec spec'
-
 alias ..='cd ..'
 alias ls='ls -GA'
 alias ll='ls -GAlh'
