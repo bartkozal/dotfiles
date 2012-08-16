@@ -5,6 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
@@ -68,19 +69,6 @@ nnoremap <c-l> <c-w>l
 inoremap jk <Esc>
 cnoremap %% <c-r>=expand('%:h').'/'<cr>
 map <leader>e :e %%
-
-" Remap the tab key to do autocompletion or indentation depending on the
-" context
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
 
 " Rename current file
 function! RenameFile()
