@@ -1,12 +1,31 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
 set nocompatible
 set encoding=utf-8
+filetype off
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'groenewege/vim-less'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'stonean/slim'
+Bundle 'skalnik/vim-vroom'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
+
+filetype plugin indent on
 syntax enable
 color jellybeans
-filetype plugin indent on
 
 ":h last-postion-jump
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
