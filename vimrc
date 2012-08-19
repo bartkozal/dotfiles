@@ -49,6 +49,7 @@ set list
 set listchars=""
 set listchars+=tab:▸\ 
 set listchars+=trail:.
+set showbreak=…
 set ruler
 set hlsearch
 set incsearch
@@ -69,6 +70,7 @@ nnoremap <c-l> <c-w>l
 inoremap jk <Esc>
 cnoremap %% <c-r>=expand('%:h').'/'<cr>
 map <leader>e :e %%
+map <leader>w :set wrap! linebreak! list!<cr>
 
 " Rename current file
 function! RenameFile()
