@@ -28,7 +28,7 @@ filetype plugin indent on
 syntax enable
 color jellybeans
 
-":h last-postion-jump
+":h last-position-jump
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 set number
@@ -50,6 +50,7 @@ set listchars=""
 set listchars+=tab:▸\ 
 set listchars+=trail:.
 set showbreak=…
+set spell
 set ruler
 set hlsearch
 set incsearch
@@ -71,6 +72,7 @@ inoremap jk <Esc>
 cnoremap %% <c-r>=expand('%:h').'/'<cr>
 map <leader>e :e %%
 map <leader>w :set wrap! linebreak! list!<cr>
+map <leader>s :set spell!<cr>
 
 " Rename current file
 function! RenameFile()
