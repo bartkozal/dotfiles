@@ -50,7 +50,6 @@ set listchars=""
 set listchars+=tab:▸\ 
 set listchars+=trail:.
 set showbreak=…
-set spell
 set ruler
 set hlsearch
 set incsearch
