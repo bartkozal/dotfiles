@@ -18,6 +18,7 @@ Bundle 'stonean/slim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
@@ -95,7 +96,7 @@ let g:netrw_dirhistmax = 0
 
 " Gundo
 let g:gundo_width = 30
-let g:gundo_preview_height = 10
+let g:gundo_preview_height = 12
 let g:gundo_preview_bottom = 1
 let g:gundo_right = 1
 let g:gundo_help = 0
