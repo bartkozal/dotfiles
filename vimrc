@@ -13,6 +13,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'sjl/gundo.vim'
 Bundle 'stonean/slim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'tpope/vim-commentary'
@@ -59,7 +60,6 @@ set scrolloff=3
 set showtabline=2
 set splitright
 set splitbelow
-set winwidth=105
 set shell=/bin/bash
 
 nnoremap <CR> :nohlsearch<cr>
@@ -72,6 +72,7 @@ cnoremap %% <c-r>=expand('%:h').'/'<cr>
 map <leader>e :e %%
 map <leader>w :set wrap! linebreak! list!<cr>
 map <leader>s :set spell!<cr>
+map <leader>u :GundoToggle<cr>
 
 " Rename current file
 function! RenameFile()
@@ -90,5 +91,13 @@ let g:ctrlp_working_path_mode = 2
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " netrw
-let g:netrw_dirhistmax=0
+let g:netrw_dirhistmax = 0
+
+" Gundo
+let g:gundo_width = 30
+let g:gundo_preview_height = 10
+let g:gundo_preview_bottom = 1
+let g:gundo_right = 1
+let g:gundo_help = 0
+let g:gundo_close_on_revert = 1
 
