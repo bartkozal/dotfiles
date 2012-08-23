@@ -18,9 +18,11 @@ Bundle 'stonean/slim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
@@ -63,6 +65,7 @@ set splitright
 set splitbelow
 set shell=/bin/bash
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 nnoremap <CR> :nohlsearch<cr>
 nnoremap <c-j> <c-w>j
@@ -76,26 +79,10 @@ map <leader>w :set wrap! linebreak! list!<cr>
 map <leader>s :set spell!<cr>
 map <leader>u :GundoToggle<cr>
 
-" Rename current file
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'))
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
-endfunction
-map <leader>n :call RenameFile()<cr>
-
-" CtrlP
 let g:ctrlp_working_path_mode = 2
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
-" netrw
 let g:netrw_dirhistmax = 0
 
-" Gundo
 let g:gundo_width = 30
 let g:gundo_preview_height = 12
 let g:gundo_preview_bottom = 1
