@@ -62,6 +62,7 @@ set showtabline=2
 set splitright
 set splitbelow
 set shell=/bin/bash
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 nnoremap <CR> :nohlsearch<cr>
 nnoremap <c-j> <c-w>j
