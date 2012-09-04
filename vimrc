@@ -66,7 +66,7 @@ set splitright
 set splitbelow
 set shell=/bin/bash
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=*/.hg/*,*/.svn/*
 
 nnoremap <CR> :nohlsearch<cr>
 nnoremap <c-j> <c-w>j
@@ -81,6 +81,7 @@ map <leader>s :set spell!<cr>
 map <leader>u :GundoToggle<cr>
 
 let g:ctrlp_working_path_mode = 2
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
 
 let g:netrw_dirhistmax = 0
 
