@@ -1,7 +1,7 @@
 source $HOME/.aliases
 
 export MY_CODE="$HOME/Developer"
-export PATH="$HOME/.chef:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.chef:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export FPATH="$FPATH:$HOME/.zsh"
 export NODE_PATH="/usr/local/lib/node_module:$NODE_PATH"
 
