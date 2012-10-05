@@ -67,6 +67,7 @@ set splitbelow
 set shell=/bin/bash
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set wildignore+=*/.hg/*,*/.svn/*
+set colorcolumn=80
 
 nnoremap <CR> :nohlsearch<cr>
 nnoremap <c-j> <c-w>j
