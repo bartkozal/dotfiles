@@ -17,4 +17,4 @@
   user = bkzl
   ssl = true
 [push]
-  default = upstream
+  default = simple
