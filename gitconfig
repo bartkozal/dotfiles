@@ -1,0 +1,20 @@
+[user]
+  name = Bartlomiej Kozal
+  email = bkzl@me.com
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  interactive = auto
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+  rebase = true
+[github]
+  user = bkzl
+  ssl = true
+[push]
+  default = upstream
