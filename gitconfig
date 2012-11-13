@@ -13,8 +13,8 @@
   remote = origin
   merge = refs/heads/master
   rebase = true
+[remote "origin"]
+  push = HEAD
 [github]
   user = bkzl
   ssl = true
-[push]
-  default = simple
