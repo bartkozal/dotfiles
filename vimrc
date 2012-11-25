@@ -40,6 +40,8 @@ set cursorline
 set clipboard=unnamed
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
+set undodir=~/.vim/undo
+set undofile
 set nowrap
 set tabstop=2 softtabstop=2 shiftwidth=2
 set expandtab
