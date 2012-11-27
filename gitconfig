@@ -18,3 +18,5 @@
 [github]
   user = bkzl
   ssl = true
+[push]
+  default = simple
