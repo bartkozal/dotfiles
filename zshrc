@@ -35,6 +35,9 @@ export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='vim'
 
+function precmd  { print -Pn "\e]2; %~/ \a" }
+function preexec { print -Pn "\e]2; %~/ \a" }
+
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
