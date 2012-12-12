@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'bbommarito/vim-slim'
+Bundle 'digitaltoad/vim-jade'
 Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
 Bundle 'groenewege/vim-less'
