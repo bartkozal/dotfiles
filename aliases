@@ -84,3 +84,9 @@ alias ll='ls -GAlh'
 alias cp='cp -R'
 alias rm='rm -R'
 alias grep='grep --color'
+
+function gifify {
+  ffmpeg -i $1 -pix_fmt rgb24 temp.gif
+  convert -layers Optimize temp.gif $2
+  rm temp.gif
+}
