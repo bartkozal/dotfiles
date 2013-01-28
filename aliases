@@ -90,3 +90,8 @@ function gifify {
   convert -layers Optimize temp.gif $2
   rm temp.gif
 }
+
+function docrails {
+  open "$MY_CODE/lifo/docrails/doc/rdoc/index.html"
+}
+
