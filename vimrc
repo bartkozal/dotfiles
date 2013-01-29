@@ -79,6 +79,7 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 inoremap jk <Esc>
 cnoremap %% <c-r>=expand('%:h').'/'<cr>
+nnoremap ;w :w<cr>
 map <leader>e :e %%
 map <leader>w :set wrap! linebreak! list!<cr>
 map <leader>s :set spell!<cr>
