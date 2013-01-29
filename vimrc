@@ -5,7 +5,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'bbommarito/vim-slim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'ervandew/supertab'
 Bundle 'gmarik/vundle'
@@ -17,11 +16,13 @@ Bundle 'mileszs/ack.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'skalnik/vim-vroom'
+Bundle 'slim-template/vim-slim'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
