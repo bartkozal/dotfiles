@@ -14,6 +14,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'slim-template/vim-slim'
@@ -27,8 +28,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'ervandew/supertab'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 syntax enable
