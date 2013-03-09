@@ -13,7 +13,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'sjl/gundo.vim'
@@ -21,6 +20,7 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'slim-template/vim-slim'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
@@ -74,6 +74,7 @@ set shell=/bin/bash
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set wildignore+=*/.hg/*,*/.svn/*
 set colorcolumn=80
+set wildmenu
 hi ColorColumn ctermbg=235
 
 nnoremap <CR> :nohlsearch<cr>
