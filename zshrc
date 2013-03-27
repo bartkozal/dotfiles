@@ -2,7 +2,7 @@ source $HOME/.aliases
 
 export MY_CODE="$HOME/Developer"
 export PATH="$HOME/.winnie-dev:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
-export FPATH="$FPATH:$HOME/.zsh"
+export FPATH="$FPATH:$HOME/.zsh/completions"
 export NODE_PATH="/usr/local/lib/node_module:$NODE_PATH"
 
 autoload -U compinit colors
