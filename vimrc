@@ -13,6 +13,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/powerline'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
@@ -41,9 +42,13 @@ color jellybeans
 ":h last-position-jump
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
+set term=screen-256color
 set number
 set showcmd
 set laststatus=2
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set noshowmode
 set cursorline
 set clipboard=unnamed
 set backupdir=~/.vim/backup
@@ -73,7 +78,6 @@ set showtabline=2
 set splitright
 set splitbelow
 set shell=/bin/bash
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set wildignore+=*/.hg/*,*/.svn/*
 set colorcolumn=80
 set wildmenu
