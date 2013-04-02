@@ -35,6 +35,10 @@ export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='vim'
 
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_FREE_MIN=500000
+export RUBY_HEAP_MIN_SLOTS=40000
+
 function precmd  { print -Pn "\e]2; %~/ \a" }
 function preexec { print -Pn "\e]2; %~/ \a" }
 
