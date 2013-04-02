@@ -98,6 +98,8 @@ map <leader>s :set spell!<cr>
 map <leader>u :GundoToggle<cr>
 map <leader>t <c-w>T
 
+let g:user_zen_leader_key = "<leader>'"
+
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
 
