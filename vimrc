@@ -13,7 +13,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/powerline'
 Bundle 'mattn/zencoding-vim'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'nanotech/jellybeans.vim'
@@ -48,7 +47,6 @@ set number
 set showcmd
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set noshowmode
 set cursorline
 set clipboard=unnamed
