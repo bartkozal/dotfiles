@@ -5,25 +5,18 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'airblade/vim-gitgutter'
-Bundle 'digitaltoad/vim-jade'
 Bundle 'ervandew/ag'
 Bundle 'gmarik/vundle'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/zencoding-vim'
-Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'sjl/gundo.vim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'slim-template/vim-slim'
-Bundle 'suan/vim-instant-markdown'
-Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
@@ -95,8 +88,6 @@ map <leader>w :set wrap! linebreak! list!<cr>
 map <leader>s :set spell!<cr>
 map <leader>u :GundoToggle<cr>
 map <leader>t <c-w>T
-
-let g:user_zen_leader_key = "<leader>'"
 
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
