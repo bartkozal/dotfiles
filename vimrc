@@ -5,12 +5,14 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'airblade/vim-gitgutter'
 Bundle 'ervandew/ag'
 Bundle 'gmarik/vundle'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/powerline'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'sjl/gundo.vim'
@@ -40,6 +42,7 @@ set number
 set showcmd
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set noshowmode
 set cursorline
 set clipboard=unnamed
