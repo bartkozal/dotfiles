@@ -4,6 +4,8 @@ export MY_CODE="$HOME/Developer"
 export PATH="$HOME/.winnie-dev:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/share/python:$PATH"
 export FPATH="$FPATH:$HOME/.zsh/completions"
 export NODE_PATH="/usr/local/lib/node_module:$NODE_PATH"
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 autoload -U compinit colors
 compinit && colors
