@@ -8,4 +8,5 @@ alias ll='ls -GAlh'
 alias cp='cp -R'
 alias rm='rm -R'
 alias grep='grep --color'
+alias q='exit'
 
