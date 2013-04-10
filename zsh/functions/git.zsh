@@ -1,5 +1,10 @@
-function d {
-  cd "$MY_CODE/$1";
+function git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo '~'
+}
+
+function git_prompt {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo ' '${ref#refs/heads/}''$(git_dirty)
 }
 
 alias gb='git branch -av'
@@ -67,31 +72,12 @@ function gbfu {
 }
 
 function gres {
-  echo "Are you sure to remove all your changes?"
+  echo "Are you want to remove all local changes?"
   select REPLY in "Yes" "No"; do
     case $REPLY in
       Yes ) git checkout -f HEAD && git clean -df; break;;
       No ) break;;
     esac
   done
-}
-
-alias b='bundle'
-alias be='bundle exec'
-alias ..='cd ..'
-alias ls='ls -GA'
-alias ll='ls -GAlh'
-alias cp='cp -R'
-alias rm='rm -R'
-alias grep='grep --color'
-
-function gifify {
-  ffmpeg -i $1 -pix_fmt rgb24 temp.gif
-  convert -layers Optimize temp.gif $2
-  rm temp.gif
-}
-
-function docrails {
-  open "$MY_CODE/lifo/docrails/doc/rdoc/index.html"
 }
 
