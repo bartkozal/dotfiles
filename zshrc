@@ -1,4 +1,4 @@
-source $HOME/.aliases
+source $HOME/.zsh/aliases.zsh
 
 export MY_CODE="$HOME/Developer"
 export PATH="$HOME/.winnie-dev:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/share/python:$PATH"
