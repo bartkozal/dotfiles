@@ -81,6 +81,8 @@ set shell=/bin/bash
 set wildmenu
 set wildignore+=.hg,.git,.svn
 set colorcolumn=+1
+set ttyfast
+set lazyredraw
 hi ColorColumn ctermbg=235
 
 let mapleader = ","
