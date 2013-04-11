@@ -35,7 +35,8 @@ syntax enable
 color jellybeans
 
 ":h last-position-jump
-:au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+au VimResized * :wincmd =
 
 set term=screen-256color
 set number
@@ -46,9 +47,11 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set noshowmode
 set cursorline
 set clipboard=unnamed
-set backupdir=~/.vim/backup
-set directory=~/.vim/swap
-set undodir=~/.vim/undo
+set backup
+set noswapfile 
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 set undofile
 set nowrap
 set tabstop=2 softtabstop=2 shiftwidth=2
@@ -59,38 +62,53 @@ set cindent
 set autoread
 set hidden
 set list
-set listchars=""
-set listchars+=tab:▸\ 
-set listchars+=trail:.
-set showbreak=…
+set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:.
+set showbreak=↪
+set fillchars=diff:⣿,vert:│
 set ruler
 set hlsearch
 set incsearch
+set gdefault
 set ignorecase
 set smartcase
 set scrolloff=3
+set sidescroll=1
+set sidescrolloff=10
 set showtabline=2
 set splitright
 set splitbelow
 set shell=/bin/bash
-set wildignore+=*/.hg/*,*/.svn/*
-set colorcolumn=80
 set wildmenu
+set wildignore+=.hg,.git,.svn
+set colorcolumn=+1
 hi ColorColumn ctermbg=235
 
-nnoremap <CR> :nohlsearch<cr>
+let mapleader = ","
+
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
 inoremap jk <Esc>
 cnoremap %% <c-r>=expand('%:h').'/'<cr>
 nnoremap ;w :w<cr>
-map <leader>e :e %%
-map <leader>w :set wrap! linebreak! list!<cr>
-map <leader>s :set spell!<cr>
-map <leader>u :GundoToggle<cr>
+nnoremap / /\v
+vnoremap / /\v
+nnoremap * *<c-o>
+nnoremap gI `.
+
+nnoremap <space> za
+vnoremap <space> za
+
+map <f2> :GundoToggle<cr>
+map <f3> :set wrap! linebreak! list!<cr>
+map <f4> :set spell!<cr>
+
+map <silent> <leader><leader> :nohlsearch<cr>
+map <leader>e :e %%<cr>
 map <leader>t <c-w>T
+map <leader>v :vs $MYVIMRC<cr>
 
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
