@@ -48,7 +48,7 @@ set noshowmode
 set cursorline
 set clipboard=unnamed
 set backup
-set noswapfile 
+set noswapfile
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
