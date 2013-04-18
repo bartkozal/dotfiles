@@ -80,7 +80,7 @@ set splitbelow
 set shell=/bin/bash
 set wildmenu
 set wildignore+=.hg,.git,.svn
-set colorcolumn=81
+set colorcolumn=80
 set ttyfast
 set lazyredraw
 hi ColorColumn ctermbg=235
