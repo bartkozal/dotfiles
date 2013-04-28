@@ -4,6 +4,7 @@ export LANG=en_US.UTF-8
 source "$HOME/.zsh/functions/shell.zsh"
 source "$HOME/.zsh/functions/git.zsh"
 source "$HOME/.zsh/functions/ruby.zsh"
+source "$HOME/.zsh/private.zsh"
 
 export CODE="$HOME/Developer"
 
