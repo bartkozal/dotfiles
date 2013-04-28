@@ -18,7 +18,9 @@ Bundle 'rking/ag.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'slim-template/vim-slim'
+Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
@@ -104,8 +106,8 @@ nnoremap <space> za
 vnoremap <space> za
 
 map <f2> :GundoToggle<cr>
-map <f3> :set wrap! linebreak! list!<cr>
-map <f4> :set spell!<cr>
+map <f3> :set spell!<cr>
+map <f4> :set wrap! linebreak! list!<cr>
 
 map <silent> <leader><leader> :nohlsearch<cr>
 map <leader>e :e %%<cr>
