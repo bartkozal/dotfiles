@@ -1,18 +1,27 @@
 require 'rake'
 
-task :default => [:install]
+task :default => [:symlinks, :gems]
 
-desc "Force install configs"
-task :install do
-  def path_to_file(file)
+desc "Create symlinks to configs"
+task :symlinks do
+  def path file
     File.directory?(file) ? file + '/' : file
   end
 
   current_dir = File.dirname(__FILE__)
-  symlinks = (Dir.entries(current_dir) - [".", "..", ".git", ".gitignore", ".gitmodules",  "Rakefile"])
-  symlinks.each do |f|
-    system "ln -sf #{current_dir}/#{path_to_file(f)} $HOME/.#{f} > /dev/null 2>&1"
+  symlinks = Dir.entries(current_dir) - [".", "..", ".git", ".gitignore", ".gitmodules",  "Rakefile"]
+  symlinks.each do |file|
+    `ln -sf #{current_dir}/#{path(file)} $HOME/.#{file} > /dev/null 2>&1`
+    puts "#{file} linked"
   end
-  puts "Created symlinks:"
-  puts symlinks.join(", ")
 end
+
+desc "Install ruby gems"
+task :gems do
+  gems = %w(bundler interactive_editor ghi powder csscss beggar adventure)
+  gems.each do |gem|
+    `gem install #{gem}`
+    puts "#{gem} installed"
+  end
+end
+
