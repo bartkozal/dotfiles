@@ -21,8 +21,16 @@ alias gdfc='git diff --cached'
 alias gdfl='git diff HEAD~1'
 alias glo='git log --decorate --oneline -n 15'
 
+function g {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    gs
+  fi
+}
+
 function gc {
-  if [ "$1" != "" ]; then
+  if [[ $# > 0 ]]; then
     git commit -m $1
   else
     git commit -v
@@ -31,13 +39,13 @@ function gc {
 
 function gaa {
   git add --all
-  if [ "$1" != "" ]; then
+  if [[ $# > 0 ]]; then
     git commit -m $1
   fi
 }
 
 function gca {
-  if [ "$1" != "" ]; then
+  if [[ $# > 0 ]]; then
     git commit --amend -m $1
   else
     git commit --amend -C HEAD
