@@ -27,12 +27,15 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-scripts/ruby-matchit'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 syntax enable
 color jellybeans
+
+ru! macros/matchit.vim
 
 ":h last-position-jump
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -83,10 +86,10 @@ set wildignore+=.hg,.git,.svn
 set colorcolumn=80
 set ttyfast
 set lazyredraw
+set noesckeys
 hi ColorColumn ctermbg=235
 
 let mapleader = ","
-
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
@@ -110,7 +113,10 @@ map <f4> :set wrap! linebreak! list!<cr>
 map <silent> <leader><leader> :nohlsearch<cr>
 map <leader>e :e %%<cr>
 map <leader>t <c-w>T
-map <leader>v :vs $MYVIMRC<cr>
+
+map <leader>v :e $MYVIMRC<cr>
+map <leader>n :sp ~/.vim/notes/notes.md<cr>
+map <leader>m :sp ~/.vim/notes/<c-r>=expand('%:p:h:t')<cr>.md<cr>
 
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'

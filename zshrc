@@ -31,8 +31,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 export PROMPT=$'%F{blue}%~/%f%F{cyan}$(git_prompt)%f '
 export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=1024
-export SAVEHIST=1024
+export HISTSIZE=2048
+export SAVEHIST=2048
+export HISTCONTROL="ignoreboth"
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='vim'
