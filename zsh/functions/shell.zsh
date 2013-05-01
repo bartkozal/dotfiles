@@ -2,6 +2,7 @@ function d {
   cd "$CODE/$1";
 }
 
+alias t='tmx'
 alias v='vim'
 alias v.='v .'
 alias ..='cd ..'
@@ -12,7 +13,6 @@ alias cp='cp -R'
 alias rm='rm -R'
 alias grep='grep --color'
 alias h='man'
-alias :h='h'
 alias q='exit'
 alias :q='q'
 
