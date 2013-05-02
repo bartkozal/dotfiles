@@ -2,7 +2,7 @@ function d {
   cd "$CODE/$1";
 }
 
-alias t='tmx'
+alias t='tmux'
 alias v='vim'
 alias v.='v .'
 alias ..='cd ..'
