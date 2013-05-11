@@ -1,5 +1,9 @@
 function d {
-  cd "$CODE/$1";
+  cd "$CODE/$1"
+}
+
+function dv {
+  cd "$CODE/$1"; vim .
 }
 
 alias t='tmux'
