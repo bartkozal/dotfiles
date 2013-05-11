@@ -20,3 +20,9 @@
   ssl = true
 [push]
   default = simple
+[diff]
+  tool = vimdiff
+[merge]
+  tool = vimdiff
+[difftool]
+  prompt = false
