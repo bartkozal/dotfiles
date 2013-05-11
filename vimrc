@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'jgdavey/vim-blockle'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/powerline'
