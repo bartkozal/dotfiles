@@ -119,10 +119,13 @@ map <f4> :set wrap! linebreak! list!<cr>
 map <silent> <leader><leader> :nohlsearch<cr>
 map <leader>e :e %%<cr>
 map <leader>t <c-w>T
-
 map <leader>v :e $MYVIMRC<cr>
-map <leader>n :sp ~/.vim/notes/notes.md<cr>
-map <leader>m :sp ~/.vim/notes/<c-r>=expand('%:p:h:t')<cr>.md<cr>
+
+" TODO rewrite to plugin (notes)
+autocmd BufRead,BufNewFile ~/.vim/notes/notes.md map <buffer> <leader>n :wq<cr>
+autocmd BufRead,BufNewFile ~/.vim/notes/*.md map <buffer> <leader>m :wq<cr>
+map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 10<cr>
+map <silent> <leader>m :sp ~/.vim/notes/<c-r>=fnamemodify(getcwd(), ':t')<cr>.md<cr>:resize 10<cr>
 
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
