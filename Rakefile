@@ -9,7 +9,8 @@ task :symlinks do
   end
 
   current_dir = File.dirname(__FILE__)
-  symlinks = Dir.entries(current_dir) - [".", "..", ".git", ".gitignore", ".gitmodules",  "Rakefile"]
+  symlinks = Dir.entries(current_dir) -
+    [".", "..", ".git", ".gitignore", ".gitmodules",  "Rakefile"]
   symlinks.each do |file|
     `ln -sf #{current_dir}/#{path(file)} $HOME/.#{file} > /dev/null 2>&1`
     puts "#{file} linked"
