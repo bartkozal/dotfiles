@@ -47,6 +47,7 @@ ru! macros/matchit.vim
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 au VimResized * :wincmd =
 
+set regexpengine=1 "use the old regexpengine for a while
 set term=screen-256color
 set number
 set showcmd
