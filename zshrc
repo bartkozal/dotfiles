@@ -46,6 +46,6 @@ bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
-source "$HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 eval "$(rbenv init -)"
 
