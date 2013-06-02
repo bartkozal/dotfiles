@@ -14,6 +14,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'leshill/vim-json'
 Bundle 'Lokaltog/powerline'
+Bundle 'mattn/zencoding-vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
@@ -141,6 +142,8 @@ let g:gundo_preview_bottom = 1
 let g:gundo_right = 1
 let g:gundo_help = 0
 let g:gundo_close_on_revert = 1
+
+let g:user_zen_leader_key = '<leader>/'
 
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
