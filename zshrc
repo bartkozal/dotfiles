@@ -14,6 +14,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/share/python:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_module:$NODE_PATH"
+export FPATH="$FPATH:/usr/local/share/zsh-completions"
 export FPATH="$FPATH:$HOME/.zsh/completions"
 
 autoload -U compinit colors
