@@ -7,7 +7,7 @@ function git_prompt {
   echo ' '${ref#refs/heads/}''$(git_dirty)
 }
 
-alias git='hub'
+# alias git='hub'
 alias gb='git branch -av'
 alias gs='git status -sb'
 alias gco='git checkout'
