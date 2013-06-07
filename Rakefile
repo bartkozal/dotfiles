@@ -19,7 +19,7 @@ end
 
 desc "Install ruby gems"
 task :gems do
-  gems = %w(bundler interactive_editor ghi powder csscss beggar adventure)
+  gems = %w(bundler interactive_editor powder csscss beggar)
   gems.each do |gem|
     `gem install #{gem}`
     puts "#{gem} installed"
