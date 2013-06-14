@@ -120,7 +120,7 @@ map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 
 map <silent> <leader><leader> :nohlsearch<cr>
-map <leader>e :e %%<cr>
+map <leader>e :Explore %%<cr>
 map <leader>w :Rename! %^
 map <leader>t <c-w>T
 map <leader>v :e $MYVIMRC<cr>
