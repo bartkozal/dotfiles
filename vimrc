@@ -131,7 +131,7 @@ map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 10<cr>
 map <silent> <leader>m :sp ~/.vim/notes/<c-r>=fnamemodify(getcwd(), ':t')<cr>.md<cr>:resize 10<cr>
 
 let g:ctrlp_working_path_mode = 2
-let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))|(vim\/(undo|backup|swap|bundle))$'
 
 let g:netrw_dirhistmax = 0
 
