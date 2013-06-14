@@ -105,6 +105,7 @@ nnoremap <c-l> <c-w>l
 
 inoremap jk <Esc>
 cnoremap %% <c-r>=expand('%:h').'/'<cr>
+cnoremap %^ <c-r>=expand('%:t')<cr>
 nnoremap ;w :w<cr>
 nnoremap / /\v
 vnoremap / /\v
@@ -120,6 +121,7 @@ map <f4> :set wrap! linebreak! list!<cr>
 
 map <silent> <leader><leader> :nohlsearch<cr>
 map <leader>e :e %%<cr>
+map <leader>w :Rename! %^
 map <leader>t <c-w>T
 map <leader>v :e $MYVIMRC<cr>
 
