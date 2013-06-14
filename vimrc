@@ -48,7 +48,6 @@ ru! macros/matchit.vim
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 au VimResized * :wincmd =
 
-set regexpengine=1 "use the old regexpengine for a while
 set term=screen-256color
 set number
 set showcmd
@@ -124,7 +123,7 @@ map <leader>e :e %%<cr>
 map <leader>t <c-w>T
 map <leader>v :e $MYVIMRC<cr>
 
-" TODO rewrite to plugin (notes)
+" TODO rewrite to plugin
 autocmd BufRead,BufNewFile ~/.vim/notes/notes.md map <buffer> <leader>n :wq<cr>
 autocmd BufRead,BufNewFile ~/.vim/notes/*.md map <buffer> <leader>m :wq<cr>
 map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 10<cr>
