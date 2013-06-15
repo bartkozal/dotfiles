@@ -135,9 +135,8 @@ map <silent> <leader>m :sp ~/.vim/notes/<c-r>=fnamemodify(getcwd(), ':t')<cr>.md
 
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))|(vim\/(undo|backup|swap|bundle))$'
-
 let g:netrw_dirhistmax = 0
-
+let g:syntastic_disabled_filetypes = ['scss', 'sass']
 let g:gundo_width = 30
 let g:gundo_preview_height = 12
 let g:gundo_preview_bottom = 1
