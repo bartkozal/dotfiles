@@ -23,11 +23,3 @@ alias grep='grep --color'
 alias h='man'
 alias q='exit'
 alias :q='q'
-
-function gtoday {
-  find $CODE -d 2 -print0 | \
-    xargs -0 -I {} \
-    git --git-dir={}/.git \
-    log --oneline --since=6am --pretty={}:\ %s --author=`whoami` --no-merges master
-}
-
