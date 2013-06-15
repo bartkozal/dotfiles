@@ -125,6 +125,7 @@ map <leader>e :Explore %%<cr>
 map <leader>w :Rename! %^
 map <leader>t <c-w>T
 map <leader>v :e $MYVIMRC<cr>
+map <leader>f :filetype detect<cr>
 
 " TODO rewrite to plugin
 autocmd BufRead,BufNewFile ~/.vim/notes/notes.md map <buffer> <leader>n :wq<cr>
