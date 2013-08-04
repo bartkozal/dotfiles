@@ -22,13 +22,6 @@ alias gdfc='git diff --cached'
 alias gdfl='git diff HEAD~1'
 alias glo='git log --decorate --oneline -n 15'
 
-function gtoday {
-  find $CODE -d 2 -print0 | \
-    xargs -0 -I {} \
-    git --git-dir={}/.git \
-    log --oneline --since=6am --pretty={}:\ %s --author=`whoami` --no-merges master
-}
-
 function g {
   if [[ $# > 0 ]]; then
     git $@
