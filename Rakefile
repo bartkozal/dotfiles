@@ -19,7 +19,7 @@ end
 
 desc "Install ruby gems"
 task :gems do
-  gems = %w(bundler)
+  gems = %w(bundler teamocil)
   gems.each do |gem|
     `gem install #{gem}`
     puts "#{gem} installed"

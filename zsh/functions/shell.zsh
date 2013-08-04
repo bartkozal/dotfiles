@@ -11,6 +11,7 @@ function gif {
 }
 
 alias t='tmux'
+alias st='teamocil --here'
 alias v='vim'
 alias v.='v .'
 alias ..='cd ..'
