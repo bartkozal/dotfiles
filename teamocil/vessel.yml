@@ -1,0 +1,10 @@
+session:
+  name: 'vessel'
+  windows:
+    - name: "vessel"
+      root: "~/Developer/bkzl/vessel"
+      layout: "4520,181x52,0,0{90x52,0,0,0,90x52,91,0[90x26,91,0,5,90x25,91,27,6]}"
+      panes:
+        - cmd: "vim ."
+        - cmd: "grunt watch"
+        - cmd: "httpserver"

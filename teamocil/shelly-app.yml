@@ -1,17 +1,15 @@
-windows:
-  - name: "vim"
-    layout: even-vertical
-    root: "~/Developer/shellycloud/shelly-app"
-    panes:
-      - cmd: "vim ."
-      - cmd:
-        - "cd ~/Developer/shellycloud/shelly-ui"
-        - "vim ."
-  - name: "logs"
-    layout: even-horizontal
-    root: "~/Developer/shellycloud/shelly-app"
-    panes:
-      - cmd: "rails s"
-      - cmd:
-        - "cd ~/Developer/shellycloud/winnie-app"
-        - "rails s -p4000"
+session:
+  name: 'shelly-app'
+  windows:
+    - name: "vim"
+      layout: even-vertical
+      root: "~/Developer/shellycloud/shelly-app"
+      panes:
+        - cmd: "vim ."
+        - cmd: ["cd ~/Developer/shellycloud/shelly-ui", "vim ."]
+    - name: "logs"
+      layout: even-horizontal
+      root: "~/Developer/shellycloud/shelly-app"
+      panes:
+        - cmd: "rails s"
+        - cmd: ["cd ~/Developer/shellycloud/winnie-app", "rails s -p4000"]
