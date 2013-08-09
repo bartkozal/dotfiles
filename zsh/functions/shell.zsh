@@ -12,6 +12,7 @@ function gif {
 }
 
 alias t='tmux'
+alias tk='tmux kill-server'
 alias st='teamocil --here'
 alias v='vim'
 alias v.='v .'
