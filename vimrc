@@ -130,7 +130,6 @@ map <leader>v :e $MYVIMRC<cr>
 map <leader>f :filetype detect<cr>
 map <leader>j :%!python -m json.tool<cr>
 
-" TODO rewrite to plugin
 autocmd BufRead,BufNewFile ~/.vim/notes/notes.md map <buffer> <leader>n :wq<cr>
 autocmd BufRead,BufNewFile ~/.vim/notes/*.md map <buffer> <leader>m :wq<cr>
 map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 10<cr>
@@ -139,7 +138,6 @@ map <silent> <leader>m :sp ~/.vim/notes/<c-r>=fnamemodify(getcwd(), ':t')<cr>.md
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))|(vim\/(undo|backup|swap|bundle))$'
 let g:netrw_dirhistmax = 0
-let g:syntastic_disabled_filetypes = ['scss', 'sass']
 let g:gundo_width = 30
 let g:gundo_preview_height = 12
 let g:gundo_preview_bottom = 1
@@ -149,4 +147,3 @@ let g:gundo_close_on_revert = 1
 
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-

@@ -50,4 +50,3 @@ bindkey '^[[1;9D' backward-word
 
 source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 eval "$(rbenv init -)"
-

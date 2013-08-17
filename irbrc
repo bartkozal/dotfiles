@@ -19,4 +19,3 @@ end
 def pbpaste
   `pbpaste`
 end
-

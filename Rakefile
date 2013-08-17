@@ -25,4 +25,3 @@ task :gems do
     puts "#{gem} installed"
   end
 end
-

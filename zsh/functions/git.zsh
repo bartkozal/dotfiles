@@ -7,7 +7,6 @@ function git_prompt {
   echo ' '${ref#refs/heads/}''$(git_dirty)
 }
 
-# alias git='hub'
 alias gb='git branch -av'
 alias gs='git status -sb'
 alias gco='git checkout'
@@ -81,7 +80,7 @@ function gbfu {
 }
 
 function gres {
-  echo "Are you want to remove all local changes?"
+  echo "Remove all local changes?"
   select REPLY in "Yes" "No"; do
     case $REPLY in
       Yes ) git checkout -f HEAD && git clean -df; break;;
