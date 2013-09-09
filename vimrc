@@ -131,8 +131,6 @@ map <leader>e :Explore %%<cr>
 map <leader>w :Rename! %^
 map <leader>t <c-w>T
 map <leader>v :e $MYVIMRC<cr>
-map <leader>f :filetype detect<cr>
-map <leader>j :%!python -m json.tool<cr>
 
 map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 10<cr>
 map <silent> <leader>m :sp ~/.vim/notes/<c-r>=fnamemodify(getcwd(), ':t')<cr>.md<cr>:resize 10<cr>
