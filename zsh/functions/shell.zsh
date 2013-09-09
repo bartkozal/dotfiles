@@ -6,6 +6,14 @@ function dv {
   cd "$CODE/$1"; vim .
 }
 
+function v {
+  if [[ $# > 0 ]]; then
+    vim $@
+  else
+    vim .
+  fi
+}
+
 function gif {
   ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | \
     gifsicle --optimize=3 --delay=3 > Screencast-`date +"%Y.%m.%d-%H.%M"`.gif
@@ -14,8 +22,6 @@ function gif {
 alias t='tmux'
 alias tk='tmux kill-server'
 alias st='teamocil --here'
-alias v='vim'
-alias v.='v .'
 alias ..='cd ..'
 alias l='ls'
 alias ls='ls -GA'
