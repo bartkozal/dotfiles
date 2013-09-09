@@ -1,6 +1,7 @@
 vim/backup
+vim/bundle
+vim/notes
 vim/swap
 vim/undo
-vim/notes
 vim/.netrwhist
 zsh/private.zsh
