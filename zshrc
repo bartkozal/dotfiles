@@ -1,12 +1,11 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-source "$HOME/.zsh/functions/shell.zsh"
-source "$HOME/.zsh/functions/git.zsh"
-source "$HOME/.zsh/functions/web.zsh"
 source "$HOME/.zsh/private.zsh"
+source "$HOME/.zsh/functions.zsh"
+source "$HOME/.zsh/git.zsh"
 
-export CODE="$HOME/Developer"
+export CODE="$HOME/code"
 
 export PATH="$HOME/.winnie-dev:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -31,7 +30,7 @@ setopt EXTENDED_HISTORY
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-export PROMPT=$'%F{blue}%~/%f%F{cyan}$(git_prompt)%f '
+export PROMPT=$'%F{238}$(rbenv version-name)%f %F{33}%~%f%F{221}$(git_prompt)%f '
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=2048
 export SAVEHIST=2048
@@ -48,5 +47,4 @@ bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
-source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 eval "$(rbenv init -)"

@@ -55,14 +55,14 @@ function gca {
 function gba {
   git checkout -b $1
   git push origin $1
-  git branch --set-upstream-to $1 origin/$1
+  git branch --set-upstream-to origin/$1 $1
 }
 
 function gbmv {
   git branch -m $1 $2
   git push origin :$1
   git push origin $2
-  git branch --set-upstream-to $2 origin/$2
+  git branch --set-upstream-to origin/$2 $2
 }
 
 function gbrm {

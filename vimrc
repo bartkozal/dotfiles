@@ -23,7 +23,6 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'slim-template/vim-slim'
 Bundle 'szw/vim-tags'
@@ -52,15 +51,15 @@ ru! macros/matchit.vim
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 au VimResized * :wincmd =
 au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-au BufRead,BufNewFile ~/.vim/notes/notes.md map <buffer> <leader>n :wq<cr>
-au BufRead,BufNewFile ~/.vim/notes/*.md map <buffer> <leader>m :wq<cr>
 
+hi ColorColumn ctermbg=235
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set term=screen-256color
 set number
 set showcmd
 set laststatus=2
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set statusline=%<%f\ %{fugitive#statusline()}%m%r%=%P\ \ %l:%c
 set noshowmode
 set cursorline
 set clipboard=unnamed
@@ -102,9 +101,9 @@ set colorcolumn=80
 set ttyfast
 set lazyredraw
 set noesckeys
-hi ColorColumn ctermbg=235
 
 let mapleader = ","
+
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
@@ -118,32 +117,22 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap * *<c-o>
 nnoremap gI `.
-
 nnoremap <space> za
 vnoremap <space> za
 
-map <f2> :GundoToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 
 map <silent> <leader><leader> :nohlsearch<cr>
 map <leader>e :Explore %%<cr>
 map <leader>w :Rename! %^
-map <leader>t <c-w>T
-map <leader>v :e $MYVIMRC<cr>
 
-map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 10<cr>
-map <silent> <leader>m :sp ~/.vim/notes/<c-r>=fnamemodify(getcwd(), ':t')<cr>.md<cr>:resize 10<cr>
+au BufRead,BufNewFile ~/.vim/notes/notes.md map <buffer> <leader>n :wq<cr>
+map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 15<cr>
 
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))|(vim\/(undo|backup|swap|bundle))$'
 let g:netrw_dirhistmax = 0
-let g:gundo_width = 30
-let g:gundo_preview_height = 12
-let g:gundo_preview_bottom = 1
-let g:gundo_right = 1
-let g:gundo_help = 0
-let g:gundo_close_on_revert = 1
 
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"

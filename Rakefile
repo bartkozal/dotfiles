@@ -1,4 +1,4 @@
-require 'rake'
+
 
 task :default => [:symlinks, :gems]
 
@@ -24,4 +24,9 @@ task :gems do
     `gem install #{gem}`
     puts "#{gem} installed"
   end
+end
+
+desc "Install vundle"
+task :vundle do
+  system %w(git clone https://github.com/gmarik/vundle.git vim/bundle/vundle)
 end
