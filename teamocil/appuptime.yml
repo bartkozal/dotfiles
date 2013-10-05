@@ -1,0 +1,11 @@
+session:
+  name: 'appuptime'
+  windows:
+    - name: "vim"
+      root: "$CODE/wijet/appuptime"
+      panes:
+        - cmd: "vim ."
+    - name: "logs"
+      root: "$CODE/wijet/appuptime"
+      panes:
+        - cmd: "rails s"
