@@ -5,7 +5,6 @@ alias s="ruby -run -e httpd . -p3000"
 
 alias t='tmux'
 alias tk='tmux kill-server'
-alias e='teamocil --here'
 
 alias ls='ls -GA'
 alias ll='ls -GAlh'
