@@ -7,6 +7,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
@@ -15,15 +16,17 @@ Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
+Bundle 'kongo2002/vim-space'
 Bundle 'leshill/vim-json'
-Bundle 'Lokaltog/powerline'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'nelstrom/vim-markdown-folding.git'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
 Bundle 'skalnik/vim-vroom'
 Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-eunuch'
@@ -44,18 +47,17 @@ color jellybeans
 
 ru macros/matchit.vim
 
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 au VimResized * :wincmd =
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 
 hi ColorColumn ctermbg=235
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set term=screen-256color
 set number
 set showcmd
 set laststatus=2
-set statusline=%<%f\ %{fugitive#statusline()}%m%r%=%P\ \ %l:%c
+set statusline=%<%f\ %{fugitive#head()}\ %y%r%m%=%l:%c\ \ %p
 set noshowmode
 set cursorline
 set clipboard=unnamed
@@ -113,8 +115,6 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap * *<c-o>
 nnoremap gI `.
-nnoremap <space> za
-vnoremap <space> za
 
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
@@ -126,6 +126,7 @@ map <leader>w :Rename! %^
 au BufRead,BufNewFile ~/.vim/notes/notes.md map <buffer> <leader>n :wq<cr>
 map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 15<cr>
 
+let g:airline_powerline_fonts = 1
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))|(vim\/(undo|backup|swap|bundle))$'
 let g:netrw_dirhistmax = 0
