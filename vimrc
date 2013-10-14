@@ -42,7 +42,7 @@ filetype plugin indent on
 syntax enable
 color jellybeans
 
-ru! macros/matchit.vim
+ru macros/matchit.vim
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 au VimResized * :wincmd =
