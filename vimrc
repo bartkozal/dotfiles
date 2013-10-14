@@ -7,6 +7,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'groenewege/vim-less'
@@ -18,6 +19,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kongo2002/vim-space'
 Bundle 'leshill/vim-json'
+Bundle 'mbbill/undotree'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'nelstrom/vim-markdown-folding.git'
 Bundle 'nanotech/jellybeans.vim'
@@ -116,6 +118,7 @@ vnoremap / /\v
 nnoremap * *<c-o>
 nnoremap gI `.
 
+map <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 
