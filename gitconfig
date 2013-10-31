@@ -22,6 +22,7 @@
   default = simple
 [diff]
   tool = vimdiff
+	algorithm = patience
 [merge]
   tool = vimdiff
 [difftool]
