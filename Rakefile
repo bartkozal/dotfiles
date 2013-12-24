@@ -1,5 +1,3 @@
-
-
 task :default => [:symlinks, :gems]
 
 desc "Create symlinks to configs"

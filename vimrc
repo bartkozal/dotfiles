@@ -127,9 +127,6 @@ map <silent> <leader><leader> :nohlsearch<cr>
 map <leader>e :Explore %%<cr>
 map <leader>w :Rename! %^
 
-au BufRead,BufNewFile ~/.vim/notes/notes.md map <buffer> <leader>n :wq<cr>
-map <silent> <leader>n :sp ~/.vim/notes/notes.md<cr>:resize 15<cr>
-
 let g:airline_powerline_fonts = 1
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))|(vim\/(undo|backup|swap|bundle))$'

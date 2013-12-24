@@ -22,12 +22,12 @@
   default = simple
 [diff]
   tool = vimdiff
-	algorithm = patience
+  algorithm = patience
 [merge]
   tool = vimdiff
 [difftool]
   prompt = false
 [init]
-	templatedir = ~/.gittemplate
+  templatedir = ~/.gittemplate
 [alias]
-	ctags = !.git/hooks/ctags
+  ctags = !.git/hooks/ctags
