@@ -20,6 +20,10 @@ export FPATH="$FPATH:$HOME/.zsh/completions"
 autoload -U compinit colors
 compinit && colors
 
+unalias run-help
+autoload run-help
+export HELPDIR="/usr/local/share/zsh/helpfiles"
+
 setopt PROMPT_SUBST
 setopt AUTO_LIST
 setopt MENU_COMPLETE
