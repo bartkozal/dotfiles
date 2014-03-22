@@ -15,6 +15,14 @@ alias q='exit'
 alias :q='exit'
 alias c='clear'
 
+function tep {
+  termit en pl $*
+}
+
+function tpe {
+  termit pl en $*
+}
+
 function d {
   cd "$CODE/$1"
 }
