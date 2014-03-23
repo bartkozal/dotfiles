@@ -42,12 +42,6 @@ color jellybeans
 
 ru macros/matchit.vim
 
-au VimResized * :wincmd =
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-
-hi ColorColumn ctermbg=235
-
 set term=screen-256color
 set number
 set showcmd
@@ -97,6 +91,11 @@ set noesckeys
 
 let mapleader = "\<space>"
 
+au VimResized * :wincmd =
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+hi ColorColumn ctermbg=235
+
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
@@ -107,7 +106,6 @@ nnoremap ;w :w<cr>
 nnoremap / /\v
 vnoremap / /\v
 nnoremap * *<c-o>
-nnoremap gI `.
 
 map <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
@@ -116,12 +114,18 @@ map <f4> :set wrap! linebreak! list!<cr>
 map <silent> <leader><leader> :nohlsearch<cr>
 map <leader>e :Explore <c-r>=expand('%:h').'/'<cr><cr>
 
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
+
 vmap v <plug>(expand_region_expand)
 vmap <c-v> <plug>(expand_region_shrink)
 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_working_path_mode = 2
-let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))|(vim\/(undo|backup|swap|bundle))$'
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
 let g:netrw_dirhistmax = 0
 
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
