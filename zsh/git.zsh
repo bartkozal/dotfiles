@@ -75,11 +75,6 @@ function gbt {
   git checkout -t $1
 }
 
-function gbfu {
-  git remote add upstream $1
-  git fetch upstream
-}
-
 function gres {
   echo "Remove all local changes?"
   select REPLY in "Yes" "No"; do
