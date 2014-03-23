@@ -9,12 +9,3 @@ IRB.conf[:HISTORY_FILE] = File.expand_path("~/.irb_history")
 IRB.conf[:AUTO_INDENT] = true
 
 alias q exit
-
-def pbcopy(string)
-  `echo "#{string}" | pbcopy`
-  string
-end
-
-def pbpaste
-  `pbpaste`
-end
