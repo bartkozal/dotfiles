@@ -95,7 +95,7 @@ set ttyfast
 set lazyredraw
 set noesckeys
 
-let mapleader = ","
+let mapleader = "\<space>"
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -115,6 +115,9 @@ map <f4> :set wrap! linebreak! list!<cr>
 
 map <silent> <leader><leader> :nohlsearch<cr>
 map <leader>e :Explore <c-r>=expand('%:h').'/'<cr><cr>
+
+vmap v <plug>(expand_region_expand)
+vmap <c-v> <plug>(expand_region_shrink)
 
 let g:airline_powerline_fonts = 1
 let g:ctrlp_working_path_mode = 2
