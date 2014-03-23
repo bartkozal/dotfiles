@@ -43,10 +43,6 @@ export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='vim'
 
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_FREE_MIN=500000
-export RUBY_HEAP_MIN_SLOTS=40000
-
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
