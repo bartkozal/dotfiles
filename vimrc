@@ -8,9 +8,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'airblade/vim-gitgutter'
+Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'jgdavey/vim-blockle'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kongo2002/vim-space'
