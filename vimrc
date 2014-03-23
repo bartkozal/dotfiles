@@ -13,22 +13,18 @@ Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
-Bundle 'kongo2002/vim-space'
 Bundle 'mbbill/undotree'
 Bundle 'mikewest/vimroom'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'nelstrom/vim-markdown-folding.git'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'rking/ag.vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'skalnik/vim-vroom'
 Bundle 'terryma/vim-expand-region'
-Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-rails'
@@ -107,8 +103,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 inoremap jk <Esc>
-cnoremap %% <c-r>=expand('%:h').'/'<cr>
-cnoremap %^ <c-r>=expand('%:t')<cr>
 nnoremap ;w :w<cr>
 nnoremap / /\v
 vnoremap / /\v
@@ -120,8 +114,7 @@ map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 
 map <silent> <leader><leader> :nohlsearch<cr>
-map <leader>e :Explore %%<cr>
-map <leader>w :Rename! %^
+map <leader>e :Explore <c-r>=expand('%:h').'/'<cr><cr>
 
 let g:airline_powerline_fonts = 1
 let g:ctrlp_working_path_mode = 2
