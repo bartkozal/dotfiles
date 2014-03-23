@@ -111,9 +111,7 @@ nnoremap * *<c-o>
 map <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
-
 map <silent> <leader><leader> :nohlsearch<cr>
-map <leader>e :Explore <c-r>=expand('%:h').'/'<cr><cr>
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
