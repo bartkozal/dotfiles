@@ -102,6 +102,11 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+nnoremap <left> <c-w>5<
+nnoremap <down> <c-w>5-
+nnoremap <up> <c-w>5+
+nnoremap <right> <c-w>5>
+
 inoremap jk <Esc>
 nnoremap ;w :w<cr>
 nnoremap / /\v
