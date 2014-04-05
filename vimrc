@@ -120,6 +120,7 @@ vmap v <plug>(expand_region_expand)
 vmap <c-v> <plug>(expand_region_shrink)
 
 let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutFastWrap = '<leader>e'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_working_path_mode = 2
