@@ -84,3 +84,8 @@ function gres {
     esac
   done
 }
+
+function gprune {
+  git fetch -p
+  git branch --merged master | grep -v 'master$' | xargs git branch -d
+}
