@@ -35,7 +35,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/gitignore'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
+Bundle 'blueyed/YouCompleteMe'
 
 filetype plugin indent on
 syntax enable
