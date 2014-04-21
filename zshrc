@@ -17,6 +17,8 @@ export FPATH="$FPATH:/usr/local/share/zsh-completions"
 export FPATH="$FPATH:/usr/local/share/zsh/site-functions"
 export FPATH="$FPATH:$HOME/.zsh/completions"
 
+export RBENV_ROOT="$HOME/.rbenv"
+
 autoload -U compinit colors
 compinit && colors
 
