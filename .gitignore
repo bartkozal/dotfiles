@@ -1,7 +1,6 @@
-vim/backup
+vim/backup/*
+!vim/backup/.gitkeep
 vim/bundle
-vim/notes
-vim/swap
-vim/undo
-vim/.netrwhist
+vim/undo/*
+!vim/undo/.gitkeep
 zsh/private.zsh
