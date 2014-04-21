@@ -14,17 +14,3 @@ task :symlinks do
     puts "#{file} linked"
   end
 end
-
-desc "Install ruby gems"
-task :gems do
-  gems = %w(bundler gem-browse gem-ctags)
-  gems.each do |gem|
-    `gem install #{gem}`
-    puts "#{gem} installed"
-  end
-end
-
-desc "Install vundle"
-task :vundle do
-  system %w(git clone https://github.com/gmarik/vundle.git vim/bundle/vundle)
-end
