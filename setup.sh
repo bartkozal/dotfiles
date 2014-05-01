@@ -6,8 +6,6 @@
 
 # Homebrew
 
-# Packages
-
 # brew install ctags
 # brew install ghi
 # brew install git
@@ -26,6 +24,11 @@
 # brew install https://raw.github.com/derekprior/tmux-vim-select-pane/master/tmux-vim-select-pane.rb
 # brew install vim
 # brew install zsh-completions
+
+# brew install postgres
+# brew install mongo
+# brew install elasticsearch
+# brew install redis
 
 # Dotfiles
 
