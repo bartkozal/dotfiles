@@ -11,7 +11,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'jiangmiao/auto-pairs'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mbbill/undotree'
@@ -123,7 +122,6 @@ nmap sk :SplitjoinJoin<cr>
 vmap v <plug>(expand_region_expand)
 vmap <c-v> <plug>(expand_region_shrink)
 
-let g:AutoPairsShortcutFastWrap = '<c-w>'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_working_path_mode = 2
