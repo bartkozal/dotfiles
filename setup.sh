@@ -9,6 +9,7 @@
 # brew install ctags
 # brew install ghi
 # brew install git
+# brew install htop
 # brew install hub
 # brew install ncdu
 # brew install node
