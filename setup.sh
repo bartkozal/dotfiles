@@ -18,6 +18,7 @@
 # brew install rbenv-default-gems
 # brew install reattach-to-user-namespace
 # brew install ruby-build
+# brew install ssh-copy-id
 # brew install the_silver_searcher
 # brew install tig
 # brew install tmux
