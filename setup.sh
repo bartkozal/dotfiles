@@ -18,6 +18,7 @@
 # brew install rbenv-bundler
 # brew install rbenv-ctags
 # brew install rbenv-default-gems
+# brew install rbenv-gem-rehash
 # brew install reattach-to-user-namespace
 # brew install ruby-build
 # brew install ssh-copy-id
