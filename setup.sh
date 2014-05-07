@@ -15,6 +15,7 @@
 # brew install node
 # brew install pow
 # brew install rbenv
+# brew install rbenv-bundler
 # brew install rbenv-ctags
 # brew install rbenv-default-gems
 # brew install reattach-to-user-namespace
