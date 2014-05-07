@@ -13,10 +13,12 @@ Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
+Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'rking/ag.vim'
+" Bundle 'scrooloose/syntastic'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'skalnik/vim-vroom'
 Bundle 'terryma/vim-expand-region'
@@ -91,7 +93,6 @@ set noesckeys
 let mapleader = "\<space>"
 
 au VimResized * :wincmd =
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 hi ColorColumn ctermbg=235
 
@@ -128,7 +129,17 @@ let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
+let g:ctrlp_reuse_window = 'startify'
 let g:netrw_dirhistmax = 0
+let g:startify_session_dir = '~/.vim/session'
+let g:startify_bookmarks = ['~/code/bkzl/dotfiles/vimrc']
+let g:startify_enable_special = 0
+let g:startify_change_to_vcs_root = 1
+let g:startify_restore_position = 1
+let g:startify_session_persistence = 1
+let g:startify_session_delete_buffers = 1
+let g:startify_files_number = 8
+let g:startify_skiplist = ['COMMIT_EDITMSG']
 let g:vroom_use_dispatch = 1
 " let g:vroom_use_spring = 1
 
