@@ -127,7 +127,11 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_user_command = [
+      \ '.git',
+      \ 'cd %s && git ls-files . -co --exclude-standard',
+      \ 'find %s -type f'
+      \ ]
 let g:ctrlp_use_caching = 0
 let g:ctrlp_reuse_window = 'startify'
 let g:netrw_dirhistmax = 0
@@ -140,6 +144,10 @@ let g:startify_session_persistence = 1
 let g:startify_session_delete_buffers = 1
 let g:startify_files_number = 8
 let g:startify_skiplist = ['COMMIT_EDITMSG']
+let g:startify_custom_header = [
+      \ "   Work hard. Don't be an asshole. Share what you know.",
+      \ '',
+      \ ]
 let g:vroom_use_dispatch = 1
 " let g:vroom_use_spring = 1
 
