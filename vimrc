@@ -11,6 +11,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'jiangmiao/auto-pairs'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-startify'
@@ -93,6 +94,7 @@ set noesckeys
 let mapleader = "\<space>"
 
 au VimResized * :wincmd =
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 hi ColorColumn ctermbg=235
 
@@ -125,6 +127,7 @@ vmap <c-v> <plug>(expand_region_shrink)
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:AutoPairsShortcutFastWrap = '<c-e>'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
 let g:ctrlp_user_command = [
@@ -139,7 +142,6 @@ let g:startify_session_dir = '~/.vim/session'
 let g:startify_bookmarks = ['~/code/bkzl/dotfiles/vimrc']
 let g:startify_enable_special = 0
 let g:startify_change_to_vcs_root = 1
-let g:startify_restore_position = 1
 let g:startify_session_persistence = 1
 let g:startify_session_delete_buffers = 1
 let g:startify_files_number = 8

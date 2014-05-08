@@ -4,3 +4,4 @@ vim/bundle
 vim/undo/*
 !vim/undo/.gitkeep
 zsh/private.zsh
+vim/session
