@@ -10,12 +10,12 @@ export CODE="$HOME/code"
 export PATH="$HOME/.winnie-dev:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/share/python:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
-export NODE_PATH="/usr/local/lib/node_module:$NODE_PATH"
 export FPATH="$FPATH:/usr/local/share/zsh-completions"
 export FPATH="$FPATH:/usr/local/share/zsh/site-functions"
 export FPATH="$FPATH:$HOME/.zsh/completions"
+
+typeset -U PATH FPATH
 
 export RBENV_ROOT="$HOME/.rbenv"
 
