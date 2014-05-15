@@ -19,7 +19,6 @@ Bundle 'mbbill/undotree'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'rking/ag.vim'
-" Bundle 'scrooloose/syntastic'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'skalnik/vim-vroom'
 Bundle 'terryma/vim-expand-region'
@@ -139,8 +138,16 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_reuse_window = 'startify'
 let g:netrw_dirhistmax = 0
 let g:startify_session_dir = '~/.vim/session'
-let g:startify_bookmarks = ['~/code/bkzl/dotfiles/vimrc']
 let g:startify_enable_special = 0
+let g:startify_list_order = [
+        \ ['   My sessions:'],
+        \ 'sessions',
+        \ ['   Last recently opened files:'],
+        \ 'files',
+        \ ['   My bookmarks:'],
+        \ 'bookmarks',
+        \ ]
+let g:startify_bookmarks = ['~/code/bkzl/dotfiles/vimrc']
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_persistence = 1
 let g:startify_session_delete_buffers = 1
