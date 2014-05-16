@@ -11,7 +11,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'jiangmiao/auto-pairs'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-startify'
@@ -126,7 +125,6 @@ vmap <c-v> <plug>(expand_region_shrink)
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:AutoPairsShortcutFastWrap = '<c-e>'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
 let g:ctrlp_user_command = [
