@@ -36,6 +36,6 @@ function v {
   if [[ $# > 0 ]]; then
     vim $@
   else
-    vim
+    vim .
   fi
 }
