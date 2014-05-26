@@ -13,7 +13,6 @@ Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
-Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'nanotech/jellybeans.vim'
@@ -34,8 +33,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/gitignore'
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'blueyed/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 syntax enable
@@ -135,27 +133,6 @@ let g:ctrlp_user_command = [
 let g:ctrlp_use_caching = 0
 let g:ctrlp_reuse_window = 'startify'
 let g:netrw_dirhistmax = 0
-let g:startify_session_dir = '~/.vim/session'
-let g:startify_enable_special = 0
-let g:startify_list_order = [
-        \ ['   My sessions:'],
-        \ 'sessions',
-        \ ['   Last recently opened files:'],
-        \ 'files',
-        \ ['   My bookmarks:'],
-        \ 'bookmarks',
-        \ ]
-let g:startify_bookmarks = ['~/code/bkzl/dotfiles/vimrc']
-let g:startify_change_to_dir = 1
-let g:startify_change_to_vcs_root = 1
-let g:startify_session_persistence = 1
-let g:startify_session_delete_buffers = 1
-let g:startify_files_number = 8
-let g:startify_skiplist = ['COMMIT_EDITMSG']
-let g:startify_custom_header = [
-      \ "   Work hard. Don't be an asshole. Share what you know.",
-      \ '',
-      \ ]
 let g:vroom_use_dispatch = 1
 " let g:vroom_use_spring = 1
 
