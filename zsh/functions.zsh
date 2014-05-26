@@ -3,9 +3,6 @@ alias be='bundle exec'
 
 alias s="ruby -run -e httpd . -p3000"
 
-alias t='tmux'
-alias tk='tmux kill-server'
-
 alias ls='ls -GA'
 alias ll='ls -GAlh'
 alias cp='cp -R'
@@ -38,4 +35,28 @@ function v {
   else
     vim .
   fi
+}
+
+alias t='tmux'
+alias tk='tmux kill-server'
+
+function tm {
+  if [[ $# > 0 ]]; then
+    if [ -z "$TMUX" ]; then
+      tmux new-session -As $1
+    else
+      if [ tmux has-session $1 ]; then
+        tmux switch-client -t $1
+      else
+        TMUX= tmux new-session -ds $1
+        tmux switch-client -t $1
+      fi
+    fi
+  else
+    tmux list-sessions
+  fi
+}
+
+function tmr {
+  tmux rename-session $1
 }
