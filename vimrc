@@ -11,6 +11,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'honza/vim-snippets'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mbbill/undotree'
@@ -18,12 +19,12 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'rking/ag.vim'
 Bundle 'sheerun/vim-polyglot'
+Bundle 'SirVer/ultisnips'
 Bundle 'skalnik/vim-vroom'
 Bundle 'terryma/vim-expand-region'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-rails'
@@ -33,7 +34,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/gitignore'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
+Bundle 'blueyed/YouCompleteMe'
 
 filetype plugin indent on
 syntax enable
@@ -135,6 +137,26 @@ let g:ctrlp_reuse_window = 'startify'
 let g:netrw_dirhistmax = 0
 let g:vroom_use_dispatch = 1
 " let g:vroom_use_spring = 1
+
+let g:UltiSnipsExpandTrigger = "<cr>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+function! g:UltiSnips_Complete()
+  call UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res == 0
+    if pumvisible()
+      return "\<c-n>"
+    else
+      return "\<cr>"
+    endif
+  endif
+
+  return ""
+  endif
+endfunction
+
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
