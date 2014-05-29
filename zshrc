@@ -18,6 +18,7 @@ export FPATH="$FPATH:$HOME/.zsh/completions"
 typeset -U PATH FPATH
 
 export RBENV_ROOT="$HOME/.rbenv"
+export NVM_DIR="$HOME/.nvm"
 
 autoload -U compinit colors
 compinit && colors
@@ -62,3 +63,4 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 eval "$(rbenv init -)"
+source $(brew --prefix nvm)/nvm.sh
