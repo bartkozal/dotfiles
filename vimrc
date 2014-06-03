@@ -133,10 +133,8 @@ let g:ctrlp_user_command = [
       \ 'find %s -type f'
       \ ]
 let g:ctrlp_use_caching = 0
-let g:ctrlp_reuse_window = 'startify'
 let g:netrw_dirhistmax = 0
 let g:vroom_use_dispatch = 1
-" let g:vroom_use_spring = 1
 
 let g:UltiSnipsExpandTrigger = "<cr>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
