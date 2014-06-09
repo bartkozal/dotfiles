@@ -11,7 +11,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mbbill/undotree'
@@ -19,7 +18,6 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'rking/ag.vim'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'SirVer/ultisnips'
 Plugin 'skalnik/vim-vroom'
 Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-bundler'
@@ -134,26 +132,6 @@ let g:ctrlp_user_command = [
 let g:ctrlp_use_caching = 0
 let g:netrw_dirhistmax = 0
 let g:vroom_use_dispatch = 1
-
-let g:UltiSnipsExpandTrigger = "<cr>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-function! g:UltiSnips_Complete()
-  call UltiSnips#ExpandSnippetOrJump()
-  if g:ulti_expand_or_jump_res == 0
-    if pumvisible()
-      return "\<c-n>"
-    else
-      return "\<cr>"
-    endif
-  endif
-
-  return ""
-  endif
-endfunction
-
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
