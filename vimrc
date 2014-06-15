@@ -33,6 +33,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'wellle/targets.vim'
 
 filetype plugin indent on
 syntax enable
