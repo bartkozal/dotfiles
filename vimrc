@@ -19,7 +19,7 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'rking/ag.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'skalnik/vim-vroom'
-Plugin 'terryma/vim-expand-region'
+Plugin 'tommcdo/vim-lion'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-commentary'
@@ -117,9 +117,6 @@ map <silent> <leader><leader> :nohlsearch<cr>
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
-
-vmap v <plug>(expand_region_expand)
-vmap <c-v> <plug>(expand_region_shrink)
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
