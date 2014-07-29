@@ -11,15 +11,12 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mbbill/undotree'
-Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'rking/ag.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'skalnik/vim-vroom'
-Plugin 'tommcdo/vim-lion'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-commentary'
@@ -38,8 +35,6 @@ Plugin 'wellle/targets.vim'
 filetype plugin indent on
 syntax enable
 color jellybeans
-
-ru macros/matchit.vim
 
 set term=screen-256color
 set number

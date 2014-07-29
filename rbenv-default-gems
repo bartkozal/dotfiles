@@ -2,6 +2,5 @@ bundler
 gem-browse
 gem-ctags
 powder
-termit
 shelly
 chef
