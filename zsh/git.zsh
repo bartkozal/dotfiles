@@ -23,14 +23,6 @@ alias gdfc='git diff --cached'
 alias gdfl='git diff HEAD~1'
 alias glo='git log --decorate --oneline -n 15'
 
-function g {
-  if [[ $# > 0 ]]; then
-    git $@
-  else
-    gs
-  fi
-}
-
 function gc {
   if [[ $# > 0 ]]; then
     git commit -m $1
@@ -70,10 +62,6 @@ function gbmv {
 function gbrm {
   git push origin :$1
   git branch -D $1
-}
-
-function gbt {
-  git checkout -t $1
 }
 
 function gres {

@@ -29,8 +29,6 @@ function v {
   fi
 }
 
-alias tk='tmux kill-server'
-
 function tm {
   if [[ $# > 0 ]]; then
     if [ -z "$TMUX" ]; then
