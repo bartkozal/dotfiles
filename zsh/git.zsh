@@ -64,6 +64,10 @@ function gbrm {
   git branch -D $1
 }
 
+function gbt {
+  git checkout -t $1
+}
+
 function gres {
   echo "Remove all local changes?"
   select REPLY in "Yes" "No"; do
