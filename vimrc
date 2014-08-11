@@ -12,6 +12,7 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'mbbill/undotree'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'rking/ag.vim'
@@ -105,6 +106,7 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap * *<c-o>
 
+map <f1> :TagbarToggle<cr>
 map <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
@@ -125,3 +127,13 @@ let g:ctrlp_user_command = [
 let g:ctrlp_use_caching = 0
 let g:netrw_dirhistmax = 0
 let g:vroom_use_dispatch = 1
+let g:tagbar_type_coffee = {
+    \ 'ctagstype' : 'coffee',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 'm:methods',
+        \ 'f:functions',
+        \ 'v:variables',
+        \ 'f:fields',
+    \ ]
+\ }
