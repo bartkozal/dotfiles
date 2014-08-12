@@ -31,15 +31,11 @@ function v {
 
 function tm {
   if [[ $# > 0 ]]; then
-    if [ -z "$TMUX" ]; then
-      tmux new-session -As $1
+    if tmux has-session -t $1 &> /dev/null; then
+      tmux switch-client -t $1
     else
-      if [ tmux has-session $1 ]; then
-        tmux switch-client -t $1
-      else
-        TMUX= tmux new-session -ds $1
-        tmux switch-client -t $1
-      fi
+      TMUX= tmux new-session -ds $1
+      tmux switch-client -t $1
     fi
   else
     tmux list-sessions
