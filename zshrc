@@ -19,7 +19,7 @@ typeset -U PATH FPATH
 
 export RBENV_ROOT="$HOME/.rbenv"
 
-autoload -U compinit colors
+autoload -U compinit colors zmv
 compinit && colors
 
 unalias run-help
