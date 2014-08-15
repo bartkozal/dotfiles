@@ -116,6 +116,8 @@ map <silent> <leader><leader> :nohlsearch<cr>
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
+nmap <c-e> :CtrlPBuffer<cr>
+nmap <c-t> :CtrlPBufTag<cr>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
