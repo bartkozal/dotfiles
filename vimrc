@@ -11,17 +11,19 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mbbill/undotree'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'rking/ag.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'SirVer/ultisnips'
 Plugin 'skalnik/vim-vroom'
+Plugin 'tommcdo/vim-lion'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-rails'
@@ -143,3 +145,23 @@ let g:tagbar_type_coffee = {
 \ }
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
+
+let g:UltiSnipsExpandTrigger = "<cr>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+function! g:UltiSnips_Complete()
+  call UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res == 0
+    if pumvisible()
+      return "\<c-n>"
+    else
+      return "\<cr>"
+    endif
+  endif
+
+  return ""
+  endif
+endfunction
+
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
