@@ -88,8 +88,16 @@ set noesckeys
 
 let mapleader = "\<space>"
 
+function! g:CallUltiSnipsOnEnter()
+  call UltiSnips#ExpandSnippet()
+  if g:ulti_expand_res == 0
+    return "\<cr>"
+  endif
+endfunction
+
 au VimResized * :wincmd =
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:CallUltiSnipsOnEnter()<cr>"
 
 hi ColorColumn ctermbg=235
 
@@ -144,23 +152,6 @@ let g:tagbar_type_coffee = {
 \ }
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
-
 let g:UltiSnipsExpandTrigger = "<cr>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-function! g:UltiSnips_Complete()
-  call UltiSnips#ExpandSnippetOrJump()
-  if g:ulti_expand_or_jump_res == 0
-    if pumvisible()
-      return "\<c-n>"
-    else
-      return "\<cr>"
-    endif
-  endif
-
-  return ""
-  endif
-endfunction
-
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
