@@ -93,6 +93,7 @@ function! g:CallUltiSnipsOnEnter()
   if g:ulti_expand_res == 0
     return "\<cr>"
   endif
+  return ""
 endfunction
 
 au VimResized * :wincmd =
