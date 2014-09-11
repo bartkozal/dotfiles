@@ -47,7 +47,7 @@ set laststatus=2
 set statusline=%<%f\ %{fugitive#head()}\ %y%r%m%=%l:%c\ \ %p
 set noshowmode
 set cursorline
-set clipboard=unnamedplus
+set clipboard=unnamed
 set backup
 set noswapfile
 set backupdir=~/.vim/backup//
