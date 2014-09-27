@@ -97,7 +97,7 @@ endfunction
 
 au VimResized * :wincmd =
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-au FileType netrw setl bufhidden=delete
+au BufEnter * setl bufhidden=delete
 
 hi ColorColumn ctermbg=235
 
@@ -125,7 +125,6 @@ map <silent> <leader><leader> :nohlsearch<cr>
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
-nmap <c-e> :CtrlPBuffer<cr>
 nmap <c-t> :CtrlPBufTag<cr>
 
 let g:airline_powerline_fonts = 1
