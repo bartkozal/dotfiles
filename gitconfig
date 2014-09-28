@@ -5,21 +5,18 @@
   editor = /usr/local/bin/vim
   excludesfile = ~/.gitignore
 [color]
-  branch = auto
-  diff = auto
-  status = auto
-  interactive = auto
+  ui = true
+[branch]
+  autosetuprebase = always
 [branch "master"]
   remote = origin
   merge = refs/heads/master
-  rebase = true
 [remote "origin"]
   push = HEAD
-[github]
-  user = bkzl
-  ssl = true
 [push]
   default = simple
+[rerere]
+  enable = true
 [diff]
   tool = vimdiff
   algorithm = patience
@@ -31,3 +28,6 @@
   templatedir = ~/.gittemplate
 [alias]
   ctags = !.git/hooks/ctags
+[github]
+  user = bkzl
+  ssl = true

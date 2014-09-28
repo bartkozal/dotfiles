@@ -21,7 +21,7 @@ alias gps='git push'
 alias gdf='git diff'
 alias gdfc='git diff --cached'
 alias gdfl='git diff HEAD~1'
-alias glo='git log --decorate --oneline -n 15'
+alias glo='git log --decorate --oneline --graph --all -n 15'
 
 function gc {
   if [[ $# > 0 ]]; then
@@ -42,7 +42,7 @@ function gca {
   if [[ $# > 0 ]]; then
     git commit --amend -m $1
   else
-    git commit --amend -C HEAD
+    git commit --amend
   fi
 }
 
