@@ -123,12 +123,16 @@ map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 map <silent> <leader><leader> :nohlsearch<cr>
 
+map <s-j> gt
+map <s-k> gT
+
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 nmap <c-t> :CtrlPBufTag<cr>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
 let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
@@ -151,4 +155,3 @@ let g:tagbar_type_coffee = {
     \ ]
 \ }
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
