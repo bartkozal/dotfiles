@@ -123,9 +123,6 @@ map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 map <silent> <leader><leader> :nohlsearch<cr>
 
-map <s-j> gt
-map <s-k> gT
-
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 nmap <c-t> :CtrlPBufTag<cr>
