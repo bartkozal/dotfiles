@@ -14,6 +14,7 @@ Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'gorkunov/smartgf.vim'
 Plugin 'gorkunov/smartpairs.vim'
+Plugin 'haya14busa/incsearch.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mbbill/undotree'
@@ -115,15 +116,22 @@ nnoremap <right> <c-w>5>
 
 inoremap jk <Esc>
 nnoremap ;w :w<cr>
-nnoremap / /\v
-vnoremap / /\v
 nnoremap * *<c-o>
 
 map <f1> :TagbarToggle<cr>
 map <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
-map <silent> <leader><leader> :nohlsearch<cr>
+
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map n <Plug>(incsearch-nohl-n)
+map N <Plug>(incsearch-nohl-N)
+map * <Plug>(incsearch-nohl-*)
+map # <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
@@ -141,8 +149,9 @@ let g:ctrlp_user_command = [
       \ 'find %s -type f'
       \ ]
 let g:ctrlp_use_caching = 0
+let g:incsearch#auto_nohlsearch = 1
+let g:incsearch#magic = '\v'
 let g:netrw_dirhistmax = 0
-let g:vroom_use_dispatch = 1
 let g:tagbar_type_coffee = {
     \ 'ctagstype' : 'coffee',
     \ 'kinds'     : [
@@ -153,4 +162,5 @@ let g:tagbar_type_coffee = {
         \ 'f:fields',
     \ ]
 \ }
+let g:vroom_use_dispatch = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
