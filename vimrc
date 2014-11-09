@@ -57,13 +57,16 @@ set noswapfile
 set backupdir=~/.vim/backup//
 set undodir=~/.vim/undo//
 set undofile
+set history=50
 set nowrap
 set tabstop=2 softtabstop=2 shiftwidth=2
+set smarttab
 set shiftround
 set expandtab
 set backspace=indent,eol,start
 set autoindent
 set cindent
+set cinoptions=l1,j1
 set autoread
 set hidden
 set list
