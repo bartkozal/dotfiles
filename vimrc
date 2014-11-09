@@ -21,6 +21,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'mbbill/undotree'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'skalnik/vim-vroom'
 Plugin 'tommcdo/vim-lion'
@@ -153,6 +154,7 @@ let g:ctrlp_use_caching = 0
 let g:incsearch#auto_nohlsearch = 1
 let g:incsearch#magic = '\v'
 let g:netrw_dirhistmax = 0
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:tagbar_type_coffee = {
     \ 'ctagstype' : 'coffee',
     \ 'kinds'     : [
