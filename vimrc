@@ -7,6 +7,7 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 
+Plugin 'alvan/vim-closetag'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
