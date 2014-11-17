@@ -58,4 +58,7 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+source `brew --prefix`/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source `brew --prefix`/etc/profile.d/z.sh
+
 eval "$(rbenv init -)"
