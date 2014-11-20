@@ -36,7 +36,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/gitignore'
 Plugin 'wellle/targets.vim'
 
@@ -94,14 +93,6 @@ set lazyredraw
 set noesckeys
 
 let mapleader = "\<space>"
-
-function! g:CallUltiSnipsOnEnter()
-  call UltiSnips#ExpandSnippet()
-  if g:ulti_expand_res == 0
-    return "\<cr>"
-  endif
-  return ""
-endfunction
 
 au VimResized * :wincmd =
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
