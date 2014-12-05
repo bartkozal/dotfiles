@@ -96,7 +96,6 @@ let mapleader = "\<space>"
 
 au VimResized * :wincmd =
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-au BufEnter * setl bufhidden=delete
 
 hi ColorColumn ctermbg=235
 
@@ -148,7 +147,6 @@ let g:ctrlp_use_caching = 0
 let g:incsearch#auto_nohlsearch = 1
 let g:incsearch#magic = '\v'
 let g:netrw_dirhistmax = 0
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:tagbar_type_coffee = {
     \ 'ctagstype' : 'coffee',
     \ 'kinds'     : [
