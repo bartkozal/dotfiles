@@ -7,24 +7,20 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 
-Plugin 'alvan/vim-closetag'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'alvan/vim-closetag'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'gorkunov/smartgf.vim'
-Plugin 'gorkunov/smartpairs.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mbbill/undotree'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'rking/ag.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'skalnik/vim-vroom'
-Plugin 'tommcdo/vim-lion'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
@@ -157,5 +153,4 @@ let g:tagbar_type_coffee = {
         \ 'f:fields',
     \ ]
 \ }
-let g:vroom_use_dispatch = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
