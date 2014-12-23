@@ -31,3 +31,7 @@
 [github]
   user = bkzl
   ssl = true
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
