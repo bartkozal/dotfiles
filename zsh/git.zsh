@@ -22,7 +22,7 @@ alias gpst='git push --tags'
 alias gdf='git diff'
 alias gdfc='git diff --cached'
 alias gdfl='git diff HEAD~1'
-alias glo='git log --decorate --oneline --graph --all -n 15'
+alias glo='git log --decorate --oneline --all -n 15'
 
 function gc {
   if [[ $# > 0 ]]; then
