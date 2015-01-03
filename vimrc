@@ -6,7 +6,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Plugin 'gmarik/vundle'
-
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
@@ -88,12 +87,12 @@ set ttyfast
 set lazyredraw
 set noesckeys
 
-let mapleader = "\<space>"
+let g:mapleader = "\<space>"
 
-au VimResized * :wincmd =
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+autocmd VimResized * :wincmd =
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-hi ColorColumn ctermbg=235
+highlight ColorColumn ctermbg=235
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
