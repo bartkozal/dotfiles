@@ -1,37 +1,37 @@
 [user]
-  name = Bartlomiej Kozal
-  email = bkzl@me.com
+	name = Bartlomiej Kozal
+	email = bkzl@me.com
 [core]
-  editor = /usr/local/bin/vim
-  excludesfile = ~/.gitignore
+	editor = /usr/local/bin/vim
+	excludesfile = ~/.gitignore
 [color]
-  ui = true
+	ui = true
 [branch]
-  autosetuprebase = always
+	autosetuprebase = always
 [branch "master"]
-  remote = origin
-  merge = refs/heads/master
+	remote = origin
+	merge = refs/heads/master
 [remote "origin"]
-  push = HEAD
+	push = HEAD
 [push]
-  default = simple
+	default = simple
 [rerere]
-  enable = true
+	enable = true
 [diff]
-  tool = vimdiff
-  algorithm = patience
+	tool = vimdiff
+	algorithm = patience
 [merge]
-  tool = vimdiff
+	tool = vimdiff
 [difftool]
-  prompt = false
+	prompt = false
 [init]
-  templatedir = ~/.gittemplate
+	templatedir = ~/.gittemplate
 [alias]
-  ctags = !.git/hooks/ctags
+	ctags = !.git/hooks/ctags
 [github]
-  user = bkzl
-  ssl = true
+	user = bkzl
+	ssl = true
 [filter "media"]
-  required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
