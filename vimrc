@@ -94,6 +94,7 @@ set colorcolumn=80
 set ttyfast
 set lazyredraw
 set noesckeys
+set shortmess-=c
 
 let g:mapleader = "\<space>"
 
