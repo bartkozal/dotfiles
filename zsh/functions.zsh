@@ -18,14 +18,14 @@ function d {
 }
 
 function dv {
-  cd "$CODE/$1"; vim .
+  cd "$CODE/$1"; mvim
 }
 
 function v {
   if [[ $# > 0 ]]; then
-    vim $@
+    mvim $@
   else
-    vim
+    mvim
   fi
 }
 
