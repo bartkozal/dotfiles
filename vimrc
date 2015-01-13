@@ -38,6 +38,14 @@ filetype plugin indent on
 syntax enable
 color jellybeans
 
+if has("gui_macvim")
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  set linespace=1
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+endif
+
 set term=screen-256color
 set number
 set showcmd
@@ -92,7 +100,7 @@ let g:mapleader = "\<space>"
 autocmd VimResized * :wincmd =
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-highlight ColorColumn ctermbg=235
+highlight ColorColumn ctermbg=235 guibg=#262626
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
