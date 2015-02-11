@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Plugin 'gmarik/vundle'
+
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
@@ -34,6 +35,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'vim-scripts/gitignore'
 Plugin 'wellle/targets.vim'
+Plugin 'tpope/vim-obsession'
+Plugin 'dhruvasagar/vim-prosession'
 
 filetype plugin indent on
 syntax enable
