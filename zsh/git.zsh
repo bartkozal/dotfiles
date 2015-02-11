@@ -9,6 +9,7 @@ function git_prompt {
 
 alias git='hub'
 alias github='open -a github'
+alias g='git'
 
 alias gb='git branch -av'
 alias gs='git status -sb'
