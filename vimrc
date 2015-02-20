@@ -10,7 +10,6 @@ Plugin 'gmarik/vundle'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'alvan/vim-closetag'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'haya14busa/incsearch.vim'
@@ -22,6 +21,8 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'tommcdo/vim-exchange'
+Plugin 'tommcdo/vim-lion'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
@@ -29,13 +30,13 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'vim-scripts/gitignore'
 Plugin 'wellle/targets.vim'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-obsession'
 Plugin 'dhruvasagar/vim-prosession'
 
@@ -105,6 +106,7 @@ let g:mapleader = "\<space>"
 
 autocmd VimResized * :wincmd =
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+autocmd InsertLeave * if expand('%') != '' | update | endif
 
 highlight ColorColumn ctermbg=235 guibg=#262626
 
@@ -117,6 +119,9 @@ nnoremap <left> <c-w>5<
 nnoremap <down> <c-w>5-
 nnoremap <up> <c-w>5+
 nnoremap <right> <c-w>5>
+
+nnoremap ; :
+nnoremap ! :!
 
 inoremap jk <Esc>
 nnoremap ;w :w<cr>
