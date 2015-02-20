@@ -35,6 +35,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'vim-scripts/gitignore'
 Plugin 'wellle/targets.vim'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-obsession'
 Plugin 'dhruvasagar/vim-prosession'
 
