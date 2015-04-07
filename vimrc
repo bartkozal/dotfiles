@@ -19,6 +19,7 @@ Plugin 'janko-m/vim-test'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mbbill/undotree'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'reedes/vim-pencil'
 Plugin 'rking/ag.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'tommcdo/vim-exchange'
@@ -105,6 +106,7 @@ let g:mapleader = "\<space>"
 autocmd VimResized * :wincmd =
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 autocmd InsertLeave * if expand('%') != '' | update | endif
+autocmd FileType markdown,mkd,text call pencil#init()
 
 highlight ColorColumn ctermbg=235 guibg=#262626
 
