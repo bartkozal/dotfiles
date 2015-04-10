@@ -10,6 +10,7 @@ Plugin 'gmarik/vundle'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'alvan/vim-closetag'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -152,18 +153,20 @@ nmap <silent> <leader>r :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
-let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
-let g:ctrlp_working_path_mode = 'r'
+let g:airline_powerline_fonts = 1
+let g:closetag_filenames = '*.html,*.erb'
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
+let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
+let g:ctrlp_use_caching = 0
 let g:ctrlp_user_command = [
       \ '.git',
       \ 'cd %s && git ls-files . -co --exclude-standard',
       \ 'find %s -type f'
       \ ]
-let g:ctrlp_use_caching = 0
+let g:ctrlp_working_path_mode = 'r'
+let g:delimitMate_matchpairs = '(:),[:],{:}'
 let g:incsearch#auto_nohlsearch = 1
 let g:incsearch#magic = '\v'
 let g:netrw_dirhistmax = 0
