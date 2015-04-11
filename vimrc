@@ -103,6 +103,9 @@ set ttyfast
 set lazyredraw
 set noesckeys
 set shortmess-=c
+set noerrorbells
+set visualbell
+set t_vb=
 
 let g:mapleader = "\<space>"
 
@@ -166,6 +169,9 @@ let g:ctrlp_user_command = [
       \ 'find %s -type f'
       \ ]
 let g:ctrlp_working_path_mode = 'r'
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
+let g:delimitMate_jump_expansion = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
 let g:incsearch#auto_nohlsearch = 1
 let g:incsearch#magic = '\v'
