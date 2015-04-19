@@ -176,4 +176,5 @@ let g:delimitMate_matchpairs = '(:),[:],{:}'
 let g:incsearch#auto_nohlsearch = 1
 let g:incsearch#magic = '\v'
 let g:netrw_dirhistmax = 0
+let g:peekaboo_compact = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
