@@ -54,7 +54,6 @@ if has("gui_macvim")
   set guioptions-=L
 endif
 
-set term=screen-256color
 set number
 set showcmd
 set laststatus=2
