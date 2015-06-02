@@ -10,9 +10,10 @@ Plugin 'gmarik/vundle'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'alvan/vim-closetag'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'alvan/vim-closetag'
 Plugin 'bling/vim-airline'
+Plugin 'chriskempson/base16-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'duggiefresh/vim-easydir'
 Plugin 'haya14busa/incsearch.vim'
@@ -24,8 +25,8 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'rking/ag.vim'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'tommcdo/vim-lion'
 Plugin 'tommcdo/vim-exchange'
+Plugin 'tommcdo/vim-lion'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
@@ -44,7 +45,9 @@ Plugin 'dhruvasagar/vim-prosession'
 
 filetype plugin indent on
 syntax enable
+
 color jellybeans
+highlight ColorColumn ctermbg=235 guibg=#262626
 
 if has("gui_macvim")
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
@@ -52,6 +55,9 @@ if has("gui_macvim")
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
+
+  colorscheme base16-default
+  set background=dark
 endif
 
 set number
@@ -112,8 +118,6 @@ autocmd VimResized * :wincmd =
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 autocmd InsertLeave * if expand('%') != '' | update | endif
 autocmd FileType markdown,mkd,text call pencil#init()
-
-highlight ColorColumn ctermbg=235 guibg=#262626
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
