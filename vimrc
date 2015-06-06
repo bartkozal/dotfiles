@@ -3,7 +3,7 @@ set encoding=utf-8
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 Plugin 'gmarik/vundle'
 
@@ -43,10 +43,10 @@ Plugin 'vim-scripts/gitignore'
 Plugin 'tpope/vim-obsession'
 Plugin 'dhruvasagar/vim-prosession'
 
+call vundle#end()
 filetype plugin indent on
-syntax enable
 
-color jellybeans
+syntax enable
 highlight ColorColumn ctermbg=235 guibg=#262626
 
 if has("gui_macvim")
@@ -134,7 +134,6 @@ nnoremap ! :!
 
 inoremap jk <Esc>
 nnoremap ;w :w<cr>
-nnoremap * *<c-o>
 
 map <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
