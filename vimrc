@@ -2,6 +2,7 @@ set nocompatible
 set encoding=utf-8
 
 call plug#begin('~/.vim/plugged')
+
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
@@ -15,7 +16,10 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'haya14busa/incsearch.vim'
 Plug 'janko-m/vim-test'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/vim-xmark', { 'do': 'make' }
 Plug 'kien/ctrlp.vim'
 Plug 'kurkale6ka/vim-pairs'
 Plug 'mbbill/undotree'
@@ -55,10 +59,12 @@ Plug 'whatyouhide/vim-textobj-xmlattr'
 
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
+
 call plug#end()
 
 filetype plugin indent on
 syntax enable
+
 colorscheme jellybeans
 highlight ColorColumn ctermbg=235 guibg=#262626
 
@@ -134,6 +140,8 @@ autocmd FileType markdown,mkd,text call pencil#init()
 autocmd FileType gitcommit setl spell
 autocmd FileType gitcommit setl diffopt+=vertical
 autocmd BufEnter .notes call <sid>LoadNotes()
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -193,6 +201,7 @@ nmap <leader>d :Gdiff<cr>
 nmap <leader>b :Gblame<cr>
 
 nnoremap <silent> <leader>n :split .notes<cr>
+nnoremap <silent> <leader>g :Goyo<cr>
 
 function! s:LoadNotes()
   setlocal filetype=markdown
