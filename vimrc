@@ -163,6 +163,8 @@ inoremap jk <Esc>
 nnoremap ;w :w<cr>
 
 nmap Y y$
+nnoremap j gj
+nnoremap k gk
 nnoremap gp `[v`]
 nnoremap ge `.
 
