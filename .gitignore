@@ -1,7 +1,6 @@
-vim/backup/*
-!vim/backup/.gitkeep
-vim/bundle
-vim/undo/*
-!vim/undo/.gitkeep
-zsh/private.zsh
+vim/autoload
+vim/backup
+vim/plugged
 vim/session
+vim/undo
+zsh/private.zsh
