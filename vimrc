@@ -204,6 +204,8 @@ nmap <leader>b :Gblame<cr>
 
 nnoremap <silent> <leader>n :split .notes<cr>
 nnoremap <silent> <leader>g :Goyo<cr>
+nnoremap <silent> <leader>x :Xmark<<cr>
+nnoremap <silent> <leader>X :Xmark!<cr>
 
 function! s:LoadNotes()
   setlocal filetype=markdown
