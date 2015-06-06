@@ -41,6 +41,8 @@ export HISTCONTROL="ignoreboth"
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='mvim -f'
+export FZF_DEFAULT_OPTS='--color=16'
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
 
 bindkey -e
 bindkey '^[[1;9C' forward-word
@@ -57,5 +59,10 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
+
+source "$HOME/.fzf.zsh"
+bindkey '^F' fzf-cd-widget
+bindkey '^R' fzf-history-widget
+bindkey '^P' fzf-file-widget
 
 eval "$(rbenv init -)"
