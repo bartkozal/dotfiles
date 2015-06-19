@@ -198,7 +198,7 @@ nmap <leader>s :Gstatus<cr>
 nmap <leader>d :Gdiff<cr>
 nmap <leader>b :Gblame<cr>
 
-nnoremap <silent> <leader>n :split .notes<cr>
+nnoremap <silent> <leader>n :60vsplit .notes<cr>
 nnoremap <silent> <leader>g :Goyo<cr>
 
 function! s:LoadNotes()
