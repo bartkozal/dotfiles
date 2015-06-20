@@ -7,6 +7,7 @@ alias less='less -FXR'
 alias q='exit'
 alias :q='exit'
 alias c='clear'
+alias b='bundle'
 alias be='bundle exec'
 alias s='ruby -run -e httpd . -p3000'
 
