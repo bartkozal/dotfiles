@@ -17,8 +17,8 @@ function d {
 
 function v {
   if [[ $# > 0 ]]; then
-    vim $@
+    mvim $@
   else
-    vim
+    mvim
   fi
 }

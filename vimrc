@@ -208,6 +208,8 @@ function! s:LoadNotes()
   nnoremap <buffer> q :quit<cr>
 endfunction
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_powerline_fonts = 1
 let g:bufExplorerDefaultHelp = 0
 let g:bufExplorerDisableDefaultKeyMapping = 0
