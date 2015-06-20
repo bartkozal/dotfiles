@@ -2,7 +2,7 @@
 	name = Bartlomiej Kozal
 	email = bkzl@me.com
 [core]
-	editor = mvim -f
+	editor = vim
 	excludesfile = ~/.gitignore
 [color]
 	ui = true
@@ -43,5 +43,3 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
-[commit]
-	message = ~/.gitmessage

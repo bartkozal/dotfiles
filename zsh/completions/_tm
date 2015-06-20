@@ -1,3 +1,0 @@
-#compdef tm
-
-compadd $(tmux -q list-sessions -F '#{session_name} #{session_attached}' | awk '$2=="0" {print $1}')

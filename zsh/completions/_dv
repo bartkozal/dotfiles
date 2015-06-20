@@ -1,3 +1,0 @@
-#compdef dv
-
-_files -W $CODE -/

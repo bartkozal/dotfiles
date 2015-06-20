@@ -1,8 +1,4 @@
 bundler
-gem-browse
-gem-ctags
 powder
 shelly
 chef
-pry
-rubocop

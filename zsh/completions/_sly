@@ -1,5 +1,0 @@
-#compdef sly
-
-_arguments "1: :(staging production)"\
-  "2: :(admin console instance logs monitoring root user winnie)"
-

@@ -15,11 +15,10 @@ Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-g-dot'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'gilligan/textobj-gitgutter'
 Plug 'glts/vim-textobj-comment'
 Plug 'haya14busa/incsearch.vim'
 Plug 'janko-m/vim-test'
-Plug 'jceb/vim-textobj-uri'
+Plug 'jlanzarotta/bufexplorer'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
@@ -43,6 +42,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
@@ -51,7 +51,6 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'troydm/easybuffer.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vim-scripts/gitignore'
 Plug 'whatyouhide/vim-textobj-xmlattr'
@@ -137,6 +136,7 @@ autocmd FileType gitcommit setl diffopt+=vertical
 autocmd BufEnter .notes call <sid>LoadNotes()
 autocmd User GoyoEnter Limelight
 autocmd User GoyoLeave Limelight!
+ 
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -151,6 +151,8 @@ nnoremap <right> <c-w>5>
 cnoremap <c-k> <up>
 cnoremap <c-j> <down>
 
+cnoremap Ag Ag!
+
 nnoremap ; :
 nnoremap ! :!
 
@@ -163,7 +165,7 @@ nnoremap k gk
 nnoremap gp `[v`]
 nnoremap ge `.
 
-map <f1> :EasyBufferToggle<cr>
+map <f1> :BufExplorerHorizontalSplit<cr>
 map <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
@@ -194,6 +196,7 @@ nmap <silent> <leader>a :TestSuite<cr>
 nmap <silent> <leader>l :TestLast<cr>
 
 nmap <leader>s :Gstatus<cr>
+nmap <leader>e :Gedit<cr>
 nmap <leader>d :Gdiff<cr>
 nmap <leader>b :Gblame<cr>
 
@@ -205,10 +208,11 @@ function! s:LoadNotes()
   nnoremap <buffer> q :quit<cr>
 endfunction
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_powerline_fonts = 1
-let g:closetag_filenames = '*.html,*.erb'
+let g:bufExplorerDefaultHelp = 0
+let g:bufExplorerDisableDefaultKeyMapping = 0
+let g:bufExplorerSplitHorzSize = 10
+let g:bufExplorerSplitBelow = 1
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
 let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
 let g:ctrlp_use_caching = 0
@@ -222,9 +226,6 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_jump_expansion = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
-let g:easybuffer_horizontal_height = '&lines/4'
-let g:easybuffer_show_header = 0
-let g:easybuffer_toggle_position = 'HorizontalBelow'
 let g:incsearch#auto_nohlsearch = 1
 let g:incsearch#magic = '\v'
 let g:netrw_dirhistmax = 0
