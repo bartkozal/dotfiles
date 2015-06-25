@@ -136,7 +136,6 @@ autocmd FileType gitcommit setl diffopt+=vertical
 autocmd BufEnter .notes call <sid>LoadNotes()
 autocmd User GoyoEnter Limelight
 autocmd User GoyoLeave Limelight!
- 
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -236,4 +235,4 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let test#ruby#rspec#executable = 'spring rspec'
-let test#strategy = "dispatch"
+let test#strategy = "terminal"
