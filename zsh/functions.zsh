@@ -23,3 +23,11 @@ function v {
     mvim
   fi
 }
+
+function a {
+  if [[ $# > 0 ]]; then
+    atom $@
+  else
+    atom
+  fi
+}
