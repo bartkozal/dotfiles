@@ -43,6 +43,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-repeat'
@@ -54,6 +55,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vim-scripts/gitignore'
 Plug 'w0ng/vim-hybrid'
 Plug 'whatyouhide/vim-textobj-xmlattr'
+Plug 'schickling/vim-bufonly'
 
 call plug#end()
 
@@ -127,8 +129,10 @@ set t_vb=
 
 let g:mapleader = "\<space>"
 
+autocmd SessionLoadPost * BufOnly
 autocmd VimResized * :wincmd =
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+autocmd InsertLeave * if expand('%') != '' | update | endif
 autocmd FileType markdown,mkd,text call pencil#init()
 autocmd FileType gitcommit setl spell
 autocmd FileType gitcommit setl diffopt+=vertical
