@@ -30,7 +30,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'kien/ctrlp.vim'
 Plug 'kurkale6ka/vim-pairs'
 Plug 'mbbill/undotree'
-Plug 'nanotech/jellybeans.vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'reedes/vim-pencil'
 Plug 'rking/ag.vim'
@@ -53,6 +52,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vim-scripts/gitignore'
+Plug 'w0ng/vim-hybrid'
 Plug 'whatyouhide/vim-textobj-xmlattr'
 
 call plug#end()
@@ -60,8 +60,7 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
-colorscheme jellybeans
-highlight ColorColumn ctermbg=235 guibg=#262626
+colorscheme hybrid
 
 if has("gui_macvim")
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
