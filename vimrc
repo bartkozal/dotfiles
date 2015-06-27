@@ -172,7 +172,6 @@ nnoremap gp `[v`]
 nnoremap ge `.
 
 cnoremap Ag Ag!
-cnoremap ag Ag!
 
 map <silent> <f1> :BuffergatorToggle<cr>
 map <silent> <f2> :UndotreeToggle<cr>
