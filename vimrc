@@ -4,8 +4,8 @@ set encoding=utf-8
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Julian/vim-textobj-variable-segment'
 Plug 'Raimondi/delimitMate'
-Plug 'RyanMcG/vim-textobj-dash'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'airblade/vim-gitgutter'
@@ -30,7 +30,6 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'kien/ctrlp.vim'
 Plug 'kurkale6ka/vim-pairs'
-Plug 'lucapette/vim-textobj-underscore'
 Plug 'mbbill/undotree'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'reedes/vim-pencil'
