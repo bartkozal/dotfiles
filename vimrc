@@ -19,7 +19,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'glts/vim-textobj-comment'
 Plug 'haya14busa/incsearch.vim'
 Plug 'janko-m/vim-test'
-Plug 'jlanzarotta/bufexplorer'
+Plug 'jeetsukumaran/vim-buffergator'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
@@ -34,6 +34,7 @@ Plug 'mbbill/undotree'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'reedes/vim-pencil'
 Plug 'rking/ag.vim'
+Plug 'schickling/vim-bufonly'
 Plug 'sheerun/vim-polyglot'
 Plug 'tek/vim-textobj-ruby'
 Plug 'tommcdo/vim-exchange'
@@ -55,7 +56,6 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vim-scripts/gitignore'
 Plug 'w0ng/vim-hybrid'
 Plug 'whatyouhide/vim-textobj-xmlattr'
-Plug 'schickling/vim-bufonly'
 
 call plug#end()
 
@@ -129,16 +129,22 @@ set t_vb=
 
 let g:mapleader = "\<space>"
 
-autocmd SessionLoadPost * BufOnly
-autocmd VimResized * :wincmd =
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-autocmd InsertLeave * if expand('%') != '' | update | endif
-autocmd FileType markdown,mkd,text call pencil#init()
-autocmd FileType gitcommit setl spell
-autocmd FileType gitcommit setl diffopt+=vertical
-autocmd BufEnter .notes call <sid>LoadNotes()
-autocmd User GoyoEnter Limelight
-autocmd User GoyoLeave Limelight!
+augroup vimrc
+  autocmd!
+  autocmd SessionLoadPost * BufOnly
+  autocmd VimResized * :wincmd =
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  autocmd InsertLeave * if expand('%') != '' | update | endif
+  autocmd FileType markdown,mkd,text call pencil#init()
+  autocmd FileType gitcommit setl spell
+  autocmd FileType gitcommit setl diffopt+=vertical
+  autocmd FileType netrw setl bufhidden=wipe
+  autocmd BufEnter .notes call <sid>LoadNotes()
+  autocmd User GoyoEnter Limelight
+  autocmd User GoyoLeave Limelight!
+  autocmd BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+  autocmd BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
+augroup END
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -153,8 +159,6 @@ nnoremap <right> <c-w>5>
 cnoremap <c-k> <up>
 cnoremap <c-j> <down>
 
-cnoremap Ag Ag!
-
 nnoremap ; :
 nnoremap ! :!
 
@@ -167,11 +171,17 @@ nnoremap k gk
 nnoremap gp `[v`]
 nnoremap ge `.
 
-map <f1> :BufExplorerHorizontalSplit<cr>
-map <f2> :UndotreeToggle<cr>
-map <f3> :set spell!<cr>
-map <f4> :set wrap! linebreak! list!<cr>
-map <f5> :set relativenumber!<cr>
+cnoremap Ag Ag!
+cnoremap ag Ag!
+
+map <silent> <f1> :BuffergatorToggle<cr>
+map <silent> <f2> :UndotreeToggle<cr>
+map <silent> <f3> :set spell!<cr>
+map <silent> <f4> :set wrap! linebreak! list!<cr>
+map <silent> <f5> :set relativenumber!<cr>
+
+nmap [b :BuffergatorMruCyclePrev<cr>
+nmap ]b :BuffergatorMruCycleNext<cr>
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
@@ -186,7 +196,7 @@ map # <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-nmap cm  <Plug>Commentary
+nmap cm <Plug>Commentary
 nmap cX <Plug>(ExchangeLine)
 
 nmap <c-t> :CtrlPBufTag<cr>
@@ -197,10 +207,10 @@ nmap <silent> <leader>r :TestFile<cr>
 nmap <silent> <leader>a :TestSuite<cr>
 nmap <silent> <leader>l :TestLast<cr>
 
-nmap <leader>s :Gstatus<cr>
-nmap <leader>e :Gedit<cr>
-nmap <leader>d :Gdiff<cr>
-nmap <leader>b :Gblame<cr>
+nmap <silent> <leader>s :Gstatus<cr>
+nmap <silent> <leader>e :Gedit<cr>
+nmap <silent> <leader>d :Gdiff<cr>
+nmap <silent> <leader>b :Gblame<cr>
 
 nnoremap <silent> <leader>n :60vsplit .notes<cr>
 nnoremap <silent> <leader>g :Goyo<cr>
@@ -214,35 +224,28 @@ function! g:UltiSnips_Complete()
   call UltiSnips#ExpandSnippetOrJump()
   if g:ulti_expand_or_jump_res == 0
     if pumvisible()
-      return "\<C-N>"
+      return "\<c-n>"
     else
-      return "\<TAB>"
+      return "\<tab>"
     endif
   endif
   return ""
 endfunction
 
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-
 function! g:UltiSnips_Reverse()
   call UltiSnips#JumpBackwards()
   if g:ulti_jump_backwards_res == 0
-    return "\<C-P>"
+    return "\<c-p>"
   endif
   return ""
 endfunction
 
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_powerline_fonts = 1
-let g:bufExplorerDefaultHelp = 0
-let g:bufExplorerDisableDefaultKeyMapping = 0
-let g:bufExplorerSplitHorzSize = 10
-let g:bufExplorerSplitBelow = 1
+let g:buffergator_viewport_split_policy = "B"
+let g:buffergator_hsplit_size = 10
+let g:buffergator_suppress_keymaps = 1
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
 let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
 let g:ctrlp_use_caching = 0
@@ -260,6 +263,8 @@ let g:incsearch#auto_nohlsearch = 1
 let g:incsearch#magic = '\v'
 let g:netrw_dirhistmax = 0
 let g:peekaboo_compact = 1
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
