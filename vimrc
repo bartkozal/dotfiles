@@ -122,9 +122,9 @@ set colorcolumn=80
 set ttyfast
 set lazyredraw
 set noesckeys
-set shortmess-=c
+set shortmess=filmnrwxsAIc
 set noerrorbells
-set visualbell
+set novisualbell
 set t_vb=
 
 let g:mapleader = "\<space>"
