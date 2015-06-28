@@ -32,9 +32,11 @@ Plug 'kurkale6ka/vim-pairs'
 Plug 'mbbill/undotree'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'reedes/vim-pencil'
+Plug 'rhysd/clever-f.vim'
 Plug 'rking/ag.vim'
 Plug 'schickling/vim-bufonly'
 Plug 'sheerun/vim-polyglot'
+Plug 'sickill/vim-pasta'
 Plug 'tek/vim-textobj-ruby'
 Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-lion'
@@ -130,7 +132,6 @@ let g:mapleader = "\<space>"
 
 augroup vimrc
   autocmd!
-  autocmd SessionLoadPost * BufOnly
   autocmd VimResized * :wincmd =
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
   autocmd InsertLeave * if expand('%') != '' | update | endif
