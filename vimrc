@@ -17,7 +17,6 @@ Plug 'christoomey/vim-g-dot'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'glts/vim-textobj-comment'
-Plug 'haya14busa/incsearch.vim'
 Plug 'janko-m/vim-test'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'junegunn/goyo.vim'
@@ -161,6 +160,8 @@ nnoremap <right> <c-w>5>
 cnoremap <c-k> <up>
 cnoremap <c-j> <down>
 
+nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr><cr>
+
 nnoremap ; :
 nnoremap ! :!
 
@@ -172,6 +173,7 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gp `[v`]
 nnoremap ge `.
+nnoremap * *<c-o>
 
 cnoremap Ag Ag!
 
@@ -186,16 +188,6 @@ nmap ]b :BuffergatorMruCycleNext<cr>
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
-
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-map n <Plug>(incsearch-nohl-n)
-map N <Plug>(incsearch-nohl-N)
-map * <Plug>(incsearch-nohl-*)
-map # <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
 
 nmap cm <Plug>Commentary
 nmap cX <Plug>(ExchangeLine)
@@ -260,8 +252,6 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_jump_expansion = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
-let g:incsearch#auto_nohlsearch = 1
-let g:incsearch#magic = '\v'
 let g:netrw_dirhistmax = 0
 let g:peekaboo_compact = 1
 let g:UltiSnipsJumpForwardTrigger="<tab>"
