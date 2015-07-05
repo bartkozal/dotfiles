@@ -262,3 +262,7 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let test#ruby#rspec#executable = 'spring rspec'
 let test#strategy = "terminal"
+
+let g:projectionist_heuristics = {
+      \ "Gemfile": {"alternate": "Gemfile.lock"},
+      \ }
