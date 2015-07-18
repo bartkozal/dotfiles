@@ -118,7 +118,7 @@ set splitright
 set splitbelow
 set shell=/bin/bash
 set wildmenu
-set wildignore+=.hg,.git,.svn
+set wildignore+=.hg,.git,.svn,.DS_Store
 set colorcolumn=80
 set ttyfast
 set lazyredraw
