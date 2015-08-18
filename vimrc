@@ -13,16 +13,12 @@ Plug 'alvan/vim-closetag'
 Plug 'bling/vim-airline'
 Plug 'bogado/file-line'
 Plug 'christoomey/vim-conflicted'
-Plug 'christoomey/vim-g-dot'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'glts/vim-textobj-comment'
 Plug 'janko-m/vim-test'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
-Plug 'junegunn/vim-xmark', { 'do': 'make' }
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
@@ -34,7 +30,6 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'reedes/vim-pencil'
 Plug 'rhysd/clever-f.vim'
 Plug 'rking/ag.vim'
-Plug 'schickling/vim-bufonly'
 Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-pasta'
 Plug 'tek/vim-textobj-ruby'
@@ -45,7 +40,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-repeat'
@@ -140,8 +134,6 @@ augroup vimrc
   autocmd FileType gitcommit setl diffopt+=vertical
   autocmd FileType netrw setl bufhidden=wipe
   autocmd BufEnter .notes call <sid>LoadNotes()
-  autocmd User GoyoEnter Limelight
-  autocmd User GoyoLeave Limelight!
   autocmd BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
   autocmd BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
 augroup END
@@ -180,9 +172,9 @@ cnoremap Ag Ag!
 
 map <silent> <f1> :BuffergatorToggle<cr>
 map <silent> <f2> :UndotreeToggle<cr>
-map <silent> <f3> :set spell!<cr>
-map <silent> <f4> :set wrap! linebreak! list!<cr>
-map <silent> <f5> :set relativenumber!<cr>
+map <f3> :set spell!<cr>
+map <f4> :set wrap! linebreak! list!<cr>
+map <f5> :set relativenumber!<cr>
 
 nmap [b :BuffergatorMruCyclePrev<cr>
 nmap ]b :BuffergatorMruCycleNext<cr>
@@ -207,7 +199,6 @@ nmap <silent> <leader>d :Gdiff<cr>
 nmap <silent> <leader>b :Gblame<cr>
 
 nnoremap <silent> <leader>n :60vsplit .notes<cr>
-nnoremap <silent> <leader>g :Goyo<cr>
 
 function! s:LoadNotes()
   setlocal filetype=markdown
