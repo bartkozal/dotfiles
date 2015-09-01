@@ -133,7 +133,6 @@ augroup vimrc
   autocmd FileType gitcommit setl spell
   autocmd FileType gitcommit setl diffopt+=vertical
   autocmd FileType netrw setl bufhidden=wipe
-  autocmd BufEnter .notes call <sid>LoadNotes()
   autocmd BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
   autocmd BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
 augroup END
@@ -197,13 +196,6 @@ nmap <silent> <leader>s :Gstatus<cr>
 nmap <silent> <leader>e :Gedit<cr>
 nmap <silent> <leader>d :Gdiff<cr>
 nmap <silent> <leader>b :Gblame<cr>
-
-nnoremap <silent> <leader>n :60vsplit .notes<cr>
-
-function! s:LoadNotes()
-  setlocal filetype=markdown
-  nnoremap <buffer> q :quit<cr>
-endfunction
 
 function! g:UltiSnips_Complete()
   call UltiSnips#ExpandSnippetOrJump()
