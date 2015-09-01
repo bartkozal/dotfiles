@@ -33,7 +33,7 @@ source "$HOME/.zsh/private.zsh"
 source "$HOME/.zsh/functions.zsh"
 source "$HOME/.zsh/git.zsh"
 
-export PROMPT=$'%F{238}$(rbenv version-name)%f %F{33}%~%f%F{221}$(git_prompt)%f '
+export PROMPT=$'%F{33}%~%f%F{221}$(git_prompt)%f '
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=2048
 export SAVEHIST=2048
