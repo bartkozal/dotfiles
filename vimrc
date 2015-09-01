@@ -27,7 +27,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'kurkale6ka/vim-pairs'
 Plug 'mbbill/undotree'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'reedes/vim-pencil'
 Plug 'rhysd/clever-f.vim'
 Plug 'rking/ag.vim'
 Plug 'sheerun/vim-polyglot'
@@ -129,7 +128,6 @@ augroup vimrc
   autocmd VimResized * :wincmd =
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
   autocmd InsertLeave * if expand('%') != '' | update | endif
-  autocmd FileType markdown,mkd,text call pencil#init()
   autocmd FileType gitcommit setl spell
   autocmd FileType gitcommit setl diffopt+=vertical
   autocmd FileType netrw setl bufhidden=wipe
