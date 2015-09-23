@@ -59,7 +59,7 @@ syntax enable
 colorscheme hybrid
 
 if has("gui_macvim")
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  set guifont=Hack:h12
   set linespace=1
   set guioptions-=T
   set guioptions-=r
