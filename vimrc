@@ -117,7 +117,7 @@ set colorcolumn=80
 set ttyfast
 set lazyredraw
 set noesckeys
-set shortmess=filmnrwxsAIc
+set shortmess=sAIcOoa
 set noerrorbells
 set novisualbell
 set t_vb=
