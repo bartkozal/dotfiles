@@ -67,6 +67,7 @@ if has("gui_macvim")
   set guioptions-=m
 endif
 
+set background=dark
 set number
 set relativenumber
 set showcmd
