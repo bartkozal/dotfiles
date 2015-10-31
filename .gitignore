@@ -1,6 +1,2 @@
-vim/autoload
-vim/backup
-vim/plugged
-vim/session
-vim/undo
+vim/
 zsh/private.zsh
