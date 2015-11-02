@@ -69,60 +69,60 @@ if has("gui_macvim")
   set guioptions-=m
 endif
 
-set background=dark
-set number
-set relativenumber
-set showcmd
-set laststatus=2
-set statusline=%<%f\ %{fugitive#head()}\ %y%r%m%=%l:%c\ \ %p
-set noshowmode
-set cursorline
-set clipboard=unnamed
-set backup
-set noswapfile
-set backupdir=~/.vim/backup//
-set undodir=~/.vim/undo//
-set undofile
-set history=50
-set nowrap
-set tabstop=2 softtabstop=2 shiftwidth=2
-set smarttab
-set shiftround
-set expandtab
-set backspace=indent,eol,start
 set autoindent
+set autoread
+set background=dark
+set backspace=indent,eol,start
+set backup
+set backupdir=~/.vim/backup//
 set cindent
 set cinoptions=l1,j1
-set autoread
+set clipboard=unnamed
+set colorcolumn=80
+set cursorline
+set diffopt+=vertical
+set expandtab
+set fillchars=diff:⣿,vert:│
+set gdefault
 set hidden
+set history=50
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set lazyredraw
 set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:.
-set showbreak=↪
-set fillchars=diff:⣿,vert:│
-set diffopt+=vertical
+set noerrorbells
+set noesckeys
+set noshowmode
+set noswapfile
+set novisualbell
+set nowrap
+set number
+set relativenumber
 set ruler
-set hlsearch
-set incsearch
-set gdefault
-set ignorecase
-set smartcase
 set scrolloff=3
+set shell=/bin/bash
+set shiftround
+set shortmess=sAIcOoa
+set showbreak=↪
+set showcmd
+set showtabline=2
 set sidescroll=1
 set sidescrolloff=10
-set showtabline=2
-set splitright
+set smartcase
+set smarttab
 set splitbelow
-set shell=/bin/bash
-set wildmenu
-set wildignore+=.hg,.git,.svn,.DS_Store
-set colorcolumn=80
-set ttyfast
-set lazyredraw
-set noesckeys
-set shortmess=sAIcOoa
-set noerrorbells
-set novisualbell
+set splitright
+set statusline=%<%f\ %{fugitive#head()}\ %y%r%m%=%l:%c\ \ %p
 set t_vb=
+set tabstop=2 softtabstop=2 shiftwidth=2
+set ttyfast
+set undodir=~/.vim/undo//
+set undofile
+set wildignore+=.hg,.git,.svn,.DS_Store
+set wildmenu
 
 let g:mapleader = "\<space>"
 
