@@ -29,6 +29,7 @@ Plug 'mbbill/undotree'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'rhysd/clever-f.vim'
 Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'jistr/vim-nerdtree-tabs'
 Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-pasta'
 Plug 'tek/vim-textobj-ruby'
@@ -127,6 +128,7 @@ let g:mapleader = "\<space>"
 
 augroup vimrc
   autocmd!
+  autocmd StdinReadPre * let s:std_in=1
   autocmd VimResized * :wincmd =
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
   autocmd InsertLeave * if expand('%') != '' | update | endif
@@ -187,6 +189,8 @@ map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 map <f5> :set relativenumber!<cr>
 
+map <silent> <leader>n <plug>NERDTreeTabsToggle<cr>
+
 nmap [b :BuffergatorMruCyclePrev<cr>
 nmap ]b :BuffergatorMruCycleNext<cr>
 
@@ -230,6 +234,8 @@ function! g:UltiSnips_Reverse()
 endfunction
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline_powerline_fonts = 1
 let g:buffergator_viewport_split_policy = "B"
 let g:buffergator_hsplit_size = 10
@@ -247,17 +253,32 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_jump_expansion = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
+let g:nerdtree_tabs_focus_on_files = 1
+let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:NERDTreeIndicatorMapCustom = {
+      \ "Modified"  : "M",
+      \ "Staged"    : "A",
+      \ "Untracked" : "?",
+      \ "Renamed"   : "R",
+      \ "Unmerged"  : "U",
+      \ "Deleted"   : "D",
+      \ "Dirty"     : "~",
+      \ "Clean"     : "C",
+      \ "Unknown"   : "*"
+      \ }
 let g:netrw_dirhistmax = 0
-let g:netrw_liststyle = 3
 let g:peekaboo_compact = 1
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
-let test#ruby#rspec#executable = 'spring rspec'
-let test#strategy = "terminal"
-
 let g:projectionist_heuristics = {
       \ "Gemfile": {"alternate": "Gemfile.lock"},
       \ }
+
+let test#ruby#rspec#executable = 'spring rspec'
+let test#strategy = "terminal"
+
+let NERDTreeMinimalUI = 1
