@@ -214,6 +214,9 @@ nmap <silent> <leader>e :Gedit<cr>
 nmap <silent> <leader>d :Gdiff<cr>
 nmap <silent> <leader>b :Gblame<cr>
 
+noremap <silent> <leader>q :q<cr>
+noremap <silent> <leader>w :w<cr>
+
 function! g:UltiSnips_Complete()
   call UltiSnips#ExpandSnippetOrJump()
   if g:ulti_expand_or_jump_res == 0
@@ -273,15 +276,15 @@ let g:NERDTreeIndicatorMapCustom = {
       \ }
 let g:netrw_dirhistmax = 0
 let g:peekaboo_compact = 1
+let g:projectionist_heuristics = {
+      \ "Gemfile": {"alternate": "Gemfile.lock"},
+      \ }
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
-let g:projectionist_heuristics = {
-      \ "Gemfile": {"alternate": "Gemfile.lock"},
-      \ }
 
 let test#ruby#rspec#executable = 'spring rspec'
 let test#strategy = "terminal"
