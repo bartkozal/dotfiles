@@ -24,7 +24,9 @@ setopt AUTO_LIST
 setopt MENU_COMPLETE
 setopt COMPLETE_IN_WORD
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
 setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
