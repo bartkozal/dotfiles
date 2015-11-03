@@ -33,6 +33,7 @@ Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'jistr/vi
 Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-pasta'
 Plug 'tek/vim-textobj-ruby'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-bundler'
@@ -253,6 +254,10 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_jump_expansion = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
+let g:multi_cursor_next_key = '<c-n>'
+let g:multi_cursor_prev_key = '<c-p>'
+let g:multi_cursor_skip_key = '<c-x>'
+let g:multi_cursor_quit_key = '<cr>'
 let g:nerdtree_tabs_focus_on_files = 1
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:NERDTreeIndicatorMapCustom = {
