@@ -93,7 +93,7 @@ set incsearch
 set laststatus=2
 set lazyredraw
 set list
-set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:.
+set listchars=tab:▸\ ,trail:.
 set noerrorbells
 set noesckeys
 set noshowmode
