@@ -18,16 +18,8 @@ function d {
 
 function v {
   if [[ $# > 0 ]]; then
-    mvim $@
+    vim $@
   else
-    mvim
-  fi
-}
-
-function a {
-  if [[ $# > 0 ]]; then
-    atom $@
-  else
-    atom
+    vim
   fi
 }

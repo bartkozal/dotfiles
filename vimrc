@@ -18,6 +18,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'glts/vim-textobj-comment'
 Plug 'janko-m/vim-test'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
@@ -279,6 +280,9 @@ let g:peekaboo_compact = 1
 let g:projectionist_heuristics = {
       \ "Gemfile": {"alternate": "Gemfile.lock"},
       \ }
+let g:togglecursor_default = 'block'
+let g:togglecursor_leave = 'block'
+let g:togglecursor_replace = 'underline'
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:ycm_collect_identifiers_from_tags_files = 1
