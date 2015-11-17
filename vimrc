@@ -150,6 +150,9 @@ nnoremap ! :!
 inoremap jk <Esc>
 nnoremap ;w :w<cr>
 
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+
 nmap Y y$
 nnoremap j gj
 nnoremap k gk
