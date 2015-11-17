@@ -52,6 +52,7 @@ NeoBundle 'tpope/vim-rsi'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'tpope/vim-endwise'
 NeoBundle 'vim-scripts/ReplaceWithRegister'
 NeoBundle 'vim-scripts/gitignore'
 NeoBundle 'w0ng/vim-hybrid'
@@ -251,7 +252,6 @@ nmap <silent> <leader>e :Gedit<cr>
 nmap <silent> <leader>d :Gdiff<cr>
 
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
