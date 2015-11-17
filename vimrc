@@ -204,6 +204,7 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
 let g:netrw_dirhistmax = 0
+let g:netrw_liststyle= 3
 let g:peekaboo_compact = 1
 let g:projectionist_heuristics = {
       \ "Gemfile": {"alternate": "Gemfile.lock"},
