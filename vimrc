@@ -1,3 +1,5 @@
+" vim:fdm=marker
+
 if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -7,10 +9,11 @@ call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'Shougo/neocomplete.vim'
+
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'Julian/vim-textobj-variable-segment'
 NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'Valloric/YouCompleteMe', { 'build': { 'others': './install.py' }}
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'christoomey/vim-conflicted'
@@ -124,6 +127,31 @@ if has("gui_macvim")
   set guioptions-=m
 endif
 
+let g:mapleader = "\<space>"
+
+" NeoComplete {{{
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_delimiter = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#max_list = 15
+let g:neocomplete#enable_fuzzy_completion = 1
+let g:neocomplete#force_omni_input_patterns = {
+      \ 'ruby': '[^. *\t]\.\w*\|\h\w*::',
+      \ 'javascript': '[^. \t]\.\w*'
+      \ }
+
+autocmd FileType css,scss,sass setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,erb,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><c-h> neocomplete#smart_close_popup()."\<c-h>"
+inoremap <expr><bs> neocomplete#smart_close_popup()."\<c-h>"
+
+" }}}
+
 augroup vimrc
   autocmd!
   autocmd VimResized * :wincmd =
@@ -132,8 +160,6 @@ augroup vimrc
   autocmd FileType gitcommit setl diffopt+=vertical
   autocmd FileType netrw setl bufhidden=wipe
 augroup END
-
-let g:mapleader = "\<space>"
 
 nmap <leader>v :vs $MYVIMRC<cr>
 
@@ -193,7 +219,8 @@ nmap <silent> <leader>s :Gstatus<cr>
 nmap <silent> <leader>e :Gedit<cr>
 nmap <silent> <leader>d :Gdiff<cr>
 
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
@@ -212,7 +239,7 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
 let g:netrw_dirhistmax = 0
-let g:netrw_liststyle= 3
+let g:netrw_liststyle = 3
 let g:peekaboo_compact = 1
 let g:projectionist_heuristics = {
       \ "Gemfile": {"alternate": "Gemfile.lock"},
@@ -225,21 +252,3 @@ let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_sass_checkers = ['sass']
 let g:syntastic_slim_checkers = ['slimrb']
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_semantic_triggers =  {
-      \   'c' : ['->', '.'],
-      \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-      \             're!\[.*\]\s'],
-      \   'ocaml' : ['.', '#'],
-      \   'cpp,objcpp' : ['->', '.', '::'],
-      \   'perl' : ['->'],
-      \   'php' : ['->', '::'],
-      \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-      \   'ruby' : ['.', '::'],
-      \   'lua' : ['.', ':'],
-      \   'erlang' : [':'],
-      \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*']
-      \ }
