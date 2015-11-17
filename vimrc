@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Julian/vim-textobj-variable-segment'
 Plug 'Raimondi/delimitMate'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-conflicted'
@@ -142,9 +142,6 @@ nnoremap <down> <c-w>5-
 nnoremap <up> <c-w>5+
 nnoremap <right> <c-w>5>
 
-cnoremap <c-k> <up>
-cnoremap <c-j> <down>
-
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 
 nnoremap ; :
@@ -171,6 +168,8 @@ function! FirstCharOrFirstCol()
   endif
 endfunction
 
+cnoremap <c-k> <up>
+cnoremap <c-j> <down>
 cnoremap Ag Ag!
 
 map <silent> <f2> :UndotreeToggle<cr>
@@ -221,3 +220,17 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
+let g:ycm_semantic_triggers =  {
+      \   'c' : ['->', '.'],
+      \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+      \             're!\[.*\]\s'],
+      \   'ocaml' : ['.', '#'],
+      \   'cpp,objcpp' : ['->', '.', '::'],
+      \   'perl' : ['->'],
+      \   'php' : ['->', '::'],
+      \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+      \   'ruby' : ['.', '::'],
+      \   'lua' : ['.', ':'],
+      \   'erlang' : [':'],
+      \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*']
+      \ }
