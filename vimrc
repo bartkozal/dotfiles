@@ -9,6 +9,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make'}}
 NeoBundle 'Shougo/neocomplete.vim'
 
 NeoBundle 'AndrewRadev/splitjoin.vim'
