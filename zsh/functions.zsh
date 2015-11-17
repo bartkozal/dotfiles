@@ -11,15 +11,6 @@ alias b='bundle'
 alias be='bundle exec'
 alias s='ruby -run -e httpd . -p3000'
 
-
 function d {
   cd "$CODE/$1"
-}
-
-function v {
-  if [[ $# > 0 ]]; then
-    vim $@
-  else
-    vim
-  fi
 }
