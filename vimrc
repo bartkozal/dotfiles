@@ -11,6 +11,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make'}}
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler.vim'
 
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'Julian/vim-textobj-variable-segment'
@@ -131,7 +133,6 @@ endif
 let g:mapleader = "\<space>"
 
 " NeoComplete {{{
-
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_auto_delimiter = 1
 let g:neocomplete#enable_smart_case = 1
@@ -150,7 +151,37 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><c-h> neocomplete#smart_close_popup()."\<c-h>"
 inoremap <expr><bs> neocomplete#smart_close_popup()."\<c-h>"
+" }}}
+" VimFiler {{{
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_no_default_key_mappings = 1
+let g:vimfiler_tree_leaf_icon = ' '
+let g:vimfiler_tree_opened_icon = '▾'
+let g:vimfiler_tree_closed_icon = '▸'
 
+call vimfiler#custom#profile('default', 'context', {
+      \ 'safe': 0,
+      \ 'auto-cd': 1
+      \ })
+
+autocmd FileType vimfiler nmap <buffer> { <c-u>
+autocmd FileType vimfiler nmap <buffer> } <c-d>
+autocmd Filetype vimfiler nmap <buffer> <enter> <plug>(vimfiler_expand_or_edit)
+autocmd Filetype vimfiler nmap <buffer> o <plug>(vimfiler_cd_or_edit)
+autocmd Filetype vimfiler nmap <buffer> <bs> <plug>(vimfiler_switch_to_parent_directory)
+autocmd Filetype vimfiler nmap <buffer> h <plug>(vimfiler_smart_h)
+autocmd Filetype vimfiler nmap <buffer> j <plug>(vimfiler_loop_cursor_down)
+autocmd Filetype vimfiler nmap <buffer> k <plug>(vimfiler_loop_cursor_up)
+autocmd Filetype vimfiler nmap <buffer> l <plug>(vimfiler_smart_l)
+autocmd filetype vimfiler nmap <buffer> M <plug>(vimfiler_mark_current_line)<plug>(vimfiler_move_file)
+autocmd Filetype vimfiler nmap <buffer> D <plug>(vimfiler_mark_current_line)<plug>(vimfiler_delete_file)
+autocmd Filetype vimfiler nmap <buffer> R <plug>(vimfiler_rename_file)
+autocmd Filetype vimfiler nmap <buffer> n <plug>(vimfiler_new_file)
+autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_make_directory)
+autocmd Filetype vimfiler nmap <buffer> . <plug>(vimfiler_toggle_visible_ignore_files)
+autocmd Filetype vimfiler nmap <buffer> <c-r> <plug>(vimfiler_redraw_screen)
+
+nmap <silent> <leader>n :VimFilerExplorer<cr>
 " }}}
 
 augroup vimrc
@@ -159,7 +190,6 @@ augroup vimrc
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
   autocmd FileType gitcommit setl spell
   autocmd FileType gitcommit setl diffopt+=vertical
-  autocmd FileType netrw setl bufhidden=wipe
 augroup END
 
 nmap <leader>v :vs $MYVIMRC<cr>
@@ -239,8 +269,6 @@ let g:ctrlp_working_path_mode = 'r'
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
-let g:netrw_dirhistmax = 0
-let g:netrw_liststyle = 3
 let g:peekaboo_compact = 1
 let g:projectionist_heuristics = {
       \ "Gemfile": {"alternate": "Gemfile.lock"},
