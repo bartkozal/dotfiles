@@ -1,67 +1,62 @@
-set nocompatible
-set encoding=utf-8
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-call plug#begin('~/.vim/plugged')
+call neobundle#begin(expand('~/.vim/bundle'))
 
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Julian/vim-textobj-variable-segment'
-Plug 'Raimondi/delimitMate'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
-Plug 'christoomey/vim-conflicted'
-Plug 'christoomey/vim-sort-motion'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'gilligan/textobj-gitgutter'
-Plug 'glts/vim-textobj-comment'
-Plug 'janko-m/vim-test'
-Plug 'junegunn/vim-peekaboo'
-Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-textobj-indent'
-Plug 'kana/vim-textobj-line'
-Plug 'kana/vim-textobj-user'
-Plug 'kien/ctrlp.vim'
-Plug 'kurkale6ka/vim-pairs'
-Plug 'mattn/emmet-vim'
-Plug 'mbbill/undotree'
-Plug 'pbrisbin/vim-mkdir'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/syntastic'
-Plug 'sheerun/vim-polyglot'
-Plug 'sickill/vim-pasta'
-Plug 'tommcdo/vim-lion'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rsi'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'vim-scripts/gitignore'
-Plug 'w0ng/vim-hybrid'
-Plug 'whatyouhide/vim-textobj-xmlattr'
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-call plug#end()
+NeoBundle 'AndrewRadev/splitjoin.vim'
+NeoBundle 'Julian/vim-textobj-variable-segment'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'Valloric/YouCompleteMe', { 'build': { 'others': './install.py' }}
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'christoomey/vim-conflicted'
+NeoBundle 'christoomey/vim-sort-motion'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'gilligan/textobj-gitgutter'
+NeoBundle 'glts/vim-textobj-comment'
+NeoBundle 'janko-m/vim-test'
+NeoBundle 'junegunn/vim-peekaboo'
+NeoBundle 'kana/vim-textobj-entire'
+NeoBundle 'kana/vim-textobj-indent'
+NeoBundle 'kana/vim-textobj-line'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'kurkale6ka/vim-pairs'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mbbill/undotree'
+NeoBundle 'pbrisbin/vim-mkdir'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'sickill/vim-pasta'
+NeoBundle 'tommcdo/vim-lion'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-eunuch'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-projectionist'
+NeoBundle 'tpope/vim-rake'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-rsi'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'vim-scripts/ReplaceWithRegister'
+NeoBundle 'vim-scripts/gitignore'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'whatyouhide/vim-textobj-xmlattr'
+
+call neobundle#end()
 
 filetype plugin indent on
 syntax enable
 
 colorscheme hybrid
-
-if has("gui_macvim")
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-  set linespace=1
-  set guioptions-=T
-  set guioptions-=r
-  set guioptions-=L
-  set guioptions-=m
-endif
 
 set autoindent
 set autoread
@@ -76,6 +71,7 @@ set clipboard=unnamed
 set colorcolumn=80
 set cursorline
 set diffopt+=vertical
+set encoding=utf-8
 set expandtab
 set fillchars=diff:⣿,vert:│
 set gdefault
@@ -119,7 +115,14 @@ set undofile
 set wildignore+=.hg,.git,.svn,.DS_Store
 set wildmenu
 
-let g:mapleader = "\<space>"
+if has("gui_macvim")
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  set linespace=1
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=m
+endif
 
 augroup vimrc
   autocmd!
@@ -129,6 +132,8 @@ augroup vimrc
   autocmd FileType gitcommit setl diffopt+=vertical
   autocmd FileType netrw setl bufhidden=wipe
 augroup END
+
+let g:mapleader = "\<space>"
 
 nmap <leader>v :vs $MYVIMRC<cr>
 
