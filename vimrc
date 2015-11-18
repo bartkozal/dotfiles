@@ -1,10 +1,12 @@
 " vim:fdm=marker
 
+" Start {{{
 if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-
+" }}}
+" Plugins {{{
 call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -61,10 +63,12 @@ NeoBundle 'whatyouhide/vim-textobj-xmlattr'
 call neobundle#end()
 
 filetype plugin indent on
+" }}}
+" Color Scheme {{{
 syntax enable
-
 colorscheme hybrid
-
+" }}}
+" Options {{{
 set autoindent
 set autoread
 set autowriteall
@@ -130,10 +134,12 @@ if has("gui_macvim")
   set guioptions-=L
   set guioptions-=m
 endif
-
+" }}}
+" Key mapping {{{
 let g:mapleader = "\<space>"
+" }}}
 
-" NeoComplete {{{
+" Neocomplete {{{
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_auto_delimiter = 1
 let g:neocomplete#enable_smart_case = 1
@@ -153,7 +159,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><c-h> neocomplete#smart_close_popup()."\<c-h>"
 inoremap <expr><bs> neocomplete#smart_close_popup()."\<c-h>"
 " }}}
-" VimFiler {{{
+" Vimfiler {{{
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_no_default_key_mappings = 1
 let g:vimfiler_tree_leaf_icon = ' '
@@ -162,7 +168,7 @@ let g:vimfiler_tree_closed_icon = '▸'
 
 call vimfiler#custom#profile('default', 'context', {
       \ 'safe': 0,
-      \ 'auto-cd': 1
+      \ 'auto_cd': 1
       \ })
 
 autocmd FileType vimfiler nmap <buffer> { <c-u>
@@ -181,6 +187,7 @@ autocmd Filetype vimfiler nmap <buffer> n <plug>(vimfiler_new_file)
 autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_make_directory)
 autocmd Filetype vimfiler nmap <buffer> . <plug>(vimfiler_toggle_visible_ignore_files)
 autocmd Filetype vimfiler nmap <buffer> <c-r> <plug>(vimfiler_redraw_screen)
+autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
 
 nmap <silent> <leader>n :VimFilerExplorer<cr>
 " }}}
@@ -193,7 +200,7 @@ augroup vimrc
   autocmd FileType gitcommit setl diffopt+=vertical
 augroup END
 
-nmap <leader>v :vs $MYVIMRC<cr>
+nnoremap <leader>v :vs $MYVIMRC<cr>
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -216,7 +223,7 @@ nnoremap ;w :w<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 
-nmap Y y$
+nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
 nnoremap ge `.
@@ -242,14 +249,14 @@ map <silent> <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 
-nmap sj :SplitjoinSplit<cr>
-nmap sk :SplitjoinJoin<cr>
+nnoremap sj :SplitjoinSplit<cr>
+nnoremap sk :SplitjoinJoin<cr>
 
-nmap cm <Plug>Commentary
+nnoremap cm <Plug>Commentary
 
-nmap <silent> <leader>s :Gstatus<cr>
-nmap <silent> <leader>e :Gedit<cr>
-nmap <silent> <leader>d :Gdiff<cr>
+nnoremap <silent> <leader>s :Gstatus<cr>
+nnoremap <silent> <leader>e :Gedit<cr>
+nnoremap <silent> <leader>d :Gdiff<cr>
 
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
