@@ -4,7 +4,7 @@ function git_dirty {
 
 function git_prompt {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo ' '${ref#refs/heads/}''$(git_dirty)
+  echo " ${ref#refs/heads/}$(git_dirty)"
 }
 
 alias git='hub'
