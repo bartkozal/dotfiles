@@ -31,8 +31,24 @@ setopt INC_APPEND_HISTORY
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+alias ls='ls -GA'
+alias ll='ls -GAlh'
+alias cp='cp -R'
+alias rm='rm -R'
+alias grep='grep --color'
+alias less='less -FXR'
+alias q='exit'
+alias :q='exit'
+alias c='clear'
+alias b='bundle'
+alias be='bundle exec'
+alias s='ruby -run -e httpd . -p3000'
+
+function d {
+  cd "$CODE/$1"
+}
+
 source "$HOME/.zsh/private.zsh"
-source "$HOME/.zsh/functions.zsh"
 source "$HOME/.zsh/git.zsh"
 
 export PROMPT=$'%F{33}%~%f%F{221}$(git_prompt)%f '
