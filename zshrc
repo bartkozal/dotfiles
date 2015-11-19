@@ -48,16 +48,4 @@ bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    fg
-    zle redisplay
-  else
-    zle push-input
-    zle clear-screen
-  fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
-
 eval "$(rbenv init -)"
