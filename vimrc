@@ -275,4 +275,5 @@ call vimfiler#custom#profile('default', 'context', {
       \ })
 
 nmap <silent> <leader>n :VimFilerExplorer<cr>
+nmap <silent> - :VimFiler<cr>
 " }}}
