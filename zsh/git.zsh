@@ -1,10 +1,13 @@
+function git_branch {
+  git status -sb 2> /dev/null | head -n 1 | awk -F '[ ]|[...]' '{print "\ " $2}'
+}
+
 function git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo '~'
+  [[ $(git status -sb 2> /dev/null | wc -l) -gt 1 ]] && echo '~'
 }
 
 function git_prompt {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo " ${ref#refs/heads/}$(git_dirty)"
+  echo "$(git_branch)$(git_dirty)"
 }
 
 alias git='hub'
