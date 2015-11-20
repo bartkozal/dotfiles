@@ -251,6 +251,7 @@ autocmd FileType vimfiler nmap <buffer> } <c-d>
 autocmd Filetype vimfiler nmap <buffer> <enter> <plug>(vimfiler_expand_or_edit)
 autocmd Filetype vimfiler nmap <buffer> o <plug>(vimfiler_cd_or_edit)
 autocmd Filetype vimfiler nmap <buffer> <bs> <plug>(vimfiler_switch_to_parent_directory)
+autocmd Filetype vimfiler nmap <buffer> - <plug>(vimfiler_switch_to_parent_directory)
 autocmd Filetype vimfiler nmap <buffer> h <plug>(vimfiler_smart_h)
 autocmd Filetype vimfiler nmap <buffer> j <plug>(vimfiler_loop_cursor_down)
 autocmd Filetype vimfiler nmap <buffer> k <plug>(vimfiler_loop_cursor_up)
