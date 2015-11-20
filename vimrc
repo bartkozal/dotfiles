@@ -30,15 +30,19 @@ NeoBundle 'whatyouhide/vim-textobj-xmlattr'
 
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'christoomey/vim-conflicted'
 NeoBundle 'christoomey/vim-sort-motion'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'haya14busa/vim-asterisk'
 NeoBundle 'junegunn/vim-peekaboo'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'kurkale6ka/vim-pairs'
 NeoBundle 'mbbill/undotree'
+NeoBundle 'rhysd/clever-f.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'sickill/vim-pasta'
@@ -51,12 +55,13 @@ NeoBundle 'tpope/vim-rsi'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/ReplaceWithRegister'
-NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 " }}}
 
 filetype plugin indent on
+
+NeoBundleCheck
 
 syntax enable
 colorscheme hybrid
@@ -160,9 +165,8 @@ nnoremap Y y$
 nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
 nnoremap ge `.
-nnoremap * *<c-o>
-nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 nnoremap <c-c> <c-a>
+nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 
 nnoremap <silent> <leader>s :Gstatus<cr>
 nnoremap <silent> <leader>d :Gdiff<cr>
@@ -286,4 +290,18 @@ let g:indentLine_enabled = 0
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 236
 let g:indentLine_color_gui = '#313131'
+" }}}
+" incsearch & asterisk {{{
+highlight IncSearchCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
+highlight IncSearchOnCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
+
+let g:incsearch#magic = '\v'
+
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map * <Plug>(incsearch-nohl)<Plug>(asterisk-z*)
+map g* <Plug>(incsearch-nohl)<Plug>(asterisk-z#)
+map # <Plug>(incsearch-nohl)<Plug>(asterisk-gz*)
+map g# <Plug>(incsearch-nohl)<Plug>(asterisk-gz#)
 " }}}
