@@ -189,6 +189,7 @@ function! FirstCharOrFirstCol()
   endif
 endfunction
 
+let g:clever_f_smart_case = 1
 let g:peekaboo_compact = 1
 
 nnoremap cm <plug>Commentary
@@ -262,14 +263,13 @@ autocmd Filetype vimfiler nmap <buffer> h <plug>(vimfiler_smart_h)
 autocmd Filetype vimfiler nmap <buffer> j <plug>(vimfiler_loop_cursor_down)
 autocmd Filetype vimfiler nmap <buffer> k <plug>(vimfiler_loop_cursor_up)
 autocmd Filetype vimfiler nmap <buffer> l <plug>(vimfiler_smart_l)
-autocmd filetype vimfiler nmap <buffer> M <plug>(vimfiler_mark_current_line)<plug>(vimfiler_move_file)
+autocmd Filetype vimfiler nmap <buffer> M <plug>(vimfiler_mark_current_line)<plug>(vimfiler_move_file)
 autocmd Filetype vimfiler nmap <buffer> D <plug>(vimfiler_mark_current_line)<plug>(vimfiler_delete_file)
 autocmd Filetype vimfiler nmap <buffer> R <plug>(vimfiler_rename_file)
 autocmd Filetype vimfiler nmap <buffer> n <plug>(vimfiler_new_file)
 autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_make_directory)
 autocmd Filetype vimfiler nmap <buffer> . <plug>(vimfiler_toggle_visible_ignore_files)
 autocmd Filetype vimfiler nmap <buffer> <c-r> <plug>(vimfiler_redraw_screen)
-autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
 
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_no_default_key_mappings = 1
@@ -283,7 +283,7 @@ call vimfiler#custom#profile('default', 'context', {
       \ })
 
 nmap <silent> <leader>n :VimFilerExplorer<cr>
-nmap <silent> - :VimFiler<cr>
+nmap <silent> - :VimFilerBufferDir<cr>
 " }}}
 " indentLine {{{
 let g:indentLine_enabled = 0
