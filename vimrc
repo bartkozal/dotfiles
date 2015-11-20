@@ -1,69 +1,63 @@
 " vim:fdm=marker
 
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+set nocompatible
+set encoding=utf-8
 
 " Plugins {{{
-call neobundle#begin(expand('~/.vim/bundle'))
+call plug#begin('~/.vim/bundle')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plug 'Shougo/vimfiler.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'}
 
-NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make'}}
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-scripts/gitignore'
+Plug 'w0ng/vim-hybrid'
 
-NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'vim-scripts/gitignore'
-NeoBundle 'w0ng/vim-hybrid'
+Plug 'Julian/vim-textobj-variable-segment'
+Plug 'gilligan/textobj-gitgutter'
+Plug 'glts/vim-textobj-comment'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
+Plug 'whatyouhide/vim-textobj-xmlattr'
 
-NeoBundle 'Julian/vim-textobj-variable-segment'
-NeoBundle 'gilligan/textobj-gitgutter'
-NeoBundle 'glts/vim-textobj-comment'
-NeoBundle 'kana/vim-textobj-entire'
-NeoBundle 'kana/vim-textobj-indent'
-NeoBundle 'kana/vim-textobj-line'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'whatyouhide/vim-textobj-xmlattr'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'Yggdroot/indentLine'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'christoomey/vim-conflicted'
+Plug 'christoomey/vim-sort-motion'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/vim-asterisk'
+Plug 'junegunn/vim-peekaboo'
+Plug 'kien/ctrlp.vim'
+Plug 'kurkale6ka/vim-pairs'
+Plug 'lambdalisue/vim-gita'
+Plug 'mattn/emmet-vim'
+Plug 'mbbill/undotree'
+Plug 'rhysd/clever-f.vim'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/syntastic'
+Plug 'sickill/vim-pasta'
+Plug 'tommcdo/vim-lion'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/ReplaceWithRegister'
 
-NeoBundle 'AndrewRadev/splitjoin.vim'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'christoomey/vim-conflicted'
-NeoBundle 'christoomey/vim-sort-motion'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'haya14busa/vim-asterisk'
-NeoBundle 'junegunn/vim-peekaboo'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'kurkale6ka/vim-pairs'
-NeoBundle 'mbbill/undotree'
-NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'sickill/vim-pasta'
-NeoBundle 'tommcdo/vim-lion'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-projectionist'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-rsi'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'vim-scripts/ReplaceWithRegister'
-
-call neobundle#end()
+call plug#end()
 " }}}
 
 filetype plugin indent on
-
-NeoBundleCheck
-
 syntax enable
+
 colorscheme hybrid
 
 " Options {{{
@@ -80,7 +74,6 @@ set clipboard=unnamed
 set colorcolumn=80
 set cursorline
 set diffopt+=vertical
-set encoding=utf-8
 set expandtab
 set fillchars=diff:⣿,vert:│
 set gdefault
@@ -168,8 +161,8 @@ nnoremap ge `.
 nnoremap <c-c> <c-a>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 
-nnoremap <silent> <leader>s :Gstatus<cr>
-nnoremap <silent> <leader>d :Gdiff<cr>
+nnoremap <silent> <leader>s :Gita status<cr>
+nnoremap <silent> <leader>d :Gita diff-ls<cr>
 
 cnoremap Ag Ag!
 cnoremap <c-k> <up>
@@ -193,9 +186,10 @@ let g:clever_f_smart_case = 1
 let g:peekaboo_compact = 1
 
 nnoremap cm <plug>Commentary
-
 nnoremap sj :SplitjoinSplit<cr>
 nnoremap sk :SplitjoinJoin<cr>
+
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " airline {{{
 let g:airline#extensions#tabline#enabled = 1
@@ -219,25 +213,25 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
 " }}}
-" neocomplete {{{
-autocmd FileType css,scss,sass setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,erb,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_auto_delimiter = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#max_list = 15
-let g:neocomplete#enable_fuzzy_completion = 1
-let g:neocomplete#force_omni_input_patterns = {
-      \ 'ruby': '[^. *\t]\.\w*\|\h\w*::',
-      \ 'javascript': '[^. \t]\.\w*'
+" YCM {{{
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_semantic_triggers =  {
+      \   'c' : ['->', '.'],
+      \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+      \             're!\[.*\]\s'],
+      \   'ocaml' : ['.', '#'],
+      \   'cpp,objcpp' : ['->', '.', '::'],
+      \   'perl' : ['->'],
+      \   'php' : ['->', '::'],
+      \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+      \   'ruby' : ['.', '::'],
+      \   'lua' : ['.', ':'],
+      \   'erlang' : [':'],
+      \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*']
       \ }
-
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <expr><c-h> neocomplete#smart_close_popup()."\<c-h>"
-inoremap <expr><bs> neocomplete#smart_close_popup()."\<c-h>"
 " }}}
 " projectionist {{{
 let g:projectionist_heuristics = {
@@ -291,7 +285,7 @@ let g:indentLine_char = '┆'
 let g:indentLine_color_term = 236
 let g:indentLine_color_gui = '#313131'
 " }}}
-" incsearch & asterisk {{{
+" incsearch, asterisk {{{
 highlight IncSearchCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
 highlight IncSearchOnCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
 
