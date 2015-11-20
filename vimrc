@@ -108,7 +108,7 @@ set smartcase
 set smarttab
 set splitbelow
 set splitright
-set statusline=%<%f\ %{fugitive#head()}\ %y%r%m%=%l:%c\ \ %p
+set statusline=%<%f\ %y%r%m%=%l:%c\ \ %p
 set t_vb=
 set tabstop=2 softtabstop=2 shiftwidth=2
 set ttyfast
