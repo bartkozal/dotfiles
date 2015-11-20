@@ -51,6 +51,7 @@ NeoBundle 'tpope/vim-rsi'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/ReplaceWithRegister'
+NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 " }}}
@@ -170,6 +171,7 @@ cnoremap Ag Ag!
 cnoremap <c-k> <up>
 cnoremap <c-j> <down>
 
+map <silent> <f1> :IndentLinesToggle<cr>
 map <silent> <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
@@ -278,4 +280,10 @@ call vimfiler#custom#profile('default', 'context', {
 
 nmap <silent> <leader>n :VimFilerExplorer<cr>
 nmap <silent> - :VimFiler<cr>
+" }}}
+" indentLine {{{
+let g:indentLine_enabled = 0
+let g:indentLine_char = '┆'
+let g:indentLine_color_term = 236
+let g:indentLine_color_gui = '#313131'
 " }}}
