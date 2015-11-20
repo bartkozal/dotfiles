@@ -192,10 +192,18 @@ nnoremap sk :SplitjoinJoin<cr>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " airline {{{
+let g:airline_section_b = "%{airline#util#wrap(airline#extensions#hunks#get_hunks(), 0)} %{g:airline_symbols.branch} %{gita#statusline#format('%lb')}"
+let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline_powerline_fonts = 1
+" }}}
+" gitgutter {{{
+let g:gitgutter_map_keys = 0
+
+nmap ]h <plug>GitGutterNextHunk
+nmap [h <plug>GitGutterPrevHunk
 " }}}
 " ctrlp {{{
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
@@ -257,11 +265,11 @@ autocmd Filetype vimfiler nmap <buffer> h <plug>(vimfiler_smart_h)
 autocmd Filetype vimfiler nmap <buffer> j <plug>(vimfiler_loop_cursor_down)
 autocmd Filetype vimfiler nmap <buffer> k <plug>(vimfiler_loop_cursor_up)
 autocmd Filetype vimfiler nmap <buffer> l <plug>(vimfiler_smart_l)
-autocmd Filetype vimfiler nmap <buffer> M <plug>(vimfiler_mark_current_line)<plug>(vimfiler_move_file)
-autocmd Filetype vimfiler nmap <buffer> D <plug>(vimfiler_mark_current_line)<plug>(vimfiler_delete_file)
-autocmd Filetype vimfiler nmap <buffer> R <plug>(vimfiler_rename_file)
+autocmd Filetype vimfiler nmap <buffer> m <plug>(vimfiler_mark_current_line)<plug>(vimfiler_move_file)
+autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_mark_current_line)<plug>(vimfiler_delete_file)
+autocmd Filetype vimfiler nmap <buffer> r <plug>(vimfiler_rename_file)
 autocmd Filetype vimfiler nmap <buffer> n <plug>(vimfiler_new_file)
-autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_make_directory)
+autocmd Filetype vimfiler nmap <buffer> k <plug>(vimfiler_make_directory)
 autocmd Filetype vimfiler nmap <buffer> . <plug>(vimfiler_toggle_visible_ignore_files)
 autocmd Filetype vimfiler nmap <buffer> <c-r> <plug>(vimfiler_redraw_screen)
 
