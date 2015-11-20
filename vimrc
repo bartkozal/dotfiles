@@ -161,6 +161,7 @@ nnoremap L $
 nnoremap ge `.
 nnoremap * *<c-o>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
+nnoremap <c-c> <c-a>
 
 nnoremap <silent> <leader>s :Gstatus<cr>
 nnoremap <silent> <leader>d :Gdiff<cr>
