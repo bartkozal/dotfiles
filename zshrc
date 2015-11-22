@@ -48,7 +48,6 @@ function d {
   cd "$CODE/$1"
 }
 
-source "$HOME/.zsh/private.zsh"
 source "$HOME/.zsh/git.zsh"
 
 export PROMPT=$'%F{4}%~%f$(git_prompt) '
