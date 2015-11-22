@@ -158,7 +158,8 @@ nnoremap Y y$
 nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
 nnoremap ge `.
-nnoremap <c-c> <c-a>
+nnoremap <c-z> <c-a>
+nnoremap <c-s> :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 
 nnoremap <silent> <leader>s :Gita status<cr>
@@ -189,8 +190,6 @@ nnoremap cm <plug>Commentary
 nnoremap sj :SplitjoinSplit<cr>
 nnoremap sk :SplitjoinJoin<cr>
 
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
 " airline {{{
 let g:airline_section_b = "%{airline#util#wrap(airline#extensions#hunks#get_hunks(), 0)} %{g:airline_symbols.branch} %{gita#statusline#format('%lb')}"
 let g:airline#extensions#hunks#non_zero_only = 1
@@ -198,12 +197,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline_powerline_fonts = 1
-" }}}
-" gitgutter {{{
-let g:gitgutter_map_keys = 0
-
-nmap ]h <plug>GitGutterNextHunk
-nmap [h <plug>GitGutterPrevHunk
 " }}}
 " ctrlp {{{
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
@@ -221,25 +214,39 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
 " }}}
-" YCM {{{
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_semantic_triggers =  {
-      \   'c' : ['->', '.'],
-      \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-      \             're!\[.*\]\s'],
-      \   'ocaml' : ['.', '#'],
-      \   'cpp,objcpp' : ['->', '.', '::'],
-      \   'perl' : ['->'],
-      \   'php' : ['->', '::'],
-      \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-      \   'ruby' : ['.', '::'],
-      \   'lua' : ['.', ':'],
-      \   'erlang' : [':'],
-      \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*']
-      \ }
+" emmet {{{
+let g:user_emmet_install_global = 0
+let g:user_emmet_mode = 'i'
+
+autocmd FileType html,erb,css,scss,sass EmmetInstall
+
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" "}}}
+" gitgutter {{{
+let g:gitgutter_map_keys = 0
+
+nmap ]h <plug>GitGutterNextHunk
+nmap [h <plug>GitGutterPrevHunk
+" }}}
+" incsearch, asterisk {{{
+highlight IncSearchCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
+highlight IncSearchOnCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
+
+let g:incsearch#magic = '\v'
+
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map * <Plug>(incsearch-nohl)<Plug>(asterisk-z*)
+map g* <Plug>(incsearch-nohl)<Plug>(asterisk-z#)
+map # <Plug>(incsearch-nohl)<Plug>(asterisk-gz*)
+map g# <Plug>(incsearch-nohl)<Plug>(asterisk-gz#)
+" }}}
+" indentLine {{{
+let g:indentLine_enabled = 0
+let g:indentLine_char = '┆'
+let g:indentLine_color_term = 236
+let g:indentLine_color_gui = '#313131'
 " }}}
 " projectionist {{{
 let g:projectionist_heuristics = {
@@ -270,6 +277,7 @@ autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_mark_current_line)<plu
 autocmd Filetype vimfiler nmap <buffer> r <plug>(vimfiler_rename_file)
 autocmd Filetype vimfiler nmap <buffer> n <plug>(vimfiler_new_file)
 autocmd Filetype vimfiler nmap <buffer> b <plug>(vimfiler_make_directory)
+autocmd Filetype vimfiler nmap <buffer> v <plug>(vimfiler_split_edit_file)
 autocmd Filetype vimfiler nmap <buffer> . <plug>(vimfiler_toggle_visible_ignore_files)
 autocmd Filetype vimfiler nmap <buffer> <c-r> <plug>(vimfiler_redraw_screen)
 
@@ -287,23 +295,23 @@ call vimfiler#custom#profile('default', 'context', {
 nmap <silent> <leader>n :VimFilerExplorer<cr>
 nmap <silent> - :VimFilerBufferDir<cr>
 " }}}
-" indentLine {{{
-let g:indentLine_enabled = 0
-let g:indentLine_char = '┆'
-let g:indentLine_color_term = 236
-let g:indentLine_color_gui = '#313131'
-" }}}
-" incsearch, asterisk {{{
-highlight IncSearchCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
-highlight IncSearchOnCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
-
-let g:incsearch#magic = '\v'
-
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-map * <Plug>(incsearch-nohl)<Plug>(asterisk-z*)
-map g* <Plug>(incsearch-nohl)<Plug>(asterisk-z#)
-map # <Plug>(incsearch-nohl)<Plug>(asterisk-gz*)
-map g# <Plug>(incsearch-nohl)<Plug>(asterisk-gz#)
+" ycm {{{
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_semantic_triggers =  {
+      \   'c' : ['->', '.'],
+      \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+      \             're!\[.*\]\s'],
+      \   'ocaml' : ['.', '#'],
+      \   'cpp,objcpp' : ['->', '.', '::'],
+      \   'perl' : ['->'],
+      \   'php' : ['->', '::'],
+      \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+      \   'ruby' : ['.', '::'],
+      \   'lua' : ['.', ':'],
+      \   'erlang' : [':'],
+      \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*']
+      \ }
 " }}}
