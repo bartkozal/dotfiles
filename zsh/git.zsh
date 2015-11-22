@@ -1,13 +1,34 @@
 function git_branch {
-  git status -sb 2> /dev/null | head -n 1 | awk -F '[ ]|[...]' '{print "\ " $2}'
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  echo "%F{3}$branch%f"
 }
 
-function git_dirty {
-  [[ $(git status -sb 2> /dev/null | wc -l) -gt 1 ]] && echo '~'
+function git_local_status {
+  if [[ $(git status -sb 2> /dev/null | wc -l) -gt 1 ]]; then
+    diff=$(git diff HEAD --shortstat 2>/dev/null | sed $'s/,/\\\n/g')
+    insertions=$(echo $diff | grep "insertion" | awk '{print " +"$1}')
+    changes=$(echo $diff | grep "change" | awk '{print " @"$1}')
+    deletions=$(echo $diff | grep "deletion" | awk '{print " -"$1}')
+
+    echo "%F{5}$changes%f%F{2}$insertions%f%F{1}$deletions%f"
+  fi
+}
+
+function git_remote_status {
+  [[ $(git status -sb 2> /dev/null | head -n 1 | awk -F '[][]' '{print $2}') ]] && \
+    echo "%F{3}~%f"
+}
+
+function git_stash {
+  if [[ $(git stash list 2> /dev/null | wc -l) -gt 0 ]]; then
+    stashes=$(git stash list 2> /dev/null | wc -l | awk '{print " !"NF}')
+    echo "%F{6}$stashes%f"
+  fi
 }
 
 function git_prompt {
-  echo "$(git_branch)$(git_dirty)"
+  [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]] && \
+    echo " $(git_remote_status)$(git_branch)$(git_stash)$(git_local_status)"
 }
 
 alias git='hub'
