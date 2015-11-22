@@ -48,15 +48,10 @@ function d {
   cd "$CODE/$1"
 }
 
-function rb_version {
-  rbenv version | awk '{print $1}'
-}
-
 source "$HOME/.zsh/private.zsh"
 source "$HOME/.zsh/git.zsh"
 
 export PROMPT=$'%F{33}%~%f%F{221}$(git_prompt)%f '
-export RPROMPT='%F{1}$(rb_version)%f'
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=2048
 export SAVEHIST=2048

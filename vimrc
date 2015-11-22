@@ -4,7 +4,7 @@ set nocompatible
 set encoding=utf-8
 
 " Plugins {{{
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/vimfiler.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'}
 
@@ -269,7 +269,7 @@ autocmd Filetype vimfiler nmap <buffer> m <plug>(vimfiler_mark_current_line)<plu
 autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_mark_current_line)<plug>(vimfiler_delete_file)
 autocmd Filetype vimfiler nmap <buffer> r <plug>(vimfiler_rename_file)
 autocmd Filetype vimfiler nmap <buffer> n <plug>(vimfiler_new_file)
-autocmd Filetype vimfiler nmap <buffer> k <plug>(vimfiler_make_directory)
+autocmd Filetype vimfiler nmap <buffer> b <plug>(vimfiler_make_directory)
 autocmd Filetype vimfiler nmap <buffer> . <plug>(vimfiler_toggle_visible_ignore_files)
 autocmd Filetype vimfiler nmap <buffer> <c-r> <plug>(vimfiler_redraw_screen)
 
