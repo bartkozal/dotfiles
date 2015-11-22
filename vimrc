@@ -24,7 +24,6 @@ Plug 'whatyouhide/vim-textobj-xmlattr'
 
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-conflicted'
@@ -169,7 +168,6 @@ cnoremap Ag Ag!
 cnoremap <c-k> <up>
 cnoremap <c-j> <down>
 
-map <silent> <f1> :IndentLinesToggle<cr>
 map <silent> <f2> :UndotreeToggle<cr>
 map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
@@ -241,12 +239,6 @@ map * <Plug>(incsearch-nohl)<Plug>(asterisk-z*)
 map g* <Plug>(incsearch-nohl)<Plug>(asterisk-z#)
 map # <Plug>(incsearch-nohl)<Plug>(asterisk-gz*)
 map g# <Plug>(incsearch-nohl)<Plug>(asterisk-gz#)
-" }}}
-" indentLine {{{
-let g:indentLine_enabled = 0
-let g:indentLine_char = '┆'
-let g:indentLine_color_term = 236
-let g:indentLine_color_gui = '#313131'
 " }}}
 " projectionist {{{
 let g:projectionist_heuristics = {
