@@ -22,9 +22,11 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'whatyouhide/vim-textobj-xmlattr'
 
+" Plug 'lambdalisue/vim-gita'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
+Plug 'ap/vim-css-color'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
@@ -34,8 +36,6 @@ Plug 'haya14busa/vim-asterisk'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kien/ctrlp.vim'
 Plug 'kurkale6ka/vim-pairs'
-Plug 'lambdalisue/vim-gita'
-Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'rhysd/clever-f.vim'
 Plug 'rking/ag.vim'
@@ -44,6 +44,7 @@ Plug 'sickill/vim-pasta'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
@@ -132,6 +133,7 @@ autocmd VimResized * :wincmd =
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 autocmd FileType gitcommit setl spell
 autocmd FileType gitcommit setl diffopt+=vertical
+autocmd BufNewFile,BufRead *.tag :set filetype=html
 
 inoremap jk <esc>
 
@@ -161,8 +163,8 @@ nnoremap <c-z> <c-a>
 nnoremap <c-s> :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 
-nnoremap <silent> <leader>s :Gita status<cr>
-nnoremap <silent> <leader>d :Gita diff-ls<cr>
+nnoremap <silent> <leader>s :Gstatus<cr>
+nnoremap <silent> <leader>d :Gdiff<cr>
 
 cnoremap Ag Ag!
 cnoremap <c-k> <up>
@@ -189,7 +191,7 @@ nnoremap sj :SplitjoinSplit<cr>
 nnoremap sk :SplitjoinJoin<cr>
 
 " airline {{{
-let g:airline_section_b = "%{airline#util#wrap(airline#extensions#hunks#get_hunks(), 0)} %{g:airline_symbols.branch} %{gita#statusline#format('%lb')}"
+" let g:airline_section_b = "%{airline#util#wrap(airline#extensions#hunks#get_hunks(), 0)} %{g:airline_symbols.branch} %{gita#statusline#format('%lb')}"
 let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
@@ -212,14 +214,6 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:delimitMate_matchpairs = '(:),[:],{:}'
 " }}}
-" emmet {{{
-let g:user_emmet_install_global = 0
-let g:user_emmet_mode = 'i'
-
-autocmd FileType html,erb,css,scss,sass EmmetInstall
-
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-" "}}}
 " gitgutter {{{
 let g:gitgutter_map_keys = 0
 
@@ -256,14 +250,14 @@ let g:syntastic_slim_checkers = ['slimrb']
 " vimfiler {{{
 autocmd FileType vimfiler nmap <buffer> { <c-u>
 autocmd FileType vimfiler nmap <buffer> } <c-d>
-autocmd Filetype vimfiler nmap <buffer> <enter> <plug>(vimfiler_expand_or_edit)
+autocmd Filetype vimfiler nmap <buffer> <enter> <plug>(vimfiler_cd_or_edit)
 autocmd Filetype vimfiler nmap <buffer> o <plug>(vimfiler_cd_or_edit)
 autocmd Filetype vimfiler nmap <buffer> <bs> <plug>(vimfiler_switch_to_parent_directory)
 autocmd Filetype vimfiler nmap <buffer> - <plug>(vimfiler_switch_to_parent_directory)
 autocmd Filetype vimfiler nmap <buffer> h <plug>(vimfiler_smart_h)
 autocmd Filetype vimfiler nmap <buffer> j <plug>(vimfiler_loop_cursor_down)
 autocmd Filetype vimfiler nmap <buffer> k <plug>(vimfiler_loop_cursor_up)
-autocmd Filetype vimfiler nmap <buffer> l <plug>(vimfiler_smart_l)
+autocmd Filetype vimfiler nmap <buffer> l <plug>(vimfiler_expand_or_edit)
 autocmd Filetype vimfiler nmap <buffer> m <plug>(vimfiler_mark_current_line)<plug>(vimfiler_move_file)
 autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_mark_current_line)<plug>(vimfiler_delete_file)
 autocmd Filetype vimfiler nmap <buffer> r <plug>(vimfiler_rename_file)
