@@ -22,7 +22,6 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'whatyouhide/vim-textobj-xmlattr'
 
-" Plug 'lambdalisue/vim-gita'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
@@ -133,7 +132,7 @@ autocmd VimResized * :wincmd =
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 autocmd FileType gitcommit setl spell
 autocmd FileType gitcommit setl diffopt+=vertical
-autocmd BufNewFile,BufRead *.tag :set filetype=html
+autocmd BufNewFile,BufRead *.tag setlocal ft=html
 
 inoremap jk <esc>
 
@@ -245,7 +244,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_sass_checkers = ['sass']
-let g:syntastic_slim_checkers = ['slimrb']
+
+let g:syntastic_error_symbol = "»"
+let g:syntastic_style_error_symbol = "»"
+let g:syntastic_warning_symbol = "»"
+let g:syntastic_style_warning_symbol = "»"
 " }}}
 " vimfiler {{{
 autocmd FileType vimfiler nmap <buffer> { <c-u>
@@ -298,6 +301,7 @@ let g:ycm_semantic_triggers =  {
       \   'ruby' : ['.', '::'],
       \   'lua' : ['.', ':'],
       \   'erlang' : [':'],
-      \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*']
+      \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*'],
+      \   'html,xml,erb,ejs' : ['<', 're!<.*\s', '</']
       \ }
 " }}}
