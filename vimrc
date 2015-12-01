@@ -271,6 +271,7 @@ autocmd Filetype vimfiler nmap <buffer> n <plug>(vimfiler_new_file)
 autocmd Filetype vimfiler nmap <buffer> b <plug>(vimfiler_make_directory)
 autocmd Filetype vimfiler nmap <buffer> v <plug>(vimfiler_split_edit_file)
 autocmd Filetype vimfiler nmap <buffer> . <plug>(vimfiler_toggle_visible_ignore_files)
+autocmd Filetype vimfiler nmap <buffer> e <plug>(vimfiler_execute_external_filer)
 autocmd Filetype vimfiler nmap <buffer> <c-r> <plug>(vimfiler_redraw_screen)
 
 let g:vimfiler_as_default_explorer = 1
