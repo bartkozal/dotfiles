@@ -133,8 +133,9 @@ let g:mapleader = "\<space>"
 
 autocmd VimResized * :wincmd =
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-autocmd FileType gitcommit setl spell
-autocmd FileType gitcommit setl diffopt+=vertical
+autocmd FileType gitcommit setlocal spell
+autocmd FileType gitcommit setlocal diffopt+=vertical
+autocmd FileType markdown setlocal spell
 autocmd BufNewFile,BufRead *.tag setlocal ft=html
 
 inoremap jk <esc>
