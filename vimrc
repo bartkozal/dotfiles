@@ -122,7 +122,7 @@ set wildignore+=.hg,.git,.svn,.DS_Store
 set wildmenu
 
 if has("gui_macvim")
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
   set linespace=1
   set guioptions-=T
   set guioptions-=r
