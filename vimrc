@@ -162,6 +162,7 @@ nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
 nnoremap ge `.
 nnoremap <c-z> <c-a>
+nnoremap * *<c-o>
 nnoremap <c-s> :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 
