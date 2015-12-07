@@ -195,11 +195,12 @@ nnoremap sj :SplitjoinSplit<cr>
 nnoremap sk :SplitjoinJoin<cr>
 
 " airline {{{
-" let g:airline_section_b = "%{airline#util#wrap(airline#extensions#hunks#get_hunks(), 0)} %{g:airline_symbols.branch} %{gita#statusline#format('%lb')}"
+let g:airline_theme = 'hybridline'
 let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline_powerline_fonts = 1
 " }}}
 " ctrlp {{{
