@@ -32,8 +32,6 @@ Plug 'bling/vim-airline'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/vim-asterisk'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kien/ctrlp.vim'
@@ -218,20 +216,6 @@ let g:gitgutter_map_keys = 0
 
 nmap ]h <plug>GitGutterNextHunk
 nmap [h <plug>GitGutterPrevHunk
-" }}}
-" incsearch, asterisk {{{
-highlight IncSearchCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
-highlight IncSearchOnCursor ctermfg=0 ctermbg=52 guifg=#000000 guibg=#cc6666
-
-let g:incsearch#magic = '\v'
-
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-map * <Plug>(incsearch-nohl)<Plug>(asterisk-z*)
-map g* <Plug>(incsearch-nohl)<Plug>(asterisk-z#)
-map # <Plug>(incsearch-nohl)<Plug>(asterisk-gz*)
-map g# <Plug>(incsearch-nohl)<Plug>(asterisk-gz#)
 " }}}
 " projectionist {{{
 let g:projectionist_heuristics = {
