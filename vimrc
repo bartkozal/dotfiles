@@ -26,7 +26,6 @@ Plug 'tek/vim-textobj-ruby'
 Plug 'whatyouhide/vim-textobj-xmlattr'
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'bling/vim-airline'
@@ -213,11 +212,6 @@ let g:ctrlp_user_command = [
       \ 'find %s -type f'
       \ ]
 let g:ctrlp_working_path_mode = 'r'
-" }}}
-" delimitMate {{{
-let g:delimitMate_expand_cr = 1
-let g:delimitMate_expand_space = 1
-let g:delimitMate_matchpairs = '(:),[:],{:}'
 " }}}
 " gitgutter {{{
 let g:gitgutter_map_keys = 0
