@@ -291,3 +291,7 @@ let g:ycm_semantic_triggers =  {
       \   'html,xml,erb,ejs' : ['<', 're!<.*\s', '</']
       \ }
 " }}}
+" ag {{{
+let g:ag_prg = 'pt --column --nogroup'
+let g:ag_working_path_mode = 'r'
+" }}}
