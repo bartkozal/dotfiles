@@ -50,7 +50,8 @@ function d {
 
 source "$HOME/.zsh/git.zsh"
 
-export PROMPT=$'%F{4}%~%f$(git_prompt) '
+export PROMPT='%F{4}%~%f$(git_prompt) '
+export RPROMPT='$(git_rprompt)'
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=2048
 export SAVEHIST=2048

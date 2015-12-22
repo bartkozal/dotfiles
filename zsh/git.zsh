@@ -21,14 +21,19 @@ function git_remote_status {
 
 function git_stash {
   if [[ $(git stash list 2> /dev/null | wc -l) -gt 0 ]]; then
-    stashes=$(git stash list 2> /dev/null | wc -l | awk '{print " !"NF}')
+    stashes=$(git stash list 2> /dev/null | wc -l | awk '{print "!"NF}')
     echo "%F{6}$stashes%f"
   fi
 }
 
 function git_prompt {
   [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]] && \
-    echo " $(git_remote_status)$(git_branch)$(git_stash)$(git_local_status)"
+    echo " $(git_remote_status)$(git_branch)"
+}
+
+function git_rprompt {
+  [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]] && \
+    echo "$(git_stash)$(git_local_status)"
 }
 
 alias git='hub'
