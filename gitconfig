@@ -45,3 +45,5 @@
 	required = true
 [gist]
 	private = true
+[ghi]
+	token = !security find-internet-password -a bkzl -s github.com -l 'ghi token' -w
