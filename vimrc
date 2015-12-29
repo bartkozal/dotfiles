@@ -97,7 +97,7 @@ set scrolloff=3
 set shell=/bin/bash
 set shiftround
 set shortmess=sAIcOoa
-set showbreak=↪
+set showbreak=↑
 set showcmd
 set showtabline=2
 set sidescroll=1
