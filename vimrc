@@ -116,7 +116,7 @@ set wildignore+=.hg,.git,.svn,.DS_Store
 set wildmenu
 
 if has("gui_macvim")
-  set guifont=Hack:h12
+  set guifont=Hack:h14
   set linespace=1
   set guioptions-=T
   set guioptions-=r
