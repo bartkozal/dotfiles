@@ -28,7 +28,7 @@ function git_stash {
 
 function git_prompt {
   [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]] && \
-    echo " $(git_remote_status)$(git_branch)"
+    echo " $(git_branch)"
 }
 
 function git_rprompt {
