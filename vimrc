@@ -40,6 +40,7 @@ Plug 'rhysd/clever-f.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'sickill/vim-pasta'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -75,6 +76,7 @@ set cursorline
 set diffopt+=vertical
 set expandtab
 set fillchars=diff:⣿,vert:│
+set formatoptions+=j
 set gdefault
 set hidden
 set history=50
@@ -143,10 +145,10 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <left> <c-w>5<
-nnoremap <down> <c-w>5-
-nnoremap <up> <c-w>5+
-nnoremap <right> <c-w>5>
+nnoremap <left> <c-w>1<
+nnoremap <down> <c-w>1-
+nnoremap <up> <c-w>1+
+nnoremap <right> <c-w>1>
 
 nnoremap ; :
 nnoremap ! :!
