@@ -32,6 +32,8 @@ Plug 'bling/vim-airline'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'janko-m/vim-test' | Plug 'christoomey/vim-tmux-runner'
+Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kien/ctrlp.vim'
 Plug 'kurkale6ka/vim-pairs'
@@ -165,6 +167,9 @@ nnoremap <c-z> <c-a>
 nnoremap * *<c-o>
 nnoremap <c-s> :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
+nnoremap <tab> gt
+nnoremap <s-tab> gT
+nnoremap <silent> <leader>o <c-w><s-t>
 
 nnoremap <silent> <leader>s :Gstatus<cr>
 nnoremap <silent> <leader>d :Gdiff<cr>
@@ -193,6 +198,10 @@ nnoremap cm <plug>Commentary
 nnoremap sj :SplitjoinSplit<cr>
 nnoremap sk :SplitjoinJoin<cr>
 
+" ag {{{
+let g:ag_prg = 'pt --column --nogroup'
+let g:ag_working_path_mode = 'r'
+" }}}
 " airline {{{
 let g:airline_theme = 'hybridline'
 let g:airline#extensions#hunks#non_zero_only = 1
@@ -237,6 +246,15 @@ let g:syntastic_error_symbol = "»"
 let g:syntastic_style_error_symbol = "»"
 let g:syntastic_warning_symbol = "»"
 let g:syntastic_style_warning_symbol = "»"
+" }}}
+" vim-test {{{
+let test#strategy = "neovim"
+
+nmap <silent> <leader>t :TestNearest<cr>
+nmap <silent> <leader>f :TestFile<cr>
+nmap <silent> <leader>a :TestSuite<cr>
+nmap <silent> <leader>r :TestLast<cr>
+nmap <silent> <leader>l :TestVisit<cr>
 " }}}
 " vimfiler {{{
 autocmd FileType vimfiler nmap <buffer> { <c-u>
@@ -293,8 +311,4 @@ let g:ycm_semantic_triggers =  {
       \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*'],
       \   'html,xml,erb,ejs' : ['<', 're!<.*\s', '</']
       \ }
-" }}}
-" ag {{{
-let g:ag_prg = 'pt --column --nogroup'
-let g:ag_working_path_mode = 'r'
 " }}}
