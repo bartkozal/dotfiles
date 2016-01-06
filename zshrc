@@ -58,7 +58,7 @@ export SAVEHIST=2048
 export HISTCONTROL="ignoreboth"
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
-export EDITOR='mvim -f'
+export EDITOR='vim'
 
 bindkey -e
 bindkey '^[[1;9C' forward-word

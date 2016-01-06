@@ -2,7 +2,7 @@
 	name = Bartlomiej Kozal
 	email = bkzl@me.com
 [core]
-	editor = mvim -f
+	editor = vim
 	excludesfile = ~/.gitignore
 [color]
 	ui = true
