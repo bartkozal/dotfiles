@@ -59,9 +59,11 @@ export HISTCONTROL="ignoreboth"
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='vim'
+export DEIS_PROFILE='staging'
 
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
 eval "$(rbenv init -)"
+eval "$(nodenv init -)"
