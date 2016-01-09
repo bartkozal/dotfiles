@@ -32,7 +32,7 @@ Plug 'bling/vim-airline'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'janko-m/vim-test' | Plug 'christoomey/vim-tmux-runner'
+Plug 'janko-m/vim-test' | Plug 'benmills/vimux'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kien/ctrlp.vim'
@@ -248,7 +248,7 @@ let g:syntastic_warning_symbol = "»"
 let g:syntastic_style_warning_symbol = "»"
 " }}}
 " vim-test {{{
-let test#strategy = "neovim"
+let test#strategy = "vimux"
 
 nmap <silent> <leader>t :TestNearest<cr>
 nmap <silent> <leader>f :TestFile<cr>
