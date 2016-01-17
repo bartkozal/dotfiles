@@ -32,6 +32,7 @@ Plug 'bling/vim-airline'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test' | Plug 'benmills/vimux'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
@@ -163,7 +164,7 @@ nnoremap Y y$
 nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
 nnoremap ge `.
-nnoremap <c-z> <c-a>
+nnoremap <c-i> <c-a>
 nnoremap * *<c-o>
 nnoremap <c-s> :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
