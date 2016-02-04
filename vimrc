@@ -170,7 +170,7 @@ nnoremap <c-s> :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 nnoremap <tab> gt
 nnoremap <s-tab> gT
-nnoremap <silent> <leader>o <c-w><s-t>
+nnoremap <silent> <leader>o <c-w><s-t>gT
 
 nnoremap <silent> <leader>s :Gstatus<cr>
 nnoremap <silent> <leader>d :Gdiff<cr>
