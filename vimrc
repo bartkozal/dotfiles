@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/vimfiler.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'}
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/gitignore'
 Plug 'w0ng/vim-hybrid'
