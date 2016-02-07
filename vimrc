@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/vimfiler.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'}
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/gitignore'
 Plug 'w0ng/vim-hybrid'
@@ -28,7 +28,6 @@ Plug 'whatyouhide/vim-textobj-xmlattr'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
@@ -37,7 +36,6 @@ Plug 'janko-m/vim-test' | Plug 'benmills/vimux'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kien/ctrlp.vim'
-Plug 'kurkale6ka/vim-pairs'
 Plug 'mbbill/undotree'
 Plug 'rhysd/clever-f.vim'
 Plug 'rking/ag.vim'
@@ -54,6 +52,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ReplaceWithRegister'
 
 call plug#end()
