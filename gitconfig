@@ -13,6 +13,8 @@
 	merge = refs/heads/master
 [remote "origin"]
 	push = HEAD
+[commit]
+  template = ~/.gitmessage
 [push]
 	default = simple
 [rerere]
