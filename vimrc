@@ -16,13 +16,13 @@ Plug 'w0ng/vim-hybrid'
 Plug 'gilligan/textobj-gitgutter'
 Plug 'glts/vim-textobj-comment'
 Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-function'
-Plug 'thinca/vim-textobj-function-javascript'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'tek/vim-textobj-ruby'
+Plug 'thinca/vim-textobj-function-javascript'
 Plug 'whatyouhide/vim-textobj-xmlattr'
 
 Plug 'AndrewRadev/splitjoin.vim'
@@ -37,8 +37,8 @@ Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
-Plug 'rhysd/clever-f.vim'
 Plug 'rking/ag.vim'
+Plug 'romainl/vim-qf'
 Plug 'scrooloose/syntastic'
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -52,6 +52,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ReplaceWithRegister'
 
@@ -122,7 +123,7 @@ set wildignore+=.hg,.git,.svn,.DS_Store
 set wildmenu
 
 if has("gui_macvim")
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+  set guifont=Hack:h14
   set linespace=1
   set guioptions-=T
   set guioptions-=r
@@ -153,9 +154,7 @@ nnoremap <down> <c-w>1-
 nnoremap <up> <c-w>1+
 nnoremap <right> <c-w>1>
 
-nnoremap ; :
 nnoremap ! :!
-nnoremap ;w :w<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap j gj
@@ -194,6 +193,8 @@ endfunction
 
 let g:clever_f_smart_case = 1
 let g:peekaboo_compact = 1
+let g:qf_mapping_ack_style = 1
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 nnoremap cm <plug>Commentary
 nnoremap sj :SplitjoinSplit<cr>
@@ -202,6 +203,8 @@ nnoremap sk :SplitjoinJoin<cr>
 " ag {{{
 let g:ag_prg = 'pt --column --nogroup'
 let g:ag_working_path_mode = 'r'
+let g:ag_mapping_message = 0
+let g:ag_highlight = 0
 " }}}
 " airline {{{
 let g:airline_theme = 'hybridline'
