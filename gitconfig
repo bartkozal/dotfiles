@@ -26,10 +26,6 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
-[init]
-	templatedir = ~/.gittemplate
-[alias]
-	ctags = !.git/hooks/ctags
 [github]
 	user = bkzl
 	ssl = true
