@@ -39,7 +39,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'rking/ag.vim'
 Plug 'romainl/vim-qf'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-lion'
@@ -87,6 +87,7 @@ set history=50
 set hlsearch
 set ignorecase
 set incsearch
+set iskeyword+=-
 set laststatus=2
 set lazyredraw
 set list
@@ -163,9 +164,10 @@ nnoremap Y y$
 nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
 nnoremap ge `.
-nnoremap <c-i> <c-a>
+nnoremap <pageup> <c-a>
+nnoremap <pagedown> <c-x>
 nnoremap * *<c-o>
-nnoremap <c-s> :%s///g<left><left>
+nnoremap <leader>/ :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 nnoremap <tab> gt
 nnoremap <s-tab> gT
@@ -201,7 +203,6 @@ nnoremap sj :SplitjoinSplit<cr>
 nnoremap sk :SplitjoinJoin<cr>
 
 " ag {{{
-let g:ag_prg = 'pt --column --nogroup'
 let g:ag_working_path_mode = 'r'
 let g:ag_mapping_message = 0
 let g:ag_highlight = 0
@@ -313,6 +314,6 @@ let g:ycm_semantic_triggers =  {
       \   'lua' : ['.', ':'],
       \   'erlang' : [':'],
       \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*'],
-      \   'html,xml,erb,ejs' : ['<', 're!<.*\s', '</']
+      \   'html,xml,erb,ejs,liquid' : ['<', 're!<.*\s', '</']
       \ }
 " }}}
