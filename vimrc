@@ -185,7 +185,7 @@ xnoremap @q :normal @q<cr>
 xnoremap @@ :normal @@<cr>
 
 map <silent> <f2> :UndotreeToggle<cr>
-map <f4> :set spell!<cr>
+map <f3> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 
 function! FirstCharOrFirstCol()
