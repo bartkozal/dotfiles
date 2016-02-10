@@ -18,6 +18,7 @@ Plug 'glts/vim-textobj-comment'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
@@ -39,7 +40,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'rking/ag.vim'
 Plug 'romainl/vim-qf'
-" Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-lion'
@@ -47,7 +48,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
@@ -115,6 +115,7 @@ set smarttab
 set splitbelow
 set splitright
 set statusline=%<%f\ %y%r%m%=%l:%c\ \ %p
+" set synmaxcol=120
 set t_vb=
 set tabstop=2 softtabstop=2 shiftwidth=2
 set ttyfast
@@ -180,8 +181,11 @@ cnoremap Ag Ag!
 cnoremap <c-k> <up>
 cnoremap <c-j> <down>
 
+xnoremap @q :normal @q<cr>
+xnoremap @@ :normal @@<cr>
+
 map <silent> <f2> :UndotreeToggle<cr>
-map <f3> :set spell!<cr>
+map <f4> :set spell!<cr>
 map <f4> :set wrap! linebreak! list!<cr>
 
 function! FirstCharOrFirstCol()
