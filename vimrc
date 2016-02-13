@@ -6,12 +6,12 @@ set encoding=utf-8
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
-Plug 'Shougo/vimfiler.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'}
+Plug 'shougo/vimfiler.vim' | Plug 'shougo/unite.vim' | Plug 'shougo/vimproc.vim', {'do': 'make'}
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/gitignore'
 Plug 'w0ng/vim-hybrid'
+Plug 'valloric/youcompleteme', { 'do': './install.py' }
 
 Plug 'gilligan/textobj-gitgutter'
 Plug 'glts/vim-textobj-comment'
@@ -21,14 +21,16 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
+Plug 'lucapette/vim-textobj-underscore'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'tek/vim-textobj-ruby'
 Plug 'thinca/vim-textobj-function-javascript'
 Plug 'whatyouhide/vim-textobj-xmlattr'
+Plug 'ryanmcg/vim-textobj-dash'
 
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
+Plug 'bkzl/vim-ag-anything'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
@@ -55,6 +57,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'andrewradev/splitjoin.vim'
 
 call plug#end()
 " }}}
@@ -115,7 +118,6 @@ set smarttab
 set splitbelow
 set splitright
 set statusline=%<%f\ %y%r%m%=%l:%c\ \ %p
-" set synmaxcol=120
 set t_vb=
 set tabstop=2 softtabstop=2 shiftwidth=2
 set ttyfast
