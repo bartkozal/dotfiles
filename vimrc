@@ -29,11 +29,12 @@ Plug 'whatyouhide/vim-textobj-xmlattr'
 Plug 'ryanmcg/vim-textobj-dash'
 
 Plug 'airblade/vim-gitgutter'
+Plug 'andrewradev/splitjoin.vim'
 Plug 'ap/vim-css-color'
-Plug 'bkzl/vim-ag-anything'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'chun-yang/vim-ag-anything'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test' | Plug 'benmills/vimux'
 Plug 'jszakmeister/vim-togglecursor'
@@ -57,7 +58,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'andrewradev/splitjoin.vim'
 
 call plug#end()
 " }}}
