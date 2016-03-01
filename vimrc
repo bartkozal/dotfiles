@@ -39,7 +39,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test' | Plug 'benmills/vimux'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'rking/ag.vim'
 Plug 'romainl/vim-qf'
@@ -251,8 +251,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_javascript_checkers = ['jshint']
 
-let g:syntastic_sass_checkers = ['scss_lint']
 let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_scss_args = "--config ~/.scss_lint.yml"
 
 let g:syntastic_error_symbol = "»"
 let g:syntastic_style_error_symbol = "»"
