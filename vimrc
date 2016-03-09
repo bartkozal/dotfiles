@@ -21,25 +21,24 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
-Plug 'lucapette/vim-textobj-underscore'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'tek/vim-textobj-ruby'
 Plug 'thinca/vim-textobj-function-javascript'
 Plug 'whatyouhide/vim-textobj-xmlattr'
-Plug 'ryanmcg/vim-textobj-dash'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'ap/vim-css-color'
+Plug 'bogado/file-line'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chun-yang/vim-ag-anything'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test' | Plug 'benmills/vimux'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'rking/ag.vim'
 Plug 'romainl/vim-qf'
@@ -90,7 +89,6 @@ set history=50
 set hlsearch
 set ignorecase
 set incsearch
-set iskeyword+=-
 set laststatus=2
 set lazyredraw
 set list
@@ -105,7 +103,7 @@ set number
 set relativenumber
 set ruler
 set scrolloff=3
-set shell=/bin/bash
+set shell=$SHELL
 set shiftround
 set shortmess=sAIcOoa
 set showbreak=↑
