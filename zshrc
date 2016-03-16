@@ -48,6 +48,10 @@ function d {
   cd "$CODE/$1"
 }
 
+function ms {
+  tmux rename-session $1
+}
+
 source "$HOME/.zsh/git.zsh"
 
 export PROMPT='%F{4}%~%f$(git_prompt) '
