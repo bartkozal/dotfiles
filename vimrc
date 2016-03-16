@@ -164,6 +164,7 @@ nnoremap k gk
 nnoremap Y y$
 nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
+nnoremap <silent> Q :set tw=80<cr>gqip:set tw=0<cr>
 nnoremap ge `.
 nnoremap <pageup> <c-a>
 nnoremap <pagedown> <c-x>
