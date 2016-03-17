@@ -29,6 +29,7 @@ Plug 'whatyouhide/vim-textobj-xmlattr'
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'ap/vim-css-color'
+Plug 'arecarn/crunch.vim'
 Plug 'bogado/file-line'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
@@ -40,6 +41,7 @@ Plug 'janko-m/vim-test' | Plug 'benmills/vimux'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mbbill/undotree'
+Plug 'raimondi/delimitmate'
 Plug 'rking/ag.vim'
 Plug 'romainl/vim-qf'
 Plug 'scrooloose/syntastic'
@@ -141,7 +143,6 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit setlocal diffopt+=vertical
 autocmd FileType markdown setlocal spell
-autocmd BufNewFile,BufRead *.tag setlocal ft=html
 
 inoremap jk <esc>
 
@@ -166,8 +167,6 @@ nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
 nnoremap <silent> Q :set tw=80<cr>gqip:set tw=0<cr>
 nnoremap ge `.
-nnoremap <pageup> <c-a>
-nnoremap <pagedown> <c-x>
 nnoremap * *<c-o>
 nnoremap <leader>/ :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
@@ -202,6 +201,9 @@ let g:clever_f_smart_case = 1
 let g:peekaboo_compact = 1
 let g:qf_mapping_ack_style = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:crunch_result_type_append = 0
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
 
 nnoremap cm <plug>Commentary
 nnoremap sj :SplitjoinSplit<cr>
