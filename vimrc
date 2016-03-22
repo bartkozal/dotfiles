@@ -37,7 +37,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'chun-yang/vim-ag-anything'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'janko-m/vim-test' | Plug 'benmills/vimux'
+Plug 'janko-m/vim-test'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mbbill/undotree'
@@ -52,6 +52,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
@@ -97,6 +98,7 @@ set list
 set listchars=tab:▸\ ,trail:.
 set noerrorbells
 set noesckeys
+set nojoinspaces
 set noshowmode
 set noswapfile
 set novisualbell
@@ -165,6 +167,8 @@ nnoremap k gk
 nnoremap Y y$
 nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
+nnoremap J mzJ`z
+nnoremap K kJ
 nnoremap <silent> Q :set tw=80<cr>gqip:set tw=0<cr>
 nnoremap ge `.
 nnoremap * *<c-o>
@@ -172,6 +176,7 @@ nnoremap <leader>/ :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
 nnoremap <tab> gt
 nnoremap <s-tab> gT
+nnoremap <leader><space> zz
 nnoremap <silent> <leader>o <c-w><s-t>gT
 
 nnoremap <silent> <leader>s :Gstatus<cr>
@@ -261,7 +266,7 @@ let g:syntastic_warning_symbol = "»"
 let g:syntastic_style_warning_symbol = "»"
 " }}}
 " vim-test {{{
-let test#strategy = "vimux"
+let test#filename_modifier = ':p'
 
 nmap <silent> <leader>t :TestNearest<cr>
 nmap <silent> <leader>f :TestFile<cr>
