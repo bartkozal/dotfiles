@@ -33,6 +33,7 @@ Plug 'arecarn/crunch.vim'
 Plug 'bogado/file-line'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
+Plug 'christoomey/vim-titlecase'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chun-yang/vim-ag-anything'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -174,10 +175,10 @@ nnoremap ge `.
 nnoremap * *<c-o>
 nnoremap <leader>/ :%s///g<left><left>
 nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
-nnoremap <tab> gt
-nnoremap <s-tab> gT
+nnoremap <silent> <tab> :tabn<cr>
+nnoremap <silent> <s-tab> :tabp<cr>
+nnoremap <silent> <leader>o <c-w><s-t>:tabp<cr>
 nnoremap <leader><space> zz
-nnoremap <silent> <leader>o <c-w><s-t>gT
 
 nnoremap <silent> <leader>s :Gstatus<cr>
 nnoremap <silent> <leader>d :Gdiff<cr>
