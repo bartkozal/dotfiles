@@ -45,3 +45,5 @@
 	private = true
 [ghi]
 	token = !security find-internet-password -a bkzl -s github.com -l 'ghi token' -w
+[alias]
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
