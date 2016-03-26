@@ -12,6 +12,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/gitignore'
 Plug 'w0ng/vim-hybrid'
 Plug 'valloric/youcompleteme', { 'do': './install.py' }
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 Plug 'gilligan/textobj-gitgutter'
 Plug 'glts/vim-textobj-comment'
@@ -265,6 +266,43 @@ let g:syntastic_error_symbol = "»"
 let g:syntastic_style_error_symbol = "»"
 let g:syntastic_warning_symbol = "»"
 let g:syntastic_style_warning_symbol = "»"
+" }}}
+" ultisnips {{{
+function! g:UltiSnips_Complete()
+  call UltiSnips#ExpandSnippet()
+  if g:ulti_expand_res == 0
+    if pumvisible()
+      return "\<c-n>"
+    else
+      call UltiSnips#JumpForwards()
+      if g:ulti_jump_forwards_res == 0
+        return "\<tab>"
+      endif
+    endif
+  endif
+  return ""
+endfunction
+
+function! g:UltiSnips_Reverse()
+  call UltiSnips#JumpBackwards()
+  if g:ulti_jump_backwards_res == 0
+    return "\<c-p>"
+  endif
+
+  return ""
+endfunction
+
+
+if !exists("g:UltiSnipsJumpForwardTrigger")
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+endif
+
+if !exists("g:UltiSnipsJumpBackwardTrigger")
+  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+endif
+
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger     . " <c-r>=g:UltiSnips_Complete()<cr>"
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <c-r>=g:UltiSnips_Reverse()<cr>"
 " }}}
 " vim-test {{{
 let test#filename_modifier = ':p'
