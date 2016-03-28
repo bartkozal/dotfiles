@@ -46,6 +46,7 @@ Plug 'mbbill/undotree'
 Plug 'raimondi/delimitmate'
 Plug 'rking/ag.vim'
 Plug 'romainl/vim-qf'
+Plug 'rstacruz/sparkup', { 'rtp': 'vim' }
 Plug 'scrooloose/syntastic'
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
