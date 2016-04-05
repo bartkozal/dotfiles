@@ -172,7 +172,6 @@ nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 nnoremap L $
 nnoremap J mzJ`z
 nnoremap K kJ
-nnoremap <silent> Q :set tw=80<cr>gqip:set tw=0<cr>
 nnoremap ge `.
 nnoremap * *<c-o>
 nnoremap <leader>/ :%s///g<left><left>
@@ -262,6 +261,8 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_scss_args = "--config ~/.scss_lint.yml"
+" let g:syntastic_text_checkers = ['language_check']
+" let g:syntastic_text_language_check_args = '--language=en-US'
 
 let g:syntastic_error_symbol = "»"
 let g:syntastic_style_error_symbol = "»"
