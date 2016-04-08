@@ -50,6 +50,7 @@ Plug 'rstacruz/sparkup', { 'rtp': 'vim' }
 Plug 'scrooloose/syntastic'
 Plug 'sickill/vim-pasta'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
