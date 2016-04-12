@@ -53,6 +53,7 @@ alias gdf='git diff'
 alias gdfc='git diff --cached'
 alias gdfl='git diff HEAD~1'
 alias glo='git log --decorate --oneline -n 15'
+alias gcl='git clone'
 
 function gc {
   if [[ $# > 0 ]]; then
