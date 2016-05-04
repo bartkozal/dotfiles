@@ -261,7 +261,7 @@ let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_javascript_checkers = ['jshint']
 
 let g:syntastic_scss_checkers = ['scss_lint']
-let g:syntastic_scss_args = "--config ~/.scss_lint.yml"
+let g:syntastic_scss_scss_lint_args = "--config ~/.scss_lint.yml"
 " let g:syntastic_text_checkers = ['language_check']
 " let g:syntastic_text_language_check_args = '--language=en-US'
 
