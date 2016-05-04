@@ -42,6 +42,7 @@ Plug 'janko-m/vim-test'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mbbill/undotree'
+Plug 'myusuf3/numbers.vim'
 Plug 'raimondi/delimitmate'
 Plug 'rking/ag.vim'
 Plug 'romainl/vim-qf'
@@ -212,6 +213,9 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:crunch_result_type_append = 0
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
+let g:togglecursor_default = 'block'
+let g:togglecursor_insert = 'line'
+let g:numbers_exclude = ['undotree']
 
 nnoremap cm <plug>Commentary
 nnoremap sj :SplitjoinSplit<cr>
