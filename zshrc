@@ -47,6 +47,10 @@ function d {
   cd "$CODE/$1"
 }
 
+function e {
+  $(git rev-parse --show-toplevel)/.exec $1
+}
+
 function ms {
   tmux rename-session $1
 }
