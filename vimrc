@@ -6,8 +6,6 @@ set encoding=utf-8
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
-Plug 'shougo/vimfiler.vim' | Plug 'shougo/unite.vim' | Plug 'shougo/vimproc.vim', {'do': 'make'}
-
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/gitignore'
 Plug 'w0ng/vim-hybrid'
@@ -40,6 +38,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/vim-peekaboo'
+Plug 'justinmk/vim-dirvish'
 Plug 'mbbill/undotree'
 Plug 'myusuf3/numbers.vim'
 Plug 'raimondi/delimitmate'
@@ -51,6 +50,7 @@ Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-rails'
@@ -276,41 +276,6 @@ nmap <silent> <leader>r :TestNearest<cr>
 nmap <silent> <leader>f :TestFile<cr>
 nmap <silent> <leader>a :TestSuite<cr>
 nmap <silent> <leader>l :TestLast<cr>
-" }}}
-" vimfiler {{{
-autocmd FileType vimfiler nmap <buffer> { <c-u>
-autocmd FileType vimfiler nmap <buffer> } <c-d>
-autocmd Filetype vimfiler nmap <buffer> <enter> <plug>(vimfiler_cd_or_edit)
-autocmd Filetype vimfiler nmap <buffer> o <plug>(vimfiler_cd_or_edit)
-autocmd Filetype vimfiler nmap <buffer> <bs> <plug>(vimfiler_switch_to_parent_directory)
-autocmd Filetype vimfiler nmap <buffer> - <plug>(vimfiler_switch_to_parent_directory)
-autocmd Filetype vimfiler nmap <buffer> h <plug>(vimfiler_smart_h)
-autocmd Filetype vimfiler nmap <buffer> j <plug>(vimfiler_loop_cursor_down)
-autocmd Filetype vimfiler nmap <buffer> k <plug>(vimfiler_loop_cursor_up)
-autocmd Filetype vimfiler nmap <buffer> l <plug>(vimfiler_expand_or_edit)
-autocmd Filetype vimfiler nmap <buffer> m <plug>(vimfiler_mark_current_line)<plug>(vimfiler_move_file)
-autocmd Filetype vimfiler nmap <buffer> d <plug>(vimfiler_mark_current_line)<plug>(vimfiler_delete_file)
-autocmd Filetype vimfiler nmap <buffer> r <plug>(vimfiler_rename_file)
-autocmd Filetype vimfiler nmap <buffer> n <plug>(vimfiler_new_file)
-autocmd Filetype vimfiler nmap <buffer> b <plug>(vimfiler_make_directory)
-autocmd Filetype vimfiler nmap <buffer> v <plug>(vimfiler_split_edit_file)
-autocmd Filetype vimfiler nmap <buffer> . <plug>(vimfiler_toggle_visible_ignore_files)
-autocmd Filetype vimfiler nmap <buffer> e <plug>(vimfiler_execute_external_filer)
-autocmd Filetype vimfiler nmap <buffer> <c-r> <plug>(vimfiler_redraw_screen)
-
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_no_default_key_mappings = 1
-let g:vimfiler_tree_leaf_icon = ' '
-let g:vimfiler_tree_opened_icon = '▾'
-let g:vimfiler_tree_closed_icon = '▸'
-
-call vimfiler#custom#profile('default', 'context', {
-      \ 'safe': 0,
-      \ 'auto_cd': 1
-      \ })
-
-nmap <silent> <leader>n :VimFilerExplorer<cr>
-nmap <silent> - :VimFilerBufferDir<cr>
 " }}}
 " ycm {{{
 let g:ycm_collect_identifiers_from_tags_files = 1
