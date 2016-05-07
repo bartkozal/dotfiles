@@ -33,7 +33,7 @@ function git_prompt {
 
 function git_rprompt {
   [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]] && \
-    echo "$(git_stash)$(git_local_status)"
+    echo " $(git_stash)$(git_local_status)"
 }
 
 alias git='hub'

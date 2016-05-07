@@ -11,24 +11,27 @@ export RBENV_ROOT="$HOME/.rbenv"
 
 typeset -U PATH FPATH
 
-autoload -U compinit colors zmv
+autoload -U compinit colors zmv add-zsh-hook
 compinit && colors
 
 unalias run-help
 autoload run-help
 export HELPDIR="/usr/local/share/zsh/helpfiles"
 
-setopt PROMPT_SUBST
-setopt AUTO_LIST
-setopt MENU_COMPLETE
-setopt COMPLETE_IN_WORD
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt EXTENDED_HISTORY
-setopt INC_APPEND_HISTORY
+setopt auto_cd
+setopt auto_list
+setopt complete_in_word
+setopt extended_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt ignore_eof
+setopt inc_append_history
+setopt menu_complete
+setopt prompt_subst
+setopt share_history
 
 zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 alias ls='ls -GA'
 alias ll='ls -GAlh'
@@ -58,7 +61,6 @@ function ms {
 source "$HOME/.zsh/git.zsh"
 
 export PROMPT='%F{4}%~%f$(git_prompt) '
-export RPROMPT='$(git_rprompt)'
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=2048
 export SAVEHIST=2048
@@ -71,6 +73,8 @@ export DEIS_PROFILE='staging'
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
+
+source "$HOME/.zsh/hooks.zsh"
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
