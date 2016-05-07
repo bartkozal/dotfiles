@@ -39,7 +39,6 @@ Plug 'chun-yang/vim-ag-anything'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test'
-Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mbbill/undotree'
 Plug 'myusuf3/numbers.vim'
@@ -48,8 +47,6 @@ Plug 'rking/ag.vim'
 Plug 'romainl/vim-qf'
 Plug 'rstacruz/sparkup', { 'rtp': 'vim' }
 Plug 'scrooloose/syntastic'
-Plug 'sickill/vim-pasta'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
@@ -64,6 +61,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'wincent/terminus'
 
 call plug#end()
 " }}}
@@ -89,6 +87,7 @@ set cursorline
 set diffopt+=vertical
 set expandtab
 set fillchars=diff:⣿,vert:│
+set foldopen-=block
 set formatoptions+=j
 set gdefault
 set hidden
@@ -213,8 +212,6 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:crunch_result_type_append = 0
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
-let g:togglecursor_default = 'block'
-let g:togglecursor_insert = 'line'
 let g:numbers_exclude = ['undotree']
 
 nnoremap cm <plug>Commentary
@@ -266,8 +263,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_scss_scss_lint_args = "--config ~/.scss_lint.yml"
-" let g:syntastic_text_checkers = ['language_check']
-" let g:syntastic_text_language_check_args = '--language=en-US'
 
 let g:syntastic_error_symbol = "»"
 let g:syntastic_style_error_symbol = "»"
@@ -277,11 +272,10 @@ let g:syntastic_style_warning_symbol = "»"
 " vim-test {{{
 let test#filename_modifier = ':p'
 
-nmap <silent> <leader>t :TestNearest<cr>
+nmap <silent> <leader>r :TestNearest<cr>
 nmap <silent> <leader>f :TestFile<cr>
 nmap <silent> <leader>a :TestSuite<cr>
-nmap <silent> <leader>r :TestLast<cr>
-nmap <silent> <leader>l :TestVisit<cr>
+nmap <silent> <leader>l :TestLast<cr>
 " }}}
 " vimfiler {{{
 autocmd FileType vimfiler nmap <buffer> { <c-u>
