@@ -28,6 +28,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'ap/vim-css-color'
 Plug 'arecarn/crunch.vim'
+Plug 'blueyed/vim-diminactive'
 Plug 'bogado/file-line'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
@@ -148,10 +149,60 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit setlocal diffopt+=vertical
 autocmd FileType markdown setlocal spell
+autocmd BufEnter,FocusGained,VimEnter,WinEnter * setlocal cursorline
+autocmd FocusLost,WinLeave * setlocal nocursorline
 
 inoremap jk <esc>
 
 nnoremap <leader>v :vs $MYVIMRC<cr>
+
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+nnoremap ! :!
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+nnoremap j gj
+nnoremap k gk
+nnoremap Y y$
+nnoremap L $
+nnoremap J mzJ`z
+nnoremap K kJ
+nnoremap ge `.
+nnoremap * *<c-o>
+nnoremap <leader>/ :%s///g<left><left>
+nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
+nnoremap <silent> <tab> :tabn<cr>
+nnoremap <silent> <s-tab> :tabp<cr>
+nnoremap <silent> <leader>o <c-w><s-t>:tabp<cr>
+nnoremap <leader><space> zz
+
+nnoremap <silent> <leader>s :Gstatus<cr>
+nnoremap <silent> <leader>d :Gdiff<cr>
+
+cnoremap Ag Ag!
+cnoremap <c-k> <up>
+cnoremap <c-j> <down>
+
+xnoremap @q :normal @q<cr>
+xnoremap @@ :normal @@<cr>
+
+map <silent> <f2> :UndotreeToggle<cr>
+map <f3> :set spell!<cr>
+map <f4> :set wrap! linebreak! list!<cr>
+
+function! FirstCharOrFirstCol()
+  let current_col = virtcol('.')
+  normal ^
+  let first_char = virtcol('.')
+  if current_col == first_char
+    normal 0
+  endif
+endfunction
+
+nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
 
 " Tmux-like window resizing {{{
 function! IsEdgeWindowSelected(direction)
@@ -207,59 +258,12 @@ function! TmuxResize(direction, amount)
   let l:action = GetAction(a:direction)
   exec l:action.a:amount
 endfunction
-"}}}
 
 nnoremap <silent> <left> :call TmuxResize('h', 1)<cr>
 nnoremap <silent> <down> :call TmuxResize('j', 1)<cr>
 nnoremap <silent> <up> :call TmuxResize('k', 1)<cr>
 nnoremap <silent> <right> :call TmuxResize('l', 1)<cr>
-
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-nnoremap ! :!
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q<cr>
-nnoremap j gj
-nnoremap k gk
-nnoremap Y y$
-nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
-nnoremap L $
-nnoremap J mzJ`z
-nnoremap K kJ
-nnoremap ge `.
-nnoremap * *<c-o>
-nnoremap <leader>/ :%s///g<left><left>
-nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
-nnoremap <silent> <tab> :tabn<cr>
-nnoremap <silent> <s-tab> :tabp<cr>
-nnoremap <silent> <leader>o <c-w><s-t>:tabp<cr>
-nnoremap <leader><space> zz
-
-nnoremap <silent> <leader>s :Gstatus<cr>
-nnoremap <silent> <leader>d :Gdiff<cr>
-
-cnoremap Ag Ag!
-cnoremap <c-k> <up>
-cnoremap <c-j> <down>
-
-xnoremap @q :normal @q<cr>
-xnoremap @@ :normal @@<cr>
-
-map <silent> <f2> :UndotreeToggle<cr>
-map <f3> :set spell!<cr>
-map <f4> :set wrap! linebreak! list!<cr>
-
-function! FirstCharOrFirstCol()
-  let current_col = virtcol('.')
-  normal ^
-  let first_char = virtcol('.')
-  if current_col == first_char
-    normal 0
-  endif
-endfunction
+"}}}
 
 let g:clever_f_smart_case = 1
 let g:peekaboo_compact = 1
@@ -269,6 +273,8 @@ let g:crunch_result_type_append = 0
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:numbers_exclude = ['undotree']
+let g:diminactive_use_colorcolumn = 1
+let g:diminactive_enable_focus = 1
 
 nnoremap cm <plug>Commentary
 nnoremap sj :SplitjoinSplit<cr>
