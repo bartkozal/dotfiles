@@ -1,7 +1,7 @@
 [user]
 	name = Bartlomiej Kozal
 	email = bkzl@me.com
-	signingkey = 4096R/7A764024
+	signingkey = 7A764024
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
