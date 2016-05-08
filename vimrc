@@ -28,6 +28,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'ap/vim-css-color'
 Plug 'arecarn/crunch.vim'
+Plug 'bkzl/vim-arrows'
 Plug 'blueyed/vim-diminactive'
 Plug 'bogado/file-line'
 Plug 'christoomey/vim-conflicted'
@@ -203,67 +204,6 @@ function! FirstCharOrFirstCol()
 endfunction
 
 nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
-
-" Tmux-like window resizing {{{
-function! IsEdgeWindowSelected(direction)
-  let l:curwindow = winnr()
-  exec "wincmd ".a:direction
-  let l:result = l:curwindow == winnr()
-
-  if (!l:result)
-    " Go back to the previous window
-    exec l:curwindow."wincmd w"
-  endif
-
-  return l:result
-endfunction
-
-function! GetAction(direction)
-  let l:keys = ['h', 'j', 'k', 'l']
-  let l:actions = ['vertical resize -', 'resize +', 'resize -', 'vertical resize +']
-  return get(l:actions, index(l:keys, a:direction))
-endfunction
-
-function! GetOpposite(direction)
-  let l:keys = ['h', 'j', 'k', 'l']
-  let l:opposites = ['l', 'k', 'j', 'h']
-  return get(l:opposites, index(l:keys, a:direction))
-endfunction
-
-function! TmuxResize(direction, amount)
-  " v >
-  if (a:direction == 'j' || a:direction == 'l')
-    if IsEdgeWindowSelected(a:direction)
-      let l:opposite = GetOpposite(a:direction)
-      let l:curwindow = winnr()
-      exec 'wincmd '.l:opposite
-      let l:action = GetAction(a:direction)
-      exec l:action.a:amount
-      exec l:curwindow.'wincmd w'
-      return
-    endif
-    " < ^
-  elseif (a:direction == 'h' || a:direction == 'k')
-    let l:opposite = GetOpposite(a:direction)
-    if IsEdgeWindowSelected(l:opposite)
-      let l:curwindow = winnr()
-      exec 'wincmd '.a:direction
-      let l:action = GetAction(a:direction)
-      exec l:action.a:amount
-      exec l:curwindow.'wincmd w'
-      return
-    endif
-  endif
-
-  let l:action = GetAction(a:direction)
-  exec l:action.a:amount
-endfunction
-
-nnoremap <silent> <left> :call TmuxResize('h', 1)<cr>
-nnoremap <silent> <down> :call TmuxResize('j', 1)<cr>
-nnoremap <silent> <up> :call TmuxResize('k', 1)<cr>
-nnoremap <silent> <right> :call TmuxResize('l', 1)<cr>
-"}}}
 
 let g:clever_f_smart_case = 1
 let g:peekaboo_compact = 1
