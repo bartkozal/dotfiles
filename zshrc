@@ -61,6 +61,7 @@ function ms {
 source "$HOME/.zsh/git.zsh"
 
 export PROMPT='%F{4}%~%f$(git_prompt) '
+export RPROMPT='$(git_rprompt)'
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=2048
 export SAVEHIST=2048
@@ -74,7 +75,13 @@ bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
-source "$HOME/.zsh/hooks.zsh"
+function auto-ls-after-cd {
+  emulate -L zsh
+  if [ "$ZSH_EVAL_CONTEXT" = "toplevel:shfunc" ]; then
+    ls
+  fi
+}
+add-zsh-hook chpwd auto-ls-after-cd
 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
