@@ -83,5 +83,17 @@ function auto-ls-after-cd {
 }
 add-zsh-hook chpwd auto-ls-after-cd
 
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
