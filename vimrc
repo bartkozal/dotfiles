@@ -168,6 +168,11 @@ nnoremap <c-w>j <c-w>J
 nnoremap <c-w>k <c-w>K
 nnoremap <c-w>l <c-w>L
 
+nnoremap <home> <c-a>
+nnoremap <end> <c-x>
+nnoremap <pageup> <c-o>
+nnoremap <pagedown> <c-i>
+
 nnoremap ! :!
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
