@@ -191,6 +191,9 @@ nnoremap <silent> <s-tab> :tabp<cr>
 nnoremap <silent> <leader>o <c-w><s-t>:tabp<cr>
 nnoremap <leader><space> zz
 
+nmap n nzzzv
+nmap N Nzzzv
+
 nnoremap <silent> <leader>s :Gstatus<cr>
 nnoremap <silent> <leader>d :Gdiff<cr>
 
