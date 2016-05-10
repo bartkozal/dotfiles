@@ -41,6 +41,7 @@ Plug 'janko-m/vim-test'
 Plug 'junegunn/vim-peekaboo'
 Plug 'justinmk/vim-dirvish'
 Plug 'mbbill/undotree'
+Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'myusuf3/numbers.vim'
 Plug 'raimondi/delimitmate'
 Plug 'rking/ag.vim'
