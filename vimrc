@@ -12,6 +12,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'valloric/youcompleteme', { 'do': './install.py' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
+Plug 'bkzl/vim-textobj-variable-segment'
 Plug 'gilligan/textobj-gitgutter'
 Plug 'glts/vim-textobj-comment'
 Plug 'kana/vim-textobj-entire'
@@ -90,7 +91,7 @@ set cursorline
 set diffopt+=vertical
 set expandtab
 set fillchars=diff:⣿,vert:│
-set foldopen-=block
+set foldopen=percent,quickfix,search,tag,undo
 set formatoptions+=j
 set gdefault
 set hidden
@@ -98,6 +99,7 @@ set history=50
 set hlsearch
 set ignorecase
 set incsearch
+set iskeyword+=-
 set laststatus=2
 set lazyredraw
 set list
