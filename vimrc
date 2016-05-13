@@ -31,7 +31,6 @@ Plug 'andrewradev/splitjoin.vim'
 Plug 'ap/vim-css-color'
 Plug 'arecarn/crunch.vim'
 Plug 'bkzl/vim-arrows'
-Plug 'blueyed/vim-diminactive'
 Plug 'bogado/file-line'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
@@ -230,8 +229,6 @@ let g:crunch_result_type_append = 0
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 let g:numbers_exclude = ['undotree']
-let g:diminactive_use_colorcolumn = 1
-let g:diminactive_enable_focus = 1
 
 nnoremap cm <plug>Commentary
 nnoremap sj :SplitjoinSplit<cr>
