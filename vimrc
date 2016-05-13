@@ -260,6 +260,15 @@ let g:ctrlp_user_command = [
       \ ]
 let g:ctrlp_working_path_mode = 'r'
 " }}}
+" dirvish {{{
+" }}}
+autocmd FileType dirvish nnoremap <buffer> t :call dirvish#open('tabedit', 0)<cr>
+autocmd FileType dirvish nnoremap <buffer> s :call dirvish#open('split', 0)<cr>
+autocmd FileType dirvish nnoremap <buffer> v :call dirvish#open('vsplit', 0)<cr>
+autocmd FileType dirvish nnoremap <buffer> n :e %
+autocmd FileType dirvish nnoremap <buffer> b :!mkdir %
+autocmd FileType dirvish sort r /[^\/]$/
+autocmd FileType dirvish keeppatterns g@\v/\.[^\/]+/?$@d
 " gitgutter {{{
 let g:gitgutter_map_keys = 0
 
