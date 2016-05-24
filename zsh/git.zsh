@@ -3,22 +3,6 @@ function git_branch {
   echo "%F{3}$branch%f"
 }
 
-function git_local_status {
-  if [[ $(git status -sb 2> /dev/null | wc -l) -gt 1 ]]; then
-    diff=$(git diff HEAD --shortstat 2>/dev/null | sed $'s/,/\\\n/g')
-    insertions=$(echo $diff | grep "insertion" | awk '{print " +"$1}')
-    changes=$(echo $diff | grep "change" | awk '{print " @"$1}')
-    deletions=$(echo $diff | grep "deletion" | awk '{print " -"$1}')
-
-    echo "%F{5}$changes%f%F{2}$insertions%f%F{1}$deletions%f"
-  fi
-}
-
-function git_remote_status {
-  [[ $(git status -sb 2> /dev/null | head -n 1 | awk -F '[][]' '{print $2}') ]] && \
-    echo "%F{3}~%f"
-}
-
 function git_stash {
   if [[ $(git stash list 2> /dev/null | wc -l) -gt 0 ]]; then
     stashes=$(git stash list 2> /dev/null | wc -l | awk '{print "!"NF}')
@@ -31,11 +15,6 @@ function git_prompt {
     echo " $(git_branch)"
 }
 
-function git_rprompt {
-  [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]] && \
-    echo " $(git_stash)$(git_local_status)"
-}
-
 alias git='hub'
 alias g='git'
 alias gh='github .'
@@ -46,9 +25,9 @@ alias gco='git checkout'
 alias gst='git stash'
 alias gstl='git stash list'
 alias gstp='git stash pop'
+alias gstd='git stash drop'
 alias gpl='git pull --rebase'
 alias gps='git push'
-alias gpst='git push --tags'
 alias gdf='git diff'
 alias gdfc='git diff --cached'
 alias gdfl='git diff HEAD~1'
@@ -108,9 +87,4 @@ function gres {
       No ) break;;
     esac
   done
-}
-
-function gprune {
-  git fetch -p
-  git branch --merged master | grep -v 'master$' | xargs git branch -d
 }

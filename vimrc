@@ -1,6 +1,5 @@
 " vim:fdm=marker
 
-set nocompatible
 set encoding=utf-8
 
 " Plugins {{{
@@ -9,60 +8,26 @@ call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/gitignore'
 Plug 'w0ng/vim-hybrid'
-Plug 'valloric/youcompleteme', { 'do': './install.py' }
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-Plug 'bkzl/vim-textobj-variable-segment'
-Plug 'gilligan/textobj-gitgutter'
 Plug 'glts/vim-textobj-comment'
-Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-textobj-function'
-Plug 'kana/vim-textobj-indent'
-Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
-Plug 'sgur/vim-textobj-parameter'
-Plug 'tek/vim-textobj-ruby'
-Plug 'thinca/vim-textobj-function-javascript'
 Plug 'whatyouhide/vim-textobj-xmlattr'
 
-Plug 'airblade/vim-gitgutter'
-Plug 'andrewradev/splitjoin.vim'
 Plug 'ap/vim-css-color'
-Plug 'arecarn/crunch.vim'
-Plug 'bkzl/vim-arrows'
 Plug 'bogado/file-line'
-Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
-Plug 'christoomey/vim-titlecase'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'chun-yang/vim-ag-anything'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
-Plug 'junegunn/vim-peekaboo'
 Plug 'justinmk/vim-dirvish'
-Plug 'mbbill/undotree'
-Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
-Plug 'myusuf3/numbers.vim'
-Plug 'raimondi/delimitmate'
 Plug 'rking/ag.vim'
-Plug 'romainl/vim-qf'
-Plug 'rstacruz/sparkup', { 'rtp': 'vim' }
-Plug 'scrooloose/syntastic'
-Plug 'tommcdo/vim-exchange'
-Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'unblevable/quick-scope'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wincent/terminus'
 
@@ -119,7 +84,7 @@ set shiftround
 set shortmess=sAIcOoa
 set showbreak=↑
 set showcmd
-set showtabline=2
+set showtabline=1
 set sidescroll=1
 set sidescrolloff=10
 set smartcase
@@ -156,60 +121,7 @@ autocmd FileType markdown setlocal spell
 autocmd BufEnter,FocusGained,VimEnter,WinEnter * setlocal cursorline
 autocmd FocusLost,WinLeave * setlocal nocursorline
 
-inoremap jk <esc>
-
-nnoremap <leader>v :vs $MYVIMRC<cr>
-
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-nnoremap <c-w>h <c-w>H
-nnoremap <c-w>j <c-w>J
-nnoremap <c-w>k <c-w>K
-nnoremap <c-w>l <c-w>L
-
-nnoremap <home> <c-a>
-nnoremap <end> <c-x>
-nnoremap <pageup> <c-o>
-nnoremap <pagedown> <c-i>
-
-nnoremap ! :!
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q<cr>
-nnoremap j gj
-nnoremap k gk
-nnoremap Y y$
-nnoremap L $
-nnoremap J mzJ`z
-nnoremap K kJ
-nnoremap ge `.
-nnoremap * *<c-o>
-nnoremap <leader>/ :%s///g<left><left>
-nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
-nnoremap <silent> <tab> :tabn<cr>
-nnoremap <silent> <s-tab> :tabp<cr>
-nnoremap <silent> <leader>o <c-w><s-t>:tabp<cr>
-nnoremap <leader><space> zz
-
-nmap n nzzzv
-nmap N Nzzzv
-
-nnoremap <silent> <leader>s :Gstatus<cr>
-nnoremap <silent> <leader>d :Gdiff<cr>
-
-cnoremap Ag Ag!
-cnoremap <c-k> <up>
-cnoremap <c-j> <down>
-
-xnoremap @q :normal @q<cr>
-xnoremap @@ :normal @@<cr>
-
-map <silent> <f2> :UndotreeToggle<cr>
-map <f3> :set spell!<cr>
-map <f4> :set wrap! linebreak! list!<cr>
-
+" Functions {{{
 function! FirstCharOrFirstCol()
   let current_col = virtcol('.')
   normal ^
@@ -218,47 +130,51 @@ function! FirstCharOrFirstCol()
     normal 0
   endif
 endfunction
+" }}}
 
+inoremap jk <esc>
+
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+nnoremap j gj
+nnoremap k gk
 nnoremap <silent> H :call FirstCharOrFirstCol()<cr>
-
-let g:clever_f_smart_case = 1
-let g:peekaboo_compact = 1
-let g:qf_mapping_ack_style = 1
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-let g:crunch_result_type_append = 0
-let g:delimitMate_expand_cr = 1
-let g:delimitMate_expand_space = 1
-let g:numbers_exclude = ['undotree']
+nnoremap J mzJ`z
+nnoremap K kJ
+nnoremap L $
+nnoremap Y y$
+nnoremap ge `.
+nnoremap * *<c-o>
+nnoremap <silent> <cr> :nohlsearch<bar>:echo<cr>
+nnoremap <silent> <tab> :tabn<cr>
+nnoremap <silent> <s-tab> :tabp<cr>
+nnoremap <silent> <leader>o <c-w><s-t>:tabp<cr>
+nnoremap <leader><leader> <c-^>
 
 nnoremap cm <plug>Commentary
-nnoremap sj :SplitjoinSplit<cr>
-nnoremap sk :SplitjoinJoin<cr>
+
+nnoremap <silent> <c-p> :FZF -m<cr>
+nnoremap <silent> <c-t> :FZF -m<cr>
+
+nmap n nzzzv
+nmap N Nzzzv
+
+cnoremap Ag Ag!
+cnoremap <c-k> <up>
+cnoremap <c-j> <down>
+
+map <f3> :set spell!<cr>
+map <f4> :set wrap! linebreak! list!<cr>
 
 " ag {{{
 let g:ag_working_path_mode = 'r'
 let g:ag_mapping_message = 0
 let g:ag_highlight = 0
-" }}}
-" airline {{{
-let g:airline_theme = 'hybridline'
-let g:airline#extensions#hunks#non_zero_only = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline_powerline_fonts = 1
-" }}}
-" ctrlp {{{
-let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn))$'
-let g:ctrlp_reuse_window = 'netrw\|help\|quickfix'
-let g:ctrlp_use_caching = 0
-let g:ctrlp_user_command = [
-      \ '.git',
-      \ 'cd %s && git ls-files . -co --exclude-standard',
-      \ 'find %s -type f'
-      \ ]
-let g:ctrlp_working_path_mode = 'r'
 " }}}
 " dirvish {{{
 autocmd FileType dirvish nnoremap <buffer> t :call dirvish#open('tabedit', 0)<cr>
@@ -266,97 +182,32 @@ autocmd FileType dirvish nnoremap <buffer> s :call dirvish#open('split', 0)<cr>
 autocmd FileType dirvish nnoremap <buffer> v :call dirvish#open('vsplit', 0)<cr>
 autocmd FileType dirvish nnoremap <buffer> n :e %
 autocmd FileType dirvish nnoremap <buffer> b :!mkdir %
-autocmd FileType dirvish sort r /[^\/]$/
 autocmd FileType dirvish keeppatterns g@\v/\.[^\/]+/?$@d
 " }}}
-" gitgutter {{{
-let g:gitgutter_map_keys = 0
+" lightline {{{
+let g:lightline = {
+      \ 'component_function': {
+      \   'fileformat': 'LightLineFileformat',
+      \   'filetype': 'LightLineFiletype',
+      \   'fileencoding': 'LightLineFileencoding'
+      \ }}
 
-nmap ]h <plug>GitGutterNextHunk
-nmap [h <plug>GitGutterPrevHunk
-" }}}
-" projectionist {{{
-let g:projectionist_heuristics = {
-      \ "Gemfile": {"alternate": "Gemfile.lock"},
-      \ }
-" }}}
-" syntastic {{{
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_ruby_checkers = ['mri']
-let g:syntastic_javascript_checkers = ['jshint']
-
-let g:syntastic_scss_checkers = ['scss_lint']
-let g:syntastic_scss_scss_lint_args = "--config ~/.scss_lint.yml"
-
-let g:syntastic_error_symbol = "»"
-let g:syntastic_style_error_symbol = "»"
-let g:syntastic_warning_symbol = "»"
-let g:syntastic_style_warning_symbol = "»"
-" }}}
-" ultisnips {{{
-function! g:UltiSnips_Complete()
-  call UltiSnips#ExpandSnippet()
-  if g:ulti_expand_res == 0
-    if pumvisible()
-      return "\<c-n>"
-    else
-      call UltiSnips#JumpForwards()
-      if g:ulti_jump_forwards_res == 0
-        return "\<tab>"
-      endif
-    endif
-  endif
-  return ""
+function! LightLineFileformat()
+  return winwidth(0) > 70 ? &fileformat : ''
 endfunction
 
-function! g:UltiSnips_Reverse()
-  call UltiSnips#JumpBackwards()
-  if g:ulti_jump_backwards_res == 0
-    return "\<c-p>"
-  endif
-
-  return ""
+function! LightLineFiletype()
+  return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
 endfunction
 
-
-if !exists("g:UltiSnipsJumpForwardTrigger")
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-endif
-
-if !exists("g:UltiSnipsJumpBackwardTrigger")
-  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-endif
-
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger     . " <c-r>=g:UltiSnips_Complete()<cr>"
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <c-r>=g:UltiSnips_Reverse()<cr>"
+function! LightLineFileencoding()
+  return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
+endfunction
 " }}}
 " vim-test {{{
-let test#filename_modifier = ':p'
-
+let test#strategy = "neovim"
 nmap <silent> <leader>r :TestNearest<cr>
 nmap <silent> <leader>f :TestFile<cr>
 nmap <silent> <leader>a :TestSuite<cr>
 nmap <silent> <leader>l :TestLast<cr>
-" }}}
-" ycm {{{
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_semantic_triggers =  {
-      \   'c' : ['->', '.'],
-      \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-      \             're!\[.*\]\s'],
-      \   'ocaml' : ['.', '#'],
-      \   'cpp,objcpp' : ['->', '.', '::'],
-      \   'perl' : ['->'],
-      \   'php' : ['->', '::'],
-      \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-      \   'ruby' : ['.', '::'],
-      \   'lua' : ['.', ':'],
-      \   'erlang' : [':'],
-      \   'css,scss,sass' : ['re!^\s*', 're![;:]\s*'],
-      \   'html,xml,erb,ejs,liquid' : ['<', 're!<.*\s', '</']
-      \ }
 " }}}

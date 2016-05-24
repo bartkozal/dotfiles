@@ -3,7 +3,7 @@
 	email = bkzl@me.com
 	signingkey = 7A764024
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore
 [color]
 	ui = true
@@ -14,17 +14,12 @@
 	merge = refs/heads/master
 [remote "origin"]
 	push = HEAD
-[commit]
-  template = ~/.gitmessage
 [push]
 	default = simple
 [rerere]
 	enable = true
 [diff]
-	tool = vimdiff
 	algorithm = patience
-[merge]
-	tool = vimdiff
 [difftool]
 	prompt = false
 [github]
@@ -47,4 +42,4 @@
 [ghi]
 	token = !security find-internet-password -a bkzl -s github.com -l 'ghi token' -w
 [alias]
-	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ > .gitignore;}; gi"
