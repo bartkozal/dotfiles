@@ -34,6 +34,7 @@ setopt share_history
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+alias vim='nvim'
 alias ls='ls -GA'
 alias ll='ls -GAlh'
 alias cp='cp -R'
@@ -54,6 +55,7 @@ function e {
 }
 
 source "$HOME/.zsh/git.zsh"
+source "$HOME/.zsh/terminal.zsh"
 
 export PROMPT='%F{4}./%.%f$(git_prompt) '
 export RPROMPT='$(git_stash)'
@@ -65,7 +67,7 @@ export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='nvim'
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
