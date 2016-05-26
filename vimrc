@@ -15,6 +15,7 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'whatyouhide/vim-textobj-xmlattr'
 
+Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'bogado/file-line'
 Plug 'christoomey/vim-sort-motion'
