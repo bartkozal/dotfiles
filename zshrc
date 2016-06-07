@@ -66,6 +66,7 @@ export HISTCONTROL="ignoreboth"
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
 export EDITOR='nvim'
+export FZF_DEFAULT_COMMAND='ag -g ""'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
