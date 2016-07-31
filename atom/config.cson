@@ -1,0 +1,31 @@
+"*":
+  core:
+    projectHome: "~/Developer"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Roboto Mono"
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+  "exception-reporting":
+    userId: "3155b042-d5ee-30c1-f3c9-c3c7cc934f06"
+  linter:
+    showErrorPanel: false
+    showErrorTabFile: false
+    showErrorTabProject: false
+    statusIconPosition: "Right"
+    statusIconScope: "File"
+  pigments:
+    extendAutocompleteToColorValue: true
+    extendAutocompleteToVariables: true
+    markerType: "dot"
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
