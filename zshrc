@@ -8,7 +8,6 @@ export FPATH="$FPATH:/usr/local/share/zsh-completions"
 export FPATH="$FPATH:/usr/local/share/zsh/site-functions"
 export FPATH="$FPATH:$HOME/.zsh/completions"
 export RBENV_ROOT="$HOME/.rbenv"
-export TERMINFO="$HOME/.terminfo"
 
 typeset -U PATH FPATH
 
@@ -43,6 +42,7 @@ alias grep='grep --color'
 alias less='less -FXR'
 alias q='exit'
 alias c='clear'
+alias b='bundle'
 alias be='bundle exec'
 alias s='ruby -run -e httpd . -p3000'
 
