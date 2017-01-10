@@ -1,9 +1,9 @@
 {
-    "editor.fontSize": 14,
-    "editor.fontFamily": "Roboto Mono",
-    "files.trimTrailingWhitespace": true,
-    "editor.tabSize": 2,
-    "files.insertFinalNewline": true,
-    "editor.scrollBeyondLastLine": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false
-  }
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Roboto Mono",
+  "files.trimTrailingWhitespace": true,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "editor.scrollBeyondLastLine": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false
+}
