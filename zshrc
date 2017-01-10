@@ -34,6 +34,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 alias vim='nvim'
+alias code='code-insiders'
 alias ls='ls -GA'
 alias ll='ls -GAlh'
 alias cp='cp -R'
@@ -50,10 +51,6 @@ function d {
   cd "$CODE/$1"
 }
 
-function e {
-  $(git rev-parse --show-toplevel)/.exec $1
-}
-
 source "$HOME/.zsh/git.zsh"
 source "$HOME/.zsh/terminal.zsh"
 
@@ -65,7 +62,7 @@ export SAVEHIST=2048
 export HISTCONTROL="ignoreboth"
 export REPORTTIME=10
 export ARCHFLAGS='-arch x86_64'
-export EDITOR='nvim'
+export EDITOR='code -w'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
