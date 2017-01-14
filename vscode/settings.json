@@ -5,5 +5,8 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.wordWrap": false,
+  "editor.tabCompletion": true,
+  "editor.rulers": [80]
 }
