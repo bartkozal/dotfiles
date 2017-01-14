@@ -1,9 +1,18 @@
 {
-  "Print to console": {
+  "log": {
     "prefix": "log",
     "body": [
-      "console.log('$1');"
+      "console.log('$1')"
     ],
     "description": "Log output to console"
+  },
+  "fun": {
+    "prefix": "fun",
+    "body": [
+      "function ($1) {",
+      "  $2",
+      "}"
+    ],
+    "description": "Insert anonymous function"
   }
 }

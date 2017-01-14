@@ -8,5 +8,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "editor.wordWrap": false,
   "editor.tabCompletion": true,
-  "editor.rulers": [80]
+  "editor.rulers": [80],
+  "editor.snippetSuggestions": "top"
 }
