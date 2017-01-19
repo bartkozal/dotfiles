@@ -2,7 +2,7 @@
   "log": {
     "prefix": "log",
     "body": [
-      "console.log('$1')"
+      "console.log($1)"
     ],
     "description": "Log output to console"
   },
