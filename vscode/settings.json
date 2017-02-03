@@ -6,8 +6,12 @@
   "files.insertFinalNewline": true,
   "editor.scrollBeyondLastLine": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "editor.wordWrap": false,
+  "editor.wordWrap": true,
   "editor.tabCompletion": true,
   "editor.rulers": [80],
-  "editor.snippetSuggestions": "top"
+  "editor.snippetSuggestions": "top",
+  "window.zoomLevel": 0,
+  "files.associations": {
+    "*.vue": "vue"
+  }
 }

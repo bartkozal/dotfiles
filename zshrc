@@ -34,7 +34,6 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 alias vim='nvim'
-alias code='code-insiders'
 alias ls='ls -GA'
 alias ll='ls -GAlh'
 alias cp='cp -R'
