@@ -53,6 +53,7 @@ function d {
 
 source "$HOME/.zsh/git.zsh"
 source "$HOME/.zsh/terminal.zsh"
+source "$HOME/.zsh/private.zsh"
 
 export PROMPT='%F{4}./%.%f$(git_prompt) '
 export RPROMPT='$(git_stash)'
