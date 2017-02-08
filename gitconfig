@@ -3,7 +3,7 @@
 	email = bkzl@me.com
 	signingkey = 7A764024
 [core]
-	editor = nvim
+	editor = code --wait
 	excludesfile = ~/.gitignore
 [color]
 	ui = true
