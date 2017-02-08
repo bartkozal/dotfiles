@@ -5,12 +5,12 @@
     "command": "-acceptSelectedSuggestion"
   },
   {
-    "key": "cmd+shift+[",
+    "key": "shift+cmd+[",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
   {
-    "key": "cmd+shift+]",
+    "key": "shift+cmd+]",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
@@ -23,5 +23,9 @@
     "key": "cmd+t",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.git"
   }
 ]
