@@ -1,4 +1,4 @@
-// Extensions: Ruby, stylelint, vetur
+// Extensions: Jest, Ruby, stylelint, vetur
 {
   "css.validate": false,
   "editor.fontFamily": "Roboto Mono",
@@ -16,6 +16,7 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "stylelint.enable": true,
+  "window.openFilesInNewWindow": "on",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
   "workbench.editor.enablePreviewFromQuickOpen": false
