@@ -3,12 +3,16 @@
   "css.validate": false,
   "editor.fontFamily": "Roboto Mono",
   "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.snippetSuggestions": "top",
   "editor.tabCompletion": true,
   "editor.tabSize": 2,
   "editor.wordWrap": true,
+  "emmet.syntaxProfiles": {
+    "vue-html": "html"
+  },
   "files.associations": {
     "*.vue": "vue",
     ".stylelintrc": "json"
