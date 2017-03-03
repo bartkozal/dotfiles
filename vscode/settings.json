@@ -9,7 +9,7 @@
   "editor.snippetSuggestions": "top",
   "editor.tabCompletion": true,
   "editor.tabSize": 2,
-  "editor.wordWrap": true,
+  "editor.wordWrap": "on",
   "emmet.syntaxProfiles": {
     "vue-html": "html"
   },
@@ -20,8 +20,12 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "stylelint.enable": true,
+  "terminal.integrated.fontFamily": "Roboto Mono",
+  "terminal.integrated.fontSize": 14,
   "window.openFilesInNewWindow": "on",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.iconTheme": "vs-minimal"
 }
