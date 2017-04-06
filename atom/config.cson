@@ -1,23 +1,13 @@
 "*":
   core:
     projectHome: "~/Developer"
-    themes: [
-      "one-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
+    telemetryConsent: "limited"
   editor:
     fontFamily: "Roboto Mono"
-    scrollPastEnd: true
-    showIndentGuide: true
     softWrap: true
   "exception-reporting":
     userId: "3155b042-d5ee-30c1-f3c9-c3c7cc934f06"
-  linter:
-    showErrorPanel: false
-    showErrorTabFile: false
-    showErrorTabProject: false
-    statusIconPosition: "Right"
-    statusIconScope: "File"
+  linter: {}
   pigments:
     extendAutocompleteToColorValue: true
     extendAutocompleteToVariables: true
