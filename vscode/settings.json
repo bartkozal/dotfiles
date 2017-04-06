@@ -1,4 +1,4 @@
-// Extensions: Jest, Ruby, stylelint, vetur
+// Extensions: Ruby, vetur, Debugger for Chrome, Code Spellchecker
 {
   "css.validate": false,
   "editor.fontFamily": "Roboto Mono",
@@ -19,13 +19,16 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "stylelint.enable": true,
+  "search.useIgnoreFilesByDefault": true,
   "terminal.integrated.fontFamily": "Roboto Mono",
-  "terminal.integrated.fontSize": 14,
-  "window.openFilesInNewWindow": "on",
+  "terminal.integrated.fontSize": 12,
+  "window.openFoldersInNewWindow": "on",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Monokai Dimmed",
   "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.experimental.colorCustomizations": {
+    "statusBarBackground": "#303030"
+  },
   "workbench.iconTheme": "vs-minimal"
 }
