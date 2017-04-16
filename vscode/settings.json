@@ -9,8 +9,10 @@
   "editor.tabCompletion": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
+  "explorer.openEditors.visible": 0,
   "emmet.syntaxProfiles": {
-    "vue-html": "html"
+    "vue-html": "html",
+    "javascript": "jsx"
   },
   "files.associations": {
     "*.vue": "vue",
