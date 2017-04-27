@@ -2,7 +2,6 @@
   "css.validate": false,
   "editor.fontFamily": "Roboto Mono",
   "editor.fontSize": 14,
-  "editor.formatOnPaste": true,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.snippetSuggestions": "top",
@@ -17,6 +16,12 @@
   "files.associations": {
     "*.vue": "vue",
     ".stylelintrc": "json"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/.vscode": true,
+    "**/node_modules": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
