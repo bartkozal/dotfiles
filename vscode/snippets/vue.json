@@ -3,47 +3,47 @@
     "prefix": "component",
     "body": [
       "<template>",
-			"  $2",
-			"</template>",
-			"",
-			"<script>",
-			"export default {",
-			"  name: '$1'",
-			"}",
-			"</script>",
-			"",
-			"<style>",
-			"",
-			"</style>"
+      "  $2",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "  name: '$1'",
+      "}",
+      "</script>",
+      "",
+      "<style>",
+      "",
+      "</style>"
     ],
     "description": "Vue component"
   },
   "template tag": {
     "prefix": "template",
     "body": [
-			"<template>",
-			"  $1",
-			"</template>"
+      "<template>",
+      "  $1",
+      "</template>"
     ],
     "description": "Template tag"
   },
   "script tag": {
     "prefix": "script",
     "body": [
-			"<script>",
-			"export default {",
-			"  name: '$1'",
-			"}",
-			"</script>"
+      "<script>",
+      "export default {",
+      "  name: '$1'",
+      "}",
+      "</script>"
     ],
     "description": "Script tag"
   },
   "style tag": {
     "prefix": "style",
     "body": [
-			"<style${1: scoped}>",
-			"  $2",
-			"</style>"
+      "<style${1: scoped}>",
+      "  $2",
+      "</style>"
     ],
     "description": "Style tag"
   }
