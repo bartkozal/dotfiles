@@ -25,6 +25,8 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
   "search.useIgnoreFilesByDefault": true,
   "terminal.integrated.fontFamily": "Roboto Mono",
   "terminal.integrated.fontSize": 12,
@@ -33,8 +35,5 @@
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Monokai Dimmed",
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.experimental.colorCustomizations": {
-    "statusBarBackground": "#303030"
-  },
   "workbench.iconTheme": "vs-minimal"
 }

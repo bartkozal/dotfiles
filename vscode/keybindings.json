@@ -5,6 +5,14 @@
     "command": "-acceptSelectedSuggestion"
   },
   {
+    "key": "enter",
+    "command": "-acceptSnippet"
+  },
+  {
+    "key": "ctrl+[IntlBackslash]",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
     "key": "shift+cmd+[",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
