@@ -35,5 +35,6 @@
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Monokai Dimmed",
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.iconTheme": "vs-minimal"
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.welcome.enabled": false
 }
