@@ -16,7 +16,6 @@
     "vue-html": "html",
     "javascript": "jsx"
   },
-  "emmet.useNewEmmet": true,
   "files.associations": {
     "*.vue": "vue",
     ".stylelintrc": "json"
