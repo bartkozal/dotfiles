@@ -1,7 +1,10 @@
-{
+  {
   "css.validate": false,
   "editor.fontFamily": "Roboto Mono",
   "editor.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderIndentGuides": true,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.snippetSuggestions": "top",
@@ -13,6 +16,7 @@
     "vue-html": "html",
     "javascript": "jsx"
   },
+  "emmet.useNewEmmet": true,
   "files.associations": {
     "*.vue": "vue",
     ".stylelintrc": "json"
@@ -21,7 +25,9 @@
     "**/.git": true,
     "**/.DS_Store": true,
     "**/.vscode": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/tmp": true,
+    "**/log": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
