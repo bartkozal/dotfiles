@@ -1,9 +1,12 @@
 "*":
   core:
+    closeDeletedFileTabs: true
     projectHome: "~/Developer"
     telemetryConsent: "limited"
+    titleBar: "custom-inset"
   editor:
     fontFamily: "Roboto Mono"
+    showIndentGuide: true
     softWrap: true
   "exception-reporting":
     userId: "3155b042-d5ee-30c1-f3c9-c3c7cc934f06"
