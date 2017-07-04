@@ -2,7 +2,6 @@
   "css.validate": false,
   "editor.fontFamily": "Roboto Mono",
   "editor.fontSize": 14,
-  "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
