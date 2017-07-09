@@ -34,6 +34,6 @@
   },
   {
     "key": "shift+cmd+g",
-    "command": "workbench.view.git"
+    "command": "workbench.view.scm"
   }
 ]
