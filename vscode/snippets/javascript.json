@@ -1,25 +1,43 @@
 {
   "log": {
     "prefix": "log",
-    "body": [
-      "console.log($1)"
-    ],
+    "body": ["console.log($1);"],
     "description": "Logs output to console"
   },
-  "anonymous function": {
-    "prefix": "func",
-    "body": [
-      "function ($1) {",
-      "  $2",
-      "}"
-    ],
-    "description": "Inserts anonymous function"
+  "return function": {
+    "prefix": "fun",
+    "body": ["${1:($2)} => ${3:($4)};"],
+    "description": "Inserts return function"
   },
   "arrow function": {
-    "prefix": "fun",
-    "body": [
-      "${2:($1)} => { $3 }"
-    ],
+    "prefix": "func",
+    "body": ["($1) => {", "  $2", "};"],
     "description": "Inserts arrow function"
+  },
+  "component": {
+    "prefix": "comp",
+    "body": [
+      "import React, { Component } from \"react\";",
+      "",
+      "class $1 extends Component {",
+      "  $2",
+      "}",
+      "",
+      "export default $1;"
+    ],
+    "description": "Inserts component"
+  },
+  "stateless component": {
+    "prefix": "com",
+    "body": [
+      "import React from \"react\";",
+      "",
+      "const $1 = ({ $2 }) => (",
+      "  $3",
+      ");",
+      "",
+      "export default $1;"
+    ],
+    "description": "Inserts stateless component"
   }
 }
