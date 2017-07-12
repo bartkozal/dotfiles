@@ -31,6 +31,8 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "flow.useNPMPackagedFlow": true,
+  "javascript.validate.enable": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "search.useIgnoreFilesByDefault": true,
