@@ -1,17 +1,17 @@
 {
   "log": {
     "prefix": "log",
-    "body": ["console.log($1);"],
+    "body": ["console.log($1) "],
     "description": "Logs output to console"
   },
   "return function": {
     "prefix": "fun",
-    "body": ["${1:($2)} => ${3:($4)};"],
+    "body": ["${1:($2)} => ${3:($4)}"],
     "description": "Inserts return function"
   },
   "arrow function": {
     "prefix": "func",
-    "body": ["($1) => {", "  $2", "};"],
+    "body": ["($1) => {", "  $2", "}"],
     "description": "Inserts arrow function"
   },
   "component": {
@@ -39,5 +39,15 @@
       "export default $1;"
     ],
     "description": "Inserts stateless component"
+  },
+  "test description": {
+    "prefix": "des",
+    "body": ["describe('$1', () => {", "  $2", "});"],
+    "description": "Inserts test description"
+  },
+  "test it": {
+    "prefix": "it",
+    "body": ["it('$1', () => {", "  $2", "});"],
+    "description": "Inserts test description"
   }
 }
