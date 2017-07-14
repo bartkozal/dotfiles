@@ -32,6 +32,8 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "flow.useNPMPackagedFlow": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
   "javascript.validate.enable": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
