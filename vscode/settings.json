@@ -1,5 +1,6 @@
 {
   "css.validate": false,
+  "editor.autoIndent": true,
   "editor.fontFamily": "Roboto Mono",
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
@@ -41,6 +42,7 @@
   "terminal.integrated.fontFamily": "Roboto Mono",
   "terminal.integrated.fontSize": 12,
   "window.openFoldersInNewWindow": "on",
+  "window.title": "${activeEditorMedium}${separator}${folderName}",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "One Dark Pro",
