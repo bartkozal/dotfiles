@@ -39,6 +39,7 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "search.useIgnoreFilesByDefault": true,
+  "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.fontFamily": "Roboto Mono",
   "terminal.integrated.fontSize": 12,
   "window.openFoldersInNewWindow": "on",

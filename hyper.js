@@ -25,7 +25,8 @@ module.exports = {
       lightWhite: "#fff",
     },
     cursorColor: "#f5bb3d",
-    fontSize: 14,
+    cursorShape: "UNDERLINE",
+    fontSize: 12,
     fontFamily: "'Roboto Mono', monospace",
     padding: "6px",
     termCSS: `
