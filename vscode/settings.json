@@ -36,7 +36,7 @@
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "javascript.validate.enable": false,
-  "prettier.singleQuote": true,
+  "prettier.singleQuote": false,
   "prettier.trailingComma": "es5",
   "search.useIgnoreFilesByDefault": true,
   "terminal.integrated.cursorStyle": "underline",

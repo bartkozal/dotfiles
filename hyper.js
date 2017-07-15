@@ -5,7 +5,7 @@
 module.exports = {
   config: {
     bell: false,
-    borderColor: "#2b2b2b",
+    borderColor: "#202121",
     colors: {
       black: "#202121",
       red: "#f73e2a",
