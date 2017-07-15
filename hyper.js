@@ -24,9 +24,10 @@ module.exports = {
       lightCyan: "#1effff",
       lightWhite: "#fff",
     },
+    cursorBlink: true,
     cursorColor: "#f5bb3d",
     cursorShape: "UNDERLINE",
-    fontSize: 12,
+    fontSize: 14,
     fontFamily: "'Roboto Mono', monospace",
     padding: "6px",
     termCSS: `
@@ -40,6 +41,7 @@ module.exports = {
     `,
   },
   plugins: [
+    "hyper-blink",
     "hyper-search",
     "hyper-statusline",
     "hypercwd",
