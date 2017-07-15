@@ -54,8 +54,7 @@ source "$HOME/.zsh/git.zsh"
 source "$HOME/.zsh/terminal.zsh"
 source "$HOME/.zsh/private.zsh"
 
-export PROMPT='%F{4}./%.%f$(git_prompt) '
-export RPROMPT='$(git_stash)'
+export PROMPT='%F{214}λ%f '
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=2048
 export SAVEHIST=2048
