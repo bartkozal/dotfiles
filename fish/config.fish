@@ -49,7 +49,7 @@ set -U fish_color_host normal
 set -U fish_color_match white
 set -U fish_color_normal white
 set -U fish_color_operator cyan
-set -U fish_color_param normal
+set -U fish_color_param bbbbbb
 set -U fish_color_quote green
 set -U fish_color_redirection cyan
 set -U fish_color_search_match green

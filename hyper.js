@@ -25,7 +25,7 @@ module.exports = {
     cursorShape: "UNDERLINE",
     fontSize: 14,
     fontFamily: "'Roboto Mono', monospace",
-    padding: "6px",
+    padding: "6px 10px",
     termCSS: `
       x-screen a {
         color: #1effff;
