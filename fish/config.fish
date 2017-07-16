@@ -37,7 +37,7 @@ set -U fish_greeting
 
 set -U fish_color_autosuggestion 595959
 set -U fish_color_cancel f5bb3d
-set -U fish_color_command green --bold
+set -U fish_color_command green
 set -U fish_color_comment 282828
 set -U fish_color_cwd normal
 set -U fish_color_cwd_root normal
@@ -49,7 +49,7 @@ set -U fish_color_host normal
 set -U fish_color_match white
 set -U fish_color_normal white
 set -U fish_color_operator cyan
-set -U fish_color_param white --bold
+set -U fish_color_param white
 set -U fish_color_quote green
 set -U fish_color_redirection cyan
 set -U fish_color_search_match green
