@@ -55,7 +55,7 @@ set -U fish_color_redirection cyan
 set -U fish_color_search_match green
 set -U fish_color_selection normal
 set -U fish_color_user normal
-set -U fish_color_valid_path blue
+set -U fish_color_valid_path normal
 set -U fish_pager_color_description bbb
 set -U fish_pager_color_prefix green
 set -U fish_pager_color_progress 595959
