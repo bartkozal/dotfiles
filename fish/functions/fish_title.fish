@@ -1,3 +1,3 @@
 function fish_title
-    echo $_
+    echo $_ @ (basename $PWD)
 end
