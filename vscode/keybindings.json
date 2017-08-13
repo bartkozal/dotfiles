@@ -1,14 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "tab",
-    "command": "-acceptSelectedSuggestion"
-  },
-  {
-    "key": "enter",
-    "command": "-acceptSnippet"
-  },
-  {
     "key": "ctrl+[IntlBackslash]",
     "command": "workbench.action.terminal.toggleTerminal"
   },
