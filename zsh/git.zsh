@@ -19,7 +19,7 @@ alias git='hub'
 alias g='git'
 alias gh='github .'
 
-alias gb='git branch -av'
+alias gb='git branch -v'
 alias gs='git status -sb'
 alias gco='git checkout'
 alias gst='git stash'
