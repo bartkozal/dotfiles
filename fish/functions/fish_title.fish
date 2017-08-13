@@ -1,3 +1,3 @@
 function fish_title
-    echo $_ - (basename $PWD)
+    echo (dirs) \($_\)
 end
