@@ -37,6 +37,7 @@ module.exports = {
     `,
   },
   plugins: [
+    'hyper-font-smoothing',
     'hyper-search',
     'hypercwd',
     'hyperlinks',
