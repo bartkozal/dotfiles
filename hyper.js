@@ -23,7 +23,7 @@ module.exports = {
     cursorBlink: true,
     cursorColor: '#59ff1a',
     cursorShape: 'UNDERLINE',
-    fontSize: 14,
+    fontSize: 16,
     fontFamily: "'Roboto Mono', monospace",
     padding: '6px 10px',
     termCSS: `
