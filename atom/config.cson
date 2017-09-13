@@ -25,7 +25,6 @@
     prettierOptions:
       singleQuote: true
       trailingComma: "es5"
-  "seti-icons": {}
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
