@@ -48,6 +48,7 @@
   "terminal.integrated.fontFamily": "Roboto Mono",
   "terminal.integrated.fontSize": 14,
   "window.openFoldersInNewWindow": "on",
+  "window.restoreWindows": "all",
   "window.title": "${activeEditorMedium}${separator}${folderName}",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
