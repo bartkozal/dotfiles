@@ -1,7 +1,8 @@
 {
   "css.validate": false,
   "editor.autoIndent": true,
-  "editor.fontFamily": "Roboto Mono",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
