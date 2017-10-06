@@ -32,7 +32,7 @@ alias gdfl='git diff HEAD~1'
 alias glo='git log --decorate --oneline -n 15'
 alias gcl='git clone'
 
-set -U fish_user_paths /usr/local/bin /usr/local/sbin
+set -U fish_user_paths /usr/local/bin
 set -U fish_greeting
 
 set -U fish_color_autosuggestion 595959
