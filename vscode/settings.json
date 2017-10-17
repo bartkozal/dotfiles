@@ -55,6 +55,5 @@
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
-  "workbench.fontAliasing": "antialiased",
   "workbench.startupEditor": "newUntitledFile"
 }
