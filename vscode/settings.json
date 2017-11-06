@@ -28,6 +28,7 @@
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
+    "**/.cache": true,
     "**/.vscode": true,
     "**/flow-typed": true,
     "**/node_modules": true,
@@ -49,7 +50,7 @@
   "terminal.integrated.fontSize": 14,
   "window.openFoldersInNewWindow": "on",
   "window.restoreWindows": "all",
-  "window.title": "${activeEditorMedium}${separator}${folderName}",
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "One Dark Pro",
