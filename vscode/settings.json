@@ -8,7 +8,9 @@
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderIndentGuides": true,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
   "editor.tabCompletion": true,
@@ -44,7 +46,6 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "search.useIgnoreFiles": true,
-  "search.useIgnoreFilesByDefault": true,
   "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.fontFamily": "Roboto Mono",
   "terminal.integrated.fontSize": 14,
@@ -56,5 +57,7 @@
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.confirmDragAndDrop": false
 }
