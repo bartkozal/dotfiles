@@ -16,7 +16,7 @@
   "editor.tabCompletion": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "elm.formatOnSave": true,
+  "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "emmet.syntaxProfiles": {
     "vue-html": "html"
@@ -59,6 +59,5 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
-  "workbench.startupEditor": "newUntitledFile",
-  "explorer.confirmDragAndDrop": false
+  "workbench.startupEditor": "newUntitledFile"
 }
