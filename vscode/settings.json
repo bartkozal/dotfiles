@@ -16,6 +16,7 @@
   "editor.tabCompletion": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
+  "elm.formatOnSave": true,
   "explorer.openEditors.visible": 0,
   "emmet.syntaxProfiles": {
     "vue-html": "html"
