@@ -56,6 +56,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
-  "workbench.fontAliasing": "auto",
+  "workbench.fontAliasing": "default",
   "workbench.startupEditor": "newUntitledFile"
 }
