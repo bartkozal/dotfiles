@@ -7,8 +7,11 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
+  "editor.quickSuggestions": true,
   "editor.renderIndentGuides": true,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
   "editor.tabCompletion": true,
@@ -23,6 +26,7 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
+  "emmet.triggerExpansionOnTab": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
   "files.associations": {
     "*.vue": "vue",
@@ -38,9 +42,12 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "flow.useNPMPackagedFlow": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "javascript.validate.enable": false,
+  "jest.enableCodeLens": false,
+  "jest.enableInlineErrorMessages": false,
   "search.smartCase": true,
   "search.location": "panel",
   "search.useIgnoreFiles": true,
@@ -57,5 +64,5 @@
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.fontAliasing": "default",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
 }
