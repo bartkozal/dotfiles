@@ -1,6 +1,0 @@
-scss_files: "**/*.scss"
-
-linters:
-  PropertySortOrder:
-    enabled: true
-    order: smacss
