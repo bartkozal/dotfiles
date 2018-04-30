@@ -11,4 +11,4 @@ kumar-harsh.graphql-for-vscode
 msjsdiag.debugger-for-chrome
 octref.vetur
 shinnn.stylelint
-zhuangtongfa.Material-theme
+will-stone.plastic
