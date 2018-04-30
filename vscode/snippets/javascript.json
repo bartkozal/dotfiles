@@ -1,17 +1,25 @@
 {
   "log": {
     "prefix": "log",
-    "body": ["console.log($0) "],
+    "body": [
+      "console.log($0) "
+    ],
     "description": "Logs output to console"
   },
   "return function": {
     "prefix": "fun",
-    "body": ["$1 => $0"],
+    "body": [
+      "$1 => $0"
+    ],
     "description": "Inserts return function"
   },
   "arrow function": {
     "prefix": "func",
-    "body": ["($1) => {", "  $0", "}"],
+    "body": [
+      "($1) => {",
+      "  $0",
+      "}"
+    ],
     "description": "Inserts arrow function"
   },
   "component": {
@@ -19,11 +27,9 @@
     "body": [
       "import React, { ${2|Component,PureComponent|} } from 'react';",
       "",
-      "class $1 extends ${2|Component,PureComponent|} {",
+      "export default class $1 extends ${2|Component,PureComponent|} {",
       "  $0",
       "}",
-      "",
-      "export default $1;"
     ],
     "description": "Inserts component"
   },
@@ -42,23 +48,35 @@
   },
   "jest description": {
     "prefix": "des",
-    "body": ["describe('$1', () => {", "  $0", "});"],
+    "body": [
+      "describe('$1', () => {",
+      "  $0",
+      "});"
+    ],
     "description": "Inserts test description"
   },
   "jest it": {
     "prefix": "it",
-    "body": ["it('$1', () => {", "  $0", "});"],
+    "body": [
+      "it('$1', () => {",
+      "  $0",
+      "});"
+    ],
     "description": "Inserts test description"
   },
   "jest test": {
     "prefix": "test",
-    "body": ["test('$1', () => {", "  $0", "});"],
+    "body": [
+      "test('$1', () => {",
+      "  $0",
+      "});"
+    ],
     "description": "Inserts test description"
   },
   "import": {
     "prefix": "imp",
     "body": [
-        "import $1 from '$2';$0"
+      "import $1 from '$2';$0"
     ],
     "description": "Inserts import statement"
   }

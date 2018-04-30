@@ -26,7 +26,6 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "emmet.triggerExpansionOnTab": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
   "files.associations": {
     "*.vue": "vue",
@@ -37,6 +36,7 @@
     "**/.DS_Store": true,
     "**/.cache": true,
     "**/node_modules": true,
+    "**/flow-typed": true,
     "**/tmp": true,
     "**/log": true
   },
