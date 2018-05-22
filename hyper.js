@@ -24,7 +24,8 @@ module.exports = {
     cursorColor: "#59ff1a",
     cursorShape: "UNDERLINE",
     fontSize: 16,
-    fontFamily: "'Roboto Mono', monospace"
+    fontFamily: "'Roboto Mono', monospace",
+    shell: "/usr/local/bin/fish"
   },
   plugins: ["hypercwd", "hyper-search"],
   localPlugins: []
