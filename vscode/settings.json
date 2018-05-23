@@ -59,10 +59,10 @@
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Plastic - deprioritised punctuation",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.fontAliasing": "default",
   "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Ayu Mirage",
 }
