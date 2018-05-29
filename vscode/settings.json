@@ -65,4 +65,16 @@
   "workbench.fontAliasing": "default",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Ayu Mirage",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.leader": "<space>"
 }
