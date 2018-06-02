@@ -1,14 +1,8 @@
 Orta.vscode-jest
-christian-kohler.npm-intellisense
 dbaeumer.vscode-eslint
-eg2.tslint
 esbenp.prettier-vscode
-flowtype.flow-for-vscode
 formulahendry.auto-rename-tag
-jpoissonnier.vscode-styled-components
 kevinkyang.auto-comment-blocks
-kumar-harsh.graphql-for-vscode
 msjsdiag.debugger-for-chrome
-octref.vetur
 shinnn.stylelint
-will-stone.plastic
+teabyii.ayu
