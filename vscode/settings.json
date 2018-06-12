@@ -42,7 +42,6 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "flow.useNPMPackagedFlow": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "javascript.validate.enable": false,
@@ -65,16 +64,4 @@
   "workbench.fontAliasing": "default",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Ayu Mirage",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
-    }
-  ],
-  "vim.leader": "<space>"
 }
