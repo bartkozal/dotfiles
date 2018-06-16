@@ -42,6 +42,7 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "flow.useNPMPackagedFlow": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "javascript.validate.enable": false,
