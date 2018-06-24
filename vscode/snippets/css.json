@@ -1,9 +1,0 @@
-{
-  "variable": {
-    "prefix": "var",
-    "body": [
-      "var(--$1)${2:;}"
-    ],
-    "description": "Inserts variable"
-  }
-}
