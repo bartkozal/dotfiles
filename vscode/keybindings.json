@@ -1,6 +1,21 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "javascriptBooster.extendSelection",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "javascriptBooster.shrinkSelection",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "ctrl+[IntlBackslash]",
     "command": "workbench.action.terminal.toggleTerminal"
   },
