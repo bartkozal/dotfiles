@@ -1,4 +1,5 @@
 {
+  "breadcrumbs.enabled": true,
   "editor.autoIndent": true,
   "editor.fontFamily": "IBMPlexMono",
   "editor.fontLigatures": true,
