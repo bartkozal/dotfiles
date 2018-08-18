@@ -5,11 +5,12 @@ CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
+joshpeng.sublime-babel-vscode
 kevinkyang.auto-comment-blocks
 msjsdiag.debugger-for-chrome
 rebornix.ruby
 sburg.vscode-javascript-booster
-sdras.night-owl
 sleistner.vscode-fileutils
+teabyii.ayu
 xabikos.JavaScriptSnippets
 xabikos.ReactSnippets
