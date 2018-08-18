@@ -6,6 +6,16 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "alt+shift+enter",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "editor.action.goToDeclaration",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
     "key": "ctrl+w",
     "command": "javascriptBooster.extendSelection",
     "when": "editorTextFocus"

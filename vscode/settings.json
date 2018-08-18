@@ -1,10 +1,20 @@
 {
+  "bracketPairColorizer.timeOut": 0,
+  "bracketPairColorizer.activeScopeCSS": [
+    "backgroundColor : {color}",
+    "borderStyle : solid",
+    "borderWidth : 1px",
+    "borderColor : {color}; opacity: 0.5"
+  ],
+  "bracketPairColorizer.highlightActiveScope": true,
   "breadcrumbs.enabled": true,
   "editor.autoIndent": true,
   "editor.fontFamily": "IBMPlexMono",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
+  "editor.highlightActiveIndentGuide": false,
+  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": true,
   "editor.renderIndentGuides": true,
@@ -50,6 +60,20 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
+  "workbench.colorCustomizations": {
+    "[Night Owl]": {
+      "editor.findMatchBorder": "#9735c5",
+      "editor.findMatchHighlightBackground": "#4e31539a",
+      "editor.findMatchHighlightBorder": "#f700ff9a",
+      "editor.selectionBackground": "#2a5679",
+      "editor.selectionHighlightBackground": "#2a567940",
+      "editor.selectionHighlightBorder": "#689eca",
+      "editor.wordHighlightBackground": "#00ffff40",
+      "editor.wordHighlightBorder": "#5aca76",
+      "editor.wordHighlightStrongBackground": "#00ffff40",
+      "editor.wordHighlightStrongBorder": "#5aca76"
+    }
+  },
   "workbench.fontAliasing": "default",
   "workbench.iconTheme": "vs-seti",
   "workbench.startupEditor": "newUntitledFile"
