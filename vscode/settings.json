@@ -46,7 +46,7 @@
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Ayu Mirage",
+  "workbench.colorTheme": "Night Owl",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
