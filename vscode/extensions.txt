@@ -1,14 +1,11 @@
 andys8.jest-snippets
 angryobject.react-pure-to-class-vscode
-castwide.solargraph
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
-joshpeng.sublime-babel-vscode
 kevinkyang.auto-comment-blocks
 msjsdiag.debugger-for-chrome
-rebornix.ruby
 sburg.vscode-javascript-booster
 sleistner.vscode-fileutils
 teabyii.ayu

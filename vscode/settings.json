@@ -1,5 +1,4 @@
 {
-  "bracketPairColorizer.timeOut": 0,
   "bracketPairColorizer.activeScopeCSS": [
     "backgroundColor : {color}",
     "borderStyle : solid",

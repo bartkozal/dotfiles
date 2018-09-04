@@ -6,7 +6,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+shift+enter",
+    "key": "ctrl+alt+enter",
     "command": "editor.action.rename",
     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
   },
