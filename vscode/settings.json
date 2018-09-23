@@ -63,7 +63,7 @@
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Ayu Mirage",
-  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.enablePreview": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.colorCustomizations": {
