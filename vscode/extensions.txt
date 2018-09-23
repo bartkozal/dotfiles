@@ -4,10 +4,12 @@ CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
+GitHub.vscode-pull-request-github
 kevinkyang.auto-comment-blocks
 msjsdiag.debugger-for-chrome
 sburg.vscode-javascript-booster
 sleistner.vscode-fileutils
+sysoev.vscode-open-in-github
 teabyii.ayu
 xabikos.JavaScriptSnippets
 xabikos.ReactSnippets
