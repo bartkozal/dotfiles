@@ -42,15 +42,9 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "flow.enabled": false,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "github.hosts": [
-    {
-      "host": "https://github.com",
-      "username": "oauth",
-      "token": "system"
-    }
-  ],
   "javascript.validate.enable": false,
   "search.smartCase": true,
   "search.location": "panel",
@@ -63,7 +57,7 @@
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Ayu Mirage",
+  "workbench.colorTheme": "Dracula",
   "workbench.editor.enablePreview": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
@@ -81,5 +75,12 @@
   },
   "workbench.fontAliasing": "default",
   "workbench.iconTheme": "vs-seti",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "githubPullRequests.hosts": [
+    {
+      "host": "https://github.com",
+      "username": "oauth",
+      "token": "system"
+    }
+  ]
 }
