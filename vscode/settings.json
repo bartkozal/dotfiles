@@ -57,7 +57,7 @@
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "lucy",
   "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.colorCustomizations": {
