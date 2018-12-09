@@ -1,14 +1,14 @@
 andys8.jest-snippets
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
-dracula-theme.theme-dracula
 esbenp.prettier-vscode
-flowtype.flow-for-vscode
 formulahendry.auto-rename-tag
 GitHub.vscode-pull-request-github
+juliettepretot.lucy-vscode
 kevinkyang.auto-comment-blocks
 msjsdiag.debugger-for-chrome
 sburg.vscode-javascript-booster
 sleistner.vscode-fileutils
 sysoev.vscode-open-in-github
+VisualStudioExptTeam.vscodeintellicode
 xabikos.JavaScriptSnippets
