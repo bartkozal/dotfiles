@@ -73,12 +73,5 @@
   },
   "workbench.fontAliasing": "default",
   "workbench.iconTheme": "vs-seti",
-  "workbench.startupEditor": "newUntitledFile",
-  "githubPullRequests.hosts": [
-    {
-      "host": "https://github.com",
-      "username": "oauth",
-      "token": "system"
-    }
-  ]
+  "workbench.startupEditor": "newUntitledFile"
 }
