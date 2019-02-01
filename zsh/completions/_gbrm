@@ -1,3 +1,0 @@
-#compdef gbrm
-
-compadd $(git branch | grep -o '\w.*')

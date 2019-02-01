@@ -1,3 +1,0 @@
-#compdef gbt
-
-compadd $(git branch -a | grep -o 'remotes[^\ ]*' | sed 's/remotes\///')

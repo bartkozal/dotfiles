@@ -1,3 +1,0 @@
-#compdef gulp
-
-compadd $(gulp --tasks-simple)
