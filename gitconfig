@@ -1,6 +1,6 @@
 [user]
 	name = Bart Kozal
-	email = bkzl@me.com
+	email = brtjkzl@gmail.com
 	signingkey = 7A764024
 [core]
 	editor = code --wait
@@ -23,7 +23,7 @@
 [difftool]
 	prompt = false
 [github]
-	user = bkzl
+	user = brtjkzl
 	ssl = true
 [filter "media"]
 	required = true
