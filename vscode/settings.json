@@ -73,5 +73,7 @@
   },
   "workbench.fontAliasing": "default",
   "workbench.iconTheme": "vs-seti",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.list.keyboardNavigation": "filter",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.horizontalScrolling": true
 }
