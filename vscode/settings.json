@@ -12,6 +12,7 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
+  "editor.gotoLocation.multiple": "goto",
   "editor.highlightActiveIndentGuide": false,
   "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
@@ -20,6 +21,7 @@
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
   "editor.tabCompletion": "onlySnippets",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -41,10 +43,10 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "flow.enabled": false,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "javascript.validate.enable": false,
+  "jest.enableCodeLens": false,
   "search.smartCase": true,
   "search.location": "panel",
   "search.useIgnoreFiles": true,
@@ -73,7 +75,8 @@
   },
   "workbench.fontAliasing": "default",
   "workbench.iconTheme": "vs-seti",
+  "workbench.list.horizontalScrolling": true,
   "workbench.list.keyboardNavigation": "filter",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.tree.horizontalScrolling": true
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
