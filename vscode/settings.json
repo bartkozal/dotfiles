@@ -78,5 +78,6 @@
   "workbench.list.horizontalScrolling": true,
   "workbench.list.keyboardNavigation": "filter",
   "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.renderIndentGuides": "none",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
