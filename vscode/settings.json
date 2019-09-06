@@ -18,7 +18,9 @@
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": true,
   "editor.renderIndentGuides": true,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
@@ -57,9 +59,7 @@
   "window.restoreWindows": "all",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
-  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "lucy",
-  "workbench.editor.swipeToNavigate": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.colorCustomizations": {
     "editor.findMatchBorder": "#9735c5",
