@@ -7,9 +7,7 @@ juliettepretot.lucy-vscode
 kevinkyang.auto-comment-blocks
 ms-vscode.vscode-typescript-tslint-plugin
 msjsdiag.debugger-for-chrome
-msjsdiag.vscode-react-native
 Orta.vscode-jest
-Prisma.vscode-graphql
 sburg.vscode-javascript-booster
 sysoev.vscode-open-in-github
 VisualStudioExptTeam.vscodeintellicode
