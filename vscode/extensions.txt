@@ -1,5 +1,4 @@
 andys8.jest-snippets
-auchenberg.vscode-browser-preview
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
