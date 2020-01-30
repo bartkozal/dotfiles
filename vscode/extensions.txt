@@ -4,7 +4,6 @@ dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 juliettepretot.lucy-vscode
 kevinkyang.auto-comment-blocks
-ms-vscode.vscode-typescript-tslint-plugin
 msjsdiag.debugger-for-chrome
 Orta.vscode-jest
 sburg.vscode-javascript-booster
