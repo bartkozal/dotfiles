@@ -19,9 +19,7 @@
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": true,
   "editor.renderIndentGuides": true,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
@@ -40,7 +38,6 @@
     "**/.DS_Store": true,
     "**/.cache": true,
     "**/node_modules": true,
-    "**/flow-typed": true,
     "**/tmp": true,
     "**/log": true
   },
@@ -53,7 +50,6 @@
   "search.location": "panel",
   "search.useIgnoreFiles": true,
   "terminal.integrated.cursorStyle": "underline",
-  "terminal.integrated.fontFamily": "Roboto Mono",
   "terminal.integrated.fontSize": 14,
   "window.openFoldersInNewWindow": "on",
   "window.restoreWindows": "all",

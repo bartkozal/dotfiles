@@ -1,10 +1,9 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export CODE="$HOME/Developer"
-export RBENV_ROOT="$HOME/.rbenv"
-export ARCHFLAGS='-arch x86_64'
 export EDITOR='code -w'
 export FZF_DEFAULT_COMMAND='ag -g ""'
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
 
 alias ls='exa --all --grid --across'
 alias ll='exa --all --long --git'
@@ -16,8 +15,6 @@ alias grep='grep --color'
 alias less='less -FXR'
 alias q='exit'
 alias c='clear'
-alias b='bundle'
-alias be='bundle exec'
 alias git='hub'
 alias gb='git branch -v'
 alias gs='git status -sb'
@@ -61,5 +58,4 @@ set -U fish_pager_color_description bbb
 set -U fish_pager_color_prefix green
 set -U fish_pager_color_progress 595959
 
-status --is-interactive; and source (rbenv init -|psub)
 status --is-interactive; and source (nodenv init -|psub)
