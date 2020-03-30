@@ -12,14 +12,15 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.highlightActiveIndentGuide": false,
   "editor.matchBrackets": "always",
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": true,
   "editor.renderIndentGuides": true,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
@@ -47,7 +48,6 @@
   "git.enableSmartCommit": true,
   "javascript.validate.enable": false,
   "search.smartCase": true,
-  "search.location": "panel",
   "search.useIgnoreFiles": true,
   "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.fontSize": 14,
@@ -75,5 +75,8 @@
   "workbench.list.keyboardNavigation": "filter",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.renderIndentGuides": "none",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
