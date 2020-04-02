@@ -8,6 +8,7 @@
   "bracketPairColorizer.highlightActiveScope": true,
   "breadcrumbs.enabled": true,
   "editor.autoIndent": "full",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "IBMPlexMono",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
@@ -17,10 +18,7 @@
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": true,
   "editor.renderIndentGuides": true,
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
@@ -47,6 +45,7 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "javascript.validate.enable": false,
+  "remote.WSL.fileWatcher.polling": true,
   "search.smartCase": true,
   "search.useIgnoreFiles": true,
   "terminal.integrated.cursorStyle": "underline",
@@ -75,8 +74,5 @@
   "workbench.list.keyboardNavigation": "filter",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.renderIndentGuides": "none",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
