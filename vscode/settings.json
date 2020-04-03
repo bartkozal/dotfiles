@@ -11,7 +11,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "IBMPlexMono",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.highlightActiveIndentGuide": false,
   "editor.matchBrackets": "always",
