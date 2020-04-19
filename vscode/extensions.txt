@@ -1,12 +1,15 @@
 andys8.jest-snippets
+bradlc.vscode-tailwindcss
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
+formulahendry.auto-rename-tag
 juliettepretot.lucy-vscode
 kevinkyang.auto-comment-blocks
 msjsdiag.debugger-for-chrome
 Orta.vscode-jest
 sburg.vscode-javascript-booster
+stylelint.vscode-stylelint
 sysoev.vscode-open-in-github
 VisualStudioExptTeam.vscodeintellicode
 xabikos.JavaScriptSnippets
