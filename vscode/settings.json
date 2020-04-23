@@ -1,11 +1,4 @@
 {
-  "bracketPairColorizer.activeScopeCSS": [
-    "backgroundColor : {color}",
-    "borderStyle : solid",
-    "borderWidth : 1px",
-    "borderColor : {color}; opacity: 0.5"
-  ],
-  "bracketPairColorizer.highlightActiveScope": true,
   "breadcrumbs.enabled": true,
   "editor.autoIndent": "full",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
