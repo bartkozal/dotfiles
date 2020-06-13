@@ -5,13 +5,14 @@ CoenraadS.bracket-pair-colorizer-2
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
+GitHub.vscode-pull-request-github
 jock.svg
 juliettepretot.lucy-vscode
 msjsdiag.debugger-for-chrome
 Orta.vscode-jest
+quicktype.quicktype
 sburg.vscode-javascript-booster
 stylelint.vscode-stylelint
 sysoev.vscode-open-in-github
 VisualStudioExptTeam.vscodeintellicode
-wooodhead.vscode-wrap-console-log-simple
 xabikos.JavaScriptSnippets
