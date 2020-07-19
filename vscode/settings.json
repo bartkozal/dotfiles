@@ -33,6 +33,7 @@
     "**/tmp": true,
     "**/log": true
   },
+  "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.confirmSync": false,
