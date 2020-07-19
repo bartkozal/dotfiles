@@ -10,7 +10,6 @@ jock.svg
 juliettepretot.lucy-vscode
 msjsdiag.debugger-for-chrome
 Orta.vscode-jest
-quicktype.quicktype
 sburg.vscode-javascript-booster
 stylelint.vscode-stylelint
 sysoev.vscode-open-in-github
