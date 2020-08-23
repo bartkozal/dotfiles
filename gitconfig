@@ -4,6 +4,8 @@
 	signingkey = 7A764024
 [core]
 	editor = code --wait
+	autocrlf = input
+	eol = lf
 [color]
 	ui = true
 [branch]
