@@ -4,6 +4,7 @@ export CODE="$HOME/Developer"
 export EDITOR='code -w'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+export DISPLAY=(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 alias ls='exa --all --grid --across'
 alias ll='exa --all --long --git'
@@ -52,3 +53,5 @@ set -U fish_pager_color_prefix green
 set -U fish_pager_color_progress 595959
 
 status --is-interactive; and source (nodenv init -|psub)
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
