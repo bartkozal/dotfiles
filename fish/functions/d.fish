@@ -1,3 +1,3 @@
 function d
-  cd "$CODE/$argv"
+  cd "$HOME/$argv"
 end

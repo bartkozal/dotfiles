@@ -1,7 +1,6 @@
 [user]
 	name = Bartlomiej Kozal
 	email = brtjkzl@gmail.com
-	signingkey = 7A764024
 [core]
 	editor = code --wait
 	autocrlf = input

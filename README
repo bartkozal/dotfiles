@@ -4,5 +4,5 @@ sudo echo "/home/linuxbrew/.linuxbrew/bin/fish" >> /etc/shells
 chsh -s /home/linuxbrew/.linuxbrew/bin/fish
 git clone git@github.com:bartkozal/dotfiles.git ~/dotfiles
 ln -s ~/dotfiles/gitconfig .gitconfig
-ln -s ~/dotfiles/fish/ .config/fish
-brew install nodenv bat exa fzf
+ln -s ~/dotfiles/fish .config/fish
+brew install pyenv nodenv bat exa fzf

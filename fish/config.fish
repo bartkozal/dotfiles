@@ -1,6 +1,5 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export CODE="$HOME/Developer"
 export EDITOR='code -w'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
