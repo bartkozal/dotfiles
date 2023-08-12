@@ -2,8 +2,7 @@
 brew install fish
 sudo echo "/home/linuxbrew/.linuxbrew/bin/fish" >> /etc/shells
 chsh -s /home/linuxbrew/.linuxbrew/bin/fish
-mkdir ~/Developer ~/.config
-git clone git@github.com:bartkozal/dotfiles.git ~/Developer/dotfiles
-ln -s ~/Developer/dotfiles/gitconfig .gitconfig
-ln -s ~/Developer/dotfiles/fish/ .config/fish
-brew install nodenv pyenv bat exa fzf
+git clone git@github.com:bartkozal/dotfiles.git ~/dotfiles
+ln -s ~/dotfiles/gitconfig .gitconfig
+ln -s ~/dotfiles/fish/ .config/fish
+brew install nodenv bat exa fzf
