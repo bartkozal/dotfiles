@@ -1,1 +1,1 @@
-complete --command d --exclusive --arguments '(ls $CODE)'
+complete --command d --exclusive --arguments '(ls ~)'
