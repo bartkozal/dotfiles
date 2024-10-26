@@ -1,5 +1,5 @@
 [user]
-	name = Bartlomiej Kozal
+	name = Bart Kozal
 	email = brtjkzl@gmail.com
 [core]
 	editor = code --wait
@@ -27,9 +27,9 @@
 	ssl = true
 [gist]
 	private = true
-[alias]
-	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ > .gitignore;}; gi"
 [hub]
 	protocol = ssh
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[init]
+	defaultBranch = main
