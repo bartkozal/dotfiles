@@ -5,9 +5,9 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
 export DISPLAY=(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
-alias ls='exa --all --grid --across'
-alias ll='exa --all --long --git'
-alias tree='exa --tree'
+alias ls='eza --all --grid --across'
+alias ll='eza --all --long --git'
+alias tree='eza --tree'
 alias cat='bat'
 alias cp='cp -R'
 alias rm='rm -R'
