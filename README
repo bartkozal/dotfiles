@@ -5,4 +5,4 @@ chsh -s /home/linuxbrew/.linuxbrew/bin/fish
 git clone git@github.com:bartkozal/dotfiles.git ~/dotfiles
 ln -s ~/dotfiles/gitconfig .gitconfig
 ln -s ~/dotfiles/fish .config/fish
-brew install pyenv nodenv bat exa fzf
+brew install nodenv bat eza fzf
