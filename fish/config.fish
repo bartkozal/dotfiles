@@ -52,5 +52,4 @@ set -U fish_pager_color_prefix green
 set -U fish_pager_color_progress 595959
 
 status --is-interactive; and source (nodenv init -|psub)
-status is-login; and pyenv init --path | source
-status is-interactive; and pyenv init - | source
+status --is-interactive; and rbenv init - --no-rehash fish | source
